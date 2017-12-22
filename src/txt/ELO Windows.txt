@@ -2,7 +2,7 @@ Bisher getestet bei: elopoint2, elo15e2itpos7, elo20x3-2
 
 1  Power off your system completely.
 2  Power on your system.
-3  After the Elo splash screen (shown below), press “ARROW UP” or “ARROW DOWN” 
+3  After the Elo splash screen (shown below), press ARROW UP or ARROW DOWN 
    repeatedly to pause on Windows Boot Manager.
 4  Select either Restore OS 32bit or Restore OS 64bit depending on your OS
    environment
