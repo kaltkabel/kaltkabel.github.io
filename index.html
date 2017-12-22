@@ -36,102 +36,78 @@
 </head>
 
 <body>
-
-<div class="outer"><div class="middle"><div class="inner">
-
-<a href="."><p>JT Demo Tool</p></a>
-<form>
-  <div class="box">
-    <select name="dev" id="dev" onchange="unhide()">
-        <option disabled selected value="0">Choose Manufacturer</option>
-        <option value="dat">Datalogic</option>
-		<option value="elo">ELO</option>
-        <option value="get">Getac</option>
-		<option value="hon">Honeywell</option>
-		<option value="zeb">Zebra</option>
-    </select>
-    <br>
-    <br>
-    <select disabled required="required" id="mod" name="mod">
-        <option disabled selected="selected" class="default">Choose Model</option>
-		
-		<option class="dat" value="axi">DL-Axist</option>
-		<option class="dat" value="elf">Elf</option>
-        <option class="dat" value="fal">Falcon X3+</option>
-        <!-- <option class="dat" value="joy">Joya X2</option> -->
-		<option class="dat" value="kym">Kyman</option>
-        <option class="dat" value="lyn">Lynx</option>
-        <option class="dat" value="me1">Memor</option>
-		<option class="dat" value="me2">Memor X3</option>
-		<option class="dat" value="sco">Scorpio X3</option>
-		
-		<option class="elo" value="iser">I-Series</option>
-		<option class="elo" value="panp">PayPoint</option>
-		<option class="elo" value="wind">Windows</option>
-		
-		<!-- <option class="get" value="b30">B300</option> -->
-		<!-- <option class="get" value="f11">F110</option> -->
-		<!-- <option class="get" value="s40">S400</option> -->
-		<option class="get" value="t80">T800</option>
-		<!-- <option class="get" value="v11">V110</option> -->
-		<option class="get" value="z71">Z710</option>
-		<!-- <option class="get" value="x50">X500</option> -->
-		
-		<option class="hon" value="ck3x">CK3X CK3R</option>
-		<option class="hon" value="ck6x">CK6X</option>
-		<option class="hon" value="cn51">CN51</option>
-		<option class="hon" value="70se">70 Series</option>
-		
-		<option class="hon" value="60s">Dolphin 60s</option>
-		<option class="hon" value="610">Dolphin 6100</option>
-		<option class="hon" value="611">Dolphin 6110</option>
-		<option class="hon" value="650">Dolphin 6500</option>
-		<option class="hon" value="70e">Dolphin 70e</option>
-		<option class="hon" value="75e">Dolphin 75e</option>
-		<option class="hon" value="780">Dolphin 7800</option>
-		<option class="hon" value="99e">Dolphin 99EX GX NI</option>
-		<option class="hon" value="ct5">Dolphin CT50</option>
-		<option class="hon" value="s51">Scanpal 5100</option>
-		<option class="hon" value="eda">Scanpal EDA50</option>
-		<option class="hon" value="edk">Scanpal EDA50K</option>
-		
-		<!-- <option class="zeb" value="mc21">MC2100</option> -->
-		<option class="zeb" value="mc30">MC3000</option>
-		<!-- <option class="zeb" value="mc31">MC3100</option> -->
-		<option class="zeb" value="mc32">MC3200</option>
-		<!-- <option class="zeb" value="mc35">MC35</option> -->
-		<!-- <option class="zeb" value="mc36">MC36</option> -->
-		<option class="zeb" value="mc40">MC40</option>
-		<!-- <option class="zeb" value="mc45">MC45</option> -->
-		<!-- <option class="zeb" value="mc50">MC50</option> -->
-		<option class="zeb" value="mc55">MC55</option>
-		<!-- <option class="zeb" value="mc65">MC65</option> -->
-		<option class="zeb" value="mc67">MC67</option>
-		<!-- <option class="zeb" value="mc70">MC70</option> -->
-		<!-- <option class="zeb" value="mc75">MC75</option> -->
-		<!-- <option class="zeb" value="mc91">MC9100</option> -->
-		<option class="zeb" value="mc92">MC9200</option>
-		<!-- <option class="zeb" value="mc95">MC9500</option> -->
-		<option class="zeb" value="tc20">TC20</option>
-		<option class="zeb" value="tc20">TC25</option>
-		<option class="zeb" value="tc55">TC51</option>
-		<option class="zeb" value="tc55">TC55</option>
-		<option class="zeb" value="tc70">TC70</option>
-		<option class="zeb" value="tc75">TC75</option>
-		<option class="zeb" value="tc80">TC8000</option>
-		<option class="zeb" value="wt40">WT40N0</option>
-		<option class="zeb" value="wt41">WT41N0</option>
-		<option class="zeb" value="wt60">WT6000</option>
-    </select>
-    <br>
-    <br>
-	<br>
-        <div id="fancy" class="fancy">Fix it Up!</div>
-		
-</div>
-</form>
-
-</div></div></div>
+	<div id="outerbox">
+		<div id="innerbox">
+			<p class="center"><a class="link title text" href=".">JT Reset FAQ</a><p>
+			<div class="form">
+				<select id="dev" class="selection" onchange="unhide()">
+					<option disabled selected value="0">Choose Manufacturer</option>
+					<option value="dat">Datalogic</option>
+					<option value="elo">ELO</option>
+					<option value="get">Getac</option>
+					<option value="hon">Honeywell</option>
+					<option value="zeb">Zebra</option>
+				</select>
+				<br />
+				<select id="mod" class="selection" disabled required="required">
+					<option disabled selected="selected" class="default">Choose Model</option>
+					<!-- DATALOGIC -->
+					<option class="dat">DL-Axist</option>
+					<option class="dat">Elf</option>
+					<option class="dat">Falcon X3+</option>
+					<option class="dat">Kyman</option>
+					<option class="dat">Lynx</option>
+					<option class="dat">Memor</option>
+					<option class="dat">Memor X3</option>
+					<option class="dat">Scorpio X3</option>
+					<!-- ELO TOUCH -->
+					<option class="elo">I-Series</option>
+					<option class="elo">PayPoint</option>
+					<option class="elo">Windows</option>
+					<!-- GETAC -->
+					<option class="get">T800</option>
+					<option class="get">Z710</option>
+					<!-- HONEYWELL -->
+					<option class="hon">CK3X, CK3R</option>
+					<option class="hon">CK6X</option>
+					<option class="hon">CN51</option>
+					<option class="hon">70 Series</option>
+					<option class="hon">Dolphin 60s</option>
+					<option class="hon">Dolphin 6100</option>
+					<option class="hon">Dolphin 6110</option>
+					<option class="hon">Dolphin 6500</option>
+					<option class="hon">Dolphin 70e</option>
+					<option class="hon">Dolphin 75e</option>
+					<option class="hon">Dolphin 7800</option>
+					<option class="hon">Dolphin 99EX/GX/NI</option>
+					<option class="hon">Dolphin CT50</option>
+					<option class="hon">Scanpal 5100</option>
+					<option class="hon">Scanpal EDA50</option>
+					<option class="hon">Scanpal EDA50K</option>
+					<!-- ZEBRA -->
+					<option class="zeb">MC3000</option>
+					<option class="zeb">MC3200</option>
+					<option class="zeb">MC40</option>
+					<option class="zeb">MC55</option>
+					<option class="zeb">MC67</option>
+					<option class="zeb">MC9200</option>
+					<option class="zeb">TC20</option>
+					<option class="zeb">TC25</option>
+					<option class="zeb">TC51</option>
+					<option class="zeb">TC55</option>
+					<option class="zeb">TC70</option>
+					<option class="zeb">TC75</option>
+					<option class="zeb">TC8000</option>
+					<option class="zeb">WT40N0</option>
+					<option class="zeb">WT41N0</option>
+					<option class="zeb">WT6000</option>
+				</select>
+			</div>
+			<div id="fancy" class="fancy text center">Fix it Up!</div>
+		</div>
+	</div>
+</body>
+</html>
 
 <div class="reload">Click here to <a href="."><b>reload</b></a></div>
 <div class="hline"></div>
