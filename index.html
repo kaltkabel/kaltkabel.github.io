@@ -1,9 +1,174 @@
 <!DOCTYPE html>
-<html>
+</html>
 <head>
-	<title>Hello World</title>
+	<title>DEMO - Fix it Up Tool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<link rel="stylesheet" href="src/css/front.css" type="text/css">
+	<link rel="stylesheet" href="src/css/mobile.css" type="text/css">
+	<link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="src/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="src/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<link rel="stylesheet" href="src/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script src="src/js/jquery.js"></script>
+	<script type="text/javascript" src="src/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<script type="text/javascript" src="src/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<script>
+		$(window).on('load', function() {
+			$('#dev').on('change', function () {
+				var selected = $(this).val().toLowerCase();
+				if (selected != '0') {
+					$('#mod').show();
+					$('#mod option').hide();  //hide all options initially
+					$('#mod option:eq(0)').show();  //show the first option
+					$('#mod option.' + selected).show();  //show options with the right class        
+				} else {
+					$('#mod').hide();     
+					$('#mod option').hide();        
+				}
+			});
+		});
+		function unhide() {
+			document.getElementById("mod").disabled = false;
+		}
+	</script>
 </head>
+
 <body>
-Hello World
+
+<div class="outer">
+<div class="middle">
+<div class="inner">
+<a href="./index.html"><p>JT Demo Tool</p></a>
+<form>
+  <div class="box">
+    <select name="dev" id="dev" onchange="unhide()">
+        <option disabled selected value="0">Choose Manufacturer</option>
+        <option value="dat">Datalogic</option>
+		<option value="elo">ELO</option>
+        <option value="get">Getac</option>
+		<option value="hon">Honeywell</option>
+		<option value="zeb">Zebra</option>
+    </select>
+    <br>
+    <br>
+    <select disabled required="required" id="mod" name="mod">
+        <option disabled selected="selected" class="default">Choose Model</option>
+		
+		<option class="dat" value="axi">DL-Axist</option>
+		<option class="dat" value="elf">Elf</option>
+        <option class="dat" value="fal">Falcon X3+</option>
+        <!-- <option class="dat" value="joy">Joya X2</option> -->
+		<option class="dat" value="kym">Kyman</option>
+        <option class="dat" value="lyn">Lynx</option>
+        <option class="dat" value="me1">Memor</option>
+		<option class="dat" value="me2">Memor X3</option>
+		<option class="dat" value="sco">Scorpio X3</option>
+		
+		<option class="elo" value="iser">I-Series</option>
+		<option class="elo" value="panp">PayPoint</option>
+		<option class="elo" value="wind">Windows</option>
+		
+		<!-- <option class="get" value="b30">B300</option> -->
+		<!-- <option class="get" value="f11">F110</option> -->
+		<!-- <option class="get" value="s40">S400</option> -->
+		<option class="get" value="t80">T800</option>
+		<!-- <option class="get" value="v11">V110</option> -->
+		<option class="get" value="z71">Z710</option>
+		<!-- <option class="get" value="x50">X500</option> -->
+		
+		<option class="hon" value="ck3x">CK3X, CK3R</option>
+		<option class="hon" value="ck6x">CK6X</option>
+		<option class="hon" value="cn51">CN51</option>
+		<option class="hon" value="70se">70 Series</option>
+		
+		<option class="hon" value="60s">Dolphin 60s</option>
+		<option class="hon" value="610">Dolphin 6100</option>
+		<option class="hon" value="611">Dolphin 6110</option>
+		<option class="hon" value="650">Dolphin 6500</option>
+		<option class="hon" value="70e">Dolphin 70e</option>
+		<option class="hon" value="75e">Dolphin 75e</option>
+		<option class="hon" value="780">Dolphin 7800</option>
+		<option class="hon" value="99e">Dolphin 99EX/GX/NI</option>
+		<option class="hon" value="ct5">Dolphin CT50</option>
+		<option class="hon" value="s51">Scanpal 5100</option>
+		<option class="hon" value="eda">Scanpal EDA50</option>
+		<option class="hon" value="edk">Scanpal EDA50K</option>
+		
+		<!-- <option class="zeb" value="mc21">MC2100</option> -->
+		<option class="zeb" value="mc30">MC3000</option>
+		<!-- <option class="zeb" value="mc31">MC3100</option> -->
+		<option class="zeb" value="mc32">MC3200</option>
+		<!-- <option class="zeb" value="mc35">MC35</option> -->
+		<!-- <option class="zeb" value="mc36">MC36</option> -->
+		<option class="zeb" value="mc40">MC40</option>
+		<!-- <option class="zeb" value="mc45">MC45</option> -->
+		<!-- <option class="zeb" value="mc50">MC50</option> -->
+		<option class="zeb" value="mc55">MC55</option>
+		<!-- <option class="zeb" value="mc65">MC65</option> -->
+		<option class="zeb" value="mc67">MC67</option>
+		<!-- <option class="zeb" value="mc70">MC70</option> -->
+		<!-- <option class="zeb" value="mc75">MC75</option> -->
+		<!-- <option class="zeb" value="mc91">MC9100</option> -->
+		<option class="zeb" value="mc92">MC9200</option>
+		<!-- <option class="zeb" value="mc95">MC9500</option> -->
+		<option class="zeb" value="tc20">TC20</option>
+		<option class="zeb" value="tc20">TC25</option>
+		<option class="zeb" value="tc55">TC51</option>
+		<option class="zeb" value="tc55">TC55</option>
+		<option class="zeb" value="tc70">TC70</option>
+		<option class="zeb" value="tc75">TC75</option>
+		<option class="zeb" value="tc80">TC8000</option>
+		<option class="zeb" value="wt40">WT40N0</option>
+		<option class="zeb" value="wt41">WT41N0</option>
+		<option class="zeb" value="wt60">WT6000</option>
+    </select>
+    <br>
+    <br>
+	<br>
+        <div id="fancy" class="fancy">Fix it Up!</div>
+		
+</div>
+</form>
+
+</div>
+</div>
+</div>
+
+<div class="reload">Click here to <a href="./index.html"><b>reload</b></a></div>
+<div class="hline"></div>
+<div id="but" class="current">Current:</div>
+
+		
+<script>
+	$(".fancy").click(function() {
+		var dev = $("#dev option:selected").text();
+		var mod = $("#mod option:selected").text();
+		var text = dev+" "+mod+".txt";
+		$("#but").text("Current: "+text);
+		$.fancybox({
+			type: 'iframe',
+			href: "src/txt/"+dev+" "+mod+".txt"
+		});
+	});
+	$( document ).ready(function() { 
+      $(".reload").click(function(event) { 
+        window.location.href = 'index.html';
+        event.preventDefault(); 
+      }); 
+	});
+	$("#dev").change(function(){
+		var text = $("#dev option:selected").text();
+		$("#but").text("Current: "+text);
+	});	
+	$("#mod").change(function(){
+		var dev = $("#dev option:selected").text();
+		var mod = $("#mod option:selected").text();
+		var text = dev+" "+mod+".txt";
+		$("#but").text("Current: "+text);
+	});
+</script>
 </body>
 </html>
