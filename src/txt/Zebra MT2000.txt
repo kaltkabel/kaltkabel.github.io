@@ -1,0 +1,11 @@
+  COLDBOOT
+-------------
+Press and hold 2 + TRIGGER buttons for 10 seconds
+
+
+  OS UPDATE
+--------------
+1. ActiveSync MT2000 to PC
+2. Unzip the appropriate OSUpdate for the model (MT2070 or MT2090)
+3. Run the “ActiveSyncOSUpdate.bat”
+4. After the Update, the MT2000 will reboot

@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------------------------
+ COLDBOOT
+------------------------------------------------------------------------------------------------
+ 1  Press ESC + ENTER + POWER
+
+
+------------------------------------------------------------------------------------------------
+ FACTORY RESET
+------------------------------------------------------------------------------------------------
+ 1  Perform a COLD BOOT
+     Press ESC + ENT + POWER
+ 2  Quickly release the keys when the screen goes black
+ 3  Within 1 second press and hold down ESC + "0" keys
+     Release the keys when a confirmation window shows up
+ 4  Confirm with "1"
+
+
+------------------------------------------------------------------------------------------------
+ OS UPDATE
+------------------------------------------------------------------------------------------------
+ 1  Copy DLUpdate.bin ----> \MemorX3\Backup
+ 2  Copy DLUPDEX_Run.exe -> \MemorX3\Backup
+ 3  Start DLUPDEX_Run.exe from the MemorX3
+ 4  Perform Factory Reset
+
+ or with DFU Tool

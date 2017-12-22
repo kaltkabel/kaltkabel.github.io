@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------------------------
+ COLDBOOT
+------------------------------------------------------------------------------------------------
+ 1  Turn on the Device
+ 2  Press "F1" + "F2" + SCAN + POWER
+
+
+------------------------------------------------------------------------------------------------
+ FACTORY RESET
+------------------------------------------------------------------------------------------------
+ 1  Turn on the Device
+ 2  Perform a COLD BOOT
+     Press "F1" + "F2" + SCAN + POWER
+     Release all keys when the screen goes black
+ 3  Immediately press and hold ESC and "0"
+ 4  Release the keys when the left orange LED starts blinking
+ 5  Confirm with "1"

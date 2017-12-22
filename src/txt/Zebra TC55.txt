@@ -1,0 +1,39 @@
+----------------------------------------------------------------------------------------------
+ANDROID Coldboot                                                                       ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Simultaneously press POWER + Left ACTION button + VOLUME UP
+ 2  The Device will reboot
+ 
+
+----------------------------------------------------------------------------------------------
+ANDROID Accessing the Recovery Menu                                                    ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Reboot the device
+ 2  Press and hold down Vol+
+
+ Recovery Menu (as seen in FW 4.1.2)
+  > Apply from SD card
+  > Apply from internal
+  > Reboot
+ 
+ 
+----------------------------------------------------------------------------------------------
+ANDROID Factory Reset                                                                  ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Copy <Factory Reset>.zip to the following path
+     JB: T55N0JxxVRFENxx.zip -> microSD:\ or internal:\
+     KK: T55N0KxxVRFENxx.zip -> microSD:\ or internal:\
+ 2  Boot into RECOVERY
+     Press and hold VOLUME UP while booting
+ 3  Apply UPDATE
+     Select "apply update from SD" or "apply update from internal"
+     Select the .zip file
+----------------------------------------------------------------------------------------------ANDROID Operating System Update                                                        ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Copy files to SD
+     T55N0xxxVRUxxxx.zip -> microSD:\ or internal:\
+ 2  Boot into RECOVERY
+     Press and hold VOLUME UP while booting
+ 3  Apply UPDATE
+     Select "apply update from SD" or "apply update from internal"
+     Select the .zip file

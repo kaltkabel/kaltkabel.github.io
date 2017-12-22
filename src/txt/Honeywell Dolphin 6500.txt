@@ -1,0 +1,7 @@
+ COLDBOOT CE
+-------------
+1. 28-key: Press and hold POWER button and then press the Reset 
+           button with the stylus
+   52-key: Press and hold BLUE and Z (Power) buttons and then 
+           press the Reset button with the stylus.
+2. The screen turns white and the decode/scan LED flashes blue for approximately 18 seconds

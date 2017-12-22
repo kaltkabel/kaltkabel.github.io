@@ -1,0 +1,20 @@
+Bisher getestet bei: elopoint2, elo15e2itpos7, elo20x3-2
+
+1  Power off your system completely.
+2  Power on your system.
+3  After the Elo splash screen (shown below), press “ARROW UP” or “ARROW DOWN” 
+   repeatedly to pause on Windows Boot Manager.
+4  Select either Restore OS 32bit or Restore OS 64bit depending on your OS
+   environment
+5  The following User Interface (UI) will be presented
+6  Select Restore OS. System will test your hardware automatically. Once the
+   process completes, click Start button to perform the system recovery function
+7  The following process will reformat the primary hard drive. Please back up your
+   data before performing the recovery process
+8  Once completed, click the Close button. The system will return to the main menu
+   of the Elo Recovery Solution. Then click the Exit button to restart your system
+
+
+NOTE: All data is deleted during the recovery process. The user must back up files
+when necessary. Elo Touch Solutions does not accept liability for lost data or
+software

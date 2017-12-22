@@ -1,0 +1,47 @@
+ COLDBOOT
+---------------
+1. Simultaneously press "1" + "9" + POWER
+2. The Device will reboot
+
+
+
+ FACTORY RESET CE
+------------------
+1. Copy files to SD
+	 OSUpdate -> microSD:\
+	 or
+	 OSUpdate -> internal:\temp\
+2. Excecute OSUpdate
+	 Navigate to OSUpdate using the explorer
+	 Double tap on
+		when using temp:    32N0c70Ben_TEMP.lnk
+		when using microSD: 32N0c70Ben_SD.lnk
+3. The System starts to FACTORY RESET
+
+
+To remove the Autostart Apps:
+1 Open the Application folder.
+2 Delete the Sample.C folder and its contents.
+3 Delete the StartUpCtl folder and its contents.
+4 Delete the Samples.C file.
+5 Open the StartUp folder.
+6 Delete the StartUpCtl file.
+
+
+
+ FACTORY RESET AND
+-------------------
+1. Copy files to Storage
+	 cleaner.zip -> microSD:\
+	 or
+	 adb (Minimal ADB Directory)
+2. Boot into RECOVERY
+	 Press and hold the TRIGGER button while booting
+	 or
+	 ADB command: "adb reboot recovery"
+3. Apply UPDATE
+	 Select "apply from sd"
+	 Select the cleaner.zip
+	 or
+	 Select "apply from adb"
+	 ADB command: "adb sideload cleaner.zip"

@@ -1,0 +1,6 @@
+----------------------------------------------------------------------------------------------
+ANDROID Factory Reset                                                                  ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Perform a Factory Reset using the Settings:
+      Settings -> Backup & Reset -> Perform Factory Reset
+ 2  The device will perform a Factory Reset

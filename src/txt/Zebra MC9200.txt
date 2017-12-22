@@ -1,0 +1,156 @@
+--------------------------------------------------------------------------------------------------
+ANDROID Coldboot                                                                           ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Press POWER button
+ 2  Tap SAFE BATTERY SWAP
+ 3  Partially eject the BATTERY
+ 4  Press and release SCAN TRIGGER + POWER
+ 5  Reinsert the BATTERY
+ 
+ 
+--------------------------------------------------------------------------------------------------
+ANDROID Accessing the Recovery Menu                                                        ANDROID
+--------------------------------------------------------------------------------------------------
+ > USB Debugging ADB method
+    1  Connect the device to PC via USB Debugging
+    2  Send command: adb device recovery
+ > Button combination method
+    1  Reboot the device
+    2  In the boot process press and hold the GUN-SCAN trigger
+	
+ 
+--------------------------------------------------------------------------------------------------
+ANDROID Factory Reset (SD card method)                                                     ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Copy Cleaner files <M92N0KXXXRFxyz>.zip or any newer version -> SD:\<M92N0KXXXRFxyz>.zip
+ 2  Reboot into RECOVERY
+     Press and hold the POWER button and select Reboot
+     When rebooting hold the gun SCAN trigger
+     The Device will enter the RECOVERY
+ 3  Start the FACTORY RESET
+     Use the ARROWS to navigate to "apply update from sdcard"
+     Select the <M92N0KXXXRFxyz>.zip to start the RESET
+ 4  Wait until the process is finished and restart the device
+
+ 
+-------------------------------------------------------------------------------------------------- 
+ANDROID Factory Reset (USB method)                                                         ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Copy Cleaner files <M92N0KXXXRFxyz>.zip or any newer version -> internal:\<M92N0KXXXRFxyz>.zip
+ 2  Reboot into RECOVERY
+     Press and hold the POWER button and select Reboot
+     When rebooting hold the gun SCAN trigger
+     The Device will enter the RECOVERY
+ 3  Start the FACTORY RESET
+     Use the ARROWS to navigate to "apply update from internal"
+     Select the <M92N0KXXXRFxyz>.zip to start the RESET
+ 4  Wait until the process is finished and restart the device
+ 
+
+-------------------------------------------------------------------------------------------------- 
+ANDROID Factory Reset (ADB method)                                                         ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Connect MC9200 to PC via USB Debugging
+ 2  Send command: adb reboot recovery
+ 3  In Recovery Mode, select "apply update from ADB"
+ 4  Send command: adb sideload <M92N0KXXXRFxyz>.zip
+ 5  When finished select "reboot system now"
+
+
+--------------------------------------------------------------------------------------------------
+ANDROID OS Recovery Update Package (SD card method)                                        ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Copy the <recovery update xyz>.zip file to a SD card.
+ 2  Remove the MC92 keypad (the device will suspend), insert the SD card, replace keypad.
+ 3  Press power key to resume device.
+ 4  Press and hold the Power button on the device until the Device options menu appears.
+ 5  Tap on Reset to reboot the device.
+ 6  When the device is rebooting hold the gun scan trigger to enter Recovery update mode.
+ 7  When the Recovery Mode home screen (Android logo) appears then release the gun scan trigger.
+ 8  Use keypad arrow keys to select “apply update from sdcard” option
+ 9  Press keypad Enter key to select the option
+ 10 Use keypad arrow keys to select <recovery update xyz>.zip file.
+ 11 Press keypad Enter key to select the <recovery update xyz>.zip file.
+ 12 Press keypad Enter key to select “reboot system now” to reboot the device.
+
+ 
+--------------------------------------------------------------------------------------------------
+ANDROID OS Recovery Update Package (USB method)                                            ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Connect MC9200 to PC via USB (note, PC must support MTP).
+ 2  Copy the <recovery update xyz>.zip file the internal memory of the MC9200. The internal 
+    memory will be shown in PC file browser as MC92N0\Internal storage.
+ 3  Press and hold the Power button on the device until the Device options menu appears.
+ 4  Tap on Reset to reboot the device.
+ 5  When the device is rebooting hold the gun scan trigger to enter Recovery update mode.
+ 6  When the Recovery Mode home screen (Android logo) appears then release the gun scan trigger.
+ 7  Use keypad arrow keys to select “apply update from emulated storage” option
+ 8  Press keypad Enter key to select the option
+ 9  Use keypad arrow keys to select <recovery update xyz>.zip file.
+ 10 Press keypad Enter key to select the <recovery update xyz>.zip file.
+ 11 Press keypad Enter key to select “reboot system now” to reboot the device.
+ 
+ 
+--------------------------------------------------------------------------------------------------
+ANDROID OS Recovery Update Package (ADB method)                                            ANDROID
+--------------------------------------------------------------------------------------------------
+ 1  Connect MC9200 to PC via USB Debugging
+ 2  Send command: adb reboot recovery
+ 3  In Recovery Mode, select "apply update from ADB"
+ 4  Send command: adb sideload <recovery update xyz>.zip
+ 5  When finished select "reboot system now"
+ 
+
+--------------------------------------------------------------------------------------------------
+WEH Coldboot                                                                                   WEH
+--------------------------------------------------------------------------------------------------
+ 1  Press POWER button
+ 2  Tap SAFE BATTERY SWAP
+ 3  Partially eject the BATTERY
+ 4  Press and release SCAN TRIGGER + POWER
+ 5  Reinsert the BATTERY
+  
+
+--------------------------------------------------------------------------------------------------
+WEH Factory Reset                                                                              WEH
+--------------------------------------------------------------------------------------------------
+ 1  Copy files to Storage
+     > sdcard:\
+     > internal:\temp\
+ 2  Start the UPDATE
+     Navigate to the above path using the file explorer
+     Execute the STARTUPDLDR.EXE
+ 3  The UPDATE will take about 1 minute
+
+
+--------------------------------------------------------------------------------------------------
+CE Coldboot                                                                             Windows CE
+--------------------------------------------------------------------------------------------------
+ 1  Partially eject the BATTERY
+ 2  Press and release SCAN TRIGGER + POWER
+ 3  Reinsert the BATTERY
+
+
+--------------------------------------------------------------------------------------------------
+CE Accessing the Bootloader Menu                                                        Windows CE
+--------------------------------------------------------------------------------------------------
+ 1  Reboot the device
+ 2  In the boot process press and hold the GUN-SCAN trigger
+ 
+ Bootloader Menu
+  > Download from SD Card
+  > Download from USB
+  > Exit
+ 
+
+--------------------------------------------------------------------------------------------------
+CE Factory Reset                                                                        Windows CE
+--------------------------------------------------------------------------------------------------
+ 1  Copy files to Storage
+     > SD:   OSupdate\ -> sdcard:\
+     > TEMP: OSupdate\ -> internal:\temp\
+ 2  Start the UPDATE
+     Navigate to the above path using the file explorer
+     > SD:   Execute 92N0c60Ben_SD
+     > TEMP: Execute 92N0c60Ben_TEMP
+ 3  The UPDATE will take about 1 minute

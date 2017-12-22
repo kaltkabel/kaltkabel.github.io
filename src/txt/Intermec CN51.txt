@@ -1,0 +1,92 @@
+-------------------------------------------------------------------------------------------------- 
+ COLD BOOT WEH
+--------------------------------------------------------------------------------------------------
+1. Press and hold the POWER button for at least 8 seconds
+2. The Computer turns off
+3. Press the POWER button again. The Computer cold boots.
+
+
+--------------------------------------------------------------------------------------------------
+ FACTORY RESET WEH
+--------------------------------------------------------------------------------------------------
+1. Copy DEMO files
+	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+	 
+2. Instruct the Bootloader to FACTORY RESET
+	 REBOOT the Device (Press the POWER button for 2 seconds and tap on REBOOT)
+	 When the white bar at the start up screen appears:
+		Press and hold the POWER button
+		Release when instructed "Release IO Button"
+	 When the message "Enter first key in 20s" appears:
+		Press "9" > "6" > "9" > "6"
+	 The Computer starts the cleanboot process.
+
+
+--------------------------------------------------------------------------------------------------
+ FACTORY RESET AND
+--------------------------------------------------------------------------------------------------
+Perform FACTORY RESET by using Settings
+	 Goto All Apps > Settings > Backup & RESET
+	 Tap on FACTORY DATA RESET
+	 Confirm RESET PHONE and ERASE EVERYTHING
+	 
+or
+
+If stuck on Boot
+
+Restore FACTORY DEFAULT by using Bootloader
+	1. Boot into Recovery
+		Turn off the device
+		Remove the Battery and reinsert the Battery after a minute
+		Press and hold TOP(left) + BOTTOM(left) + TOP(right) + POWER buttons
+		When the "Intermec/Honeywell" logo (+ on the bottom a "powered by android") appears, 
+		  release only the POWER button
+		When the "Android" logo appears, release all other buttons
+		Navigate to RECOVERY MODE using TOP(left) and BOTTOM(left)
+		Press the TOP(right) button
+		When the "Android" logo with a RED TRIANGLE appears, press the RED button
+		
+		or
+		
+		ADB command "adb reboot recovery"
+		When the "Android" logo with a RED TRIANGLE appears, press the RED button
+		
+	2. Select "wipe cache partition"
+	3. Select "data/factory reset"
+	4. Perform FACTORY RESET by using Settings
+		Goto All Apps > Settings > Backup & RESET
+		Tap on FACTORY DATA RESET
+		Confirm RESET PHONE and ERASE EVERYTHING
+
+
+--------------------------------------------------------------------------------------------------
+ OS UPDATE WEH
+--------------------------------------------------------------------------------------------------
+1. Identify the Firmware
+	 The Part Number (PN) defines the Firmware Version
+	 Example:
+		PN CN51AN1KCF1W1000 = W1
+		PN CN51xxxxxxxW1xxx = W1
+	 W0 = "A4_WEH65_NOWAN_WWE" = WEH 6.5 WWE, WLAN only
+	 W1 = "A4_WEH65_WAN_WWE"   = WEH 6.5 WWE
+	 W2 = "A4_WEH65_NOWAN_LP"  = WEH 6.5 LP,  WLAN only
+	 W3 = "A4_WEH65_WAN_LP"    = WEH 6.5 LP
+		WWE = World Wide English
+		LP  = Laungage Pack (multilingual)
+
+2. Copy DEMO files
+	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+	 
+3. Update the OS
+	 AutoFlash.img, IBOOT.nb0 -> root of microSD card
+	 Remove the battery and insert the SD card
+	 Reinsert battery and place device on charge - The OS upgrade will begin
+	 When the “Autoflash Complete” message is displayed 
+		Remove the SD card
+	 Reboot the device
+
+
+--------------------------------------------------------------------------------------------------
+ OS UPDATE AND
+--------------------------------------------------------------------------------------------------
+Flash .zip in recovery

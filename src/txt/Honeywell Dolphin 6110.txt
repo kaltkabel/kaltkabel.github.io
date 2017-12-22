@@ -1,0 +1,17 @@
+ COLDBOOT
+----------
+1. Hold the POWER button until a menu appears
+2. Select HARD RESET
+
+
+ FACTORY RESET WEH
+-------------------
+Copy Files
+1. Connect the Device to the Computer
+2. Powertools and Demos -> IPSM/Honeywell/Autoinstall
+
+Instruct Bootloader to FACTORY RESET:
+1. Perform a Hard Reset / Cold boot (Power Menu)
+2. When the Screen turns on:
+	 Enter on numeric keyboard: 1 > 2 > 7 > 7
+3. Confirm with Enter > Enter
