@@ -14,3 +14,4 @@ ANDROID Accessing the Android Home Menu                                         
 ANDROID Troubleshooting                                                                 ANDROID
 ----------------------------------------------------------------------------------------------- 	   
  Default Password for Control Panel / EloView: 1elo
+ 
