@@ -67,11 +67,11 @@ ANDROID OS Recovery Update Package (SD card method)                             
  5  Tap on Reset to reboot the device.
  6  When the device is rebooting hold the gun scan trigger to enter Recovery update mode.
  7  When the Recovery Mode home screen (Android logo) appears then release the gun scan trigger.
- 8  Use keypad arrow keys to select “apply update from sdcard” option
+ 8  Use keypad arrow keys to select "apply update from sdcard" option
  9  Press keypad Enter key to select the option
  10 Use keypad arrow keys to select <recovery update xyz>.zip file.
  11 Press keypad Enter key to select the <recovery update xyz>.zip file.
- 12 Press keypad Enter key to select “reboot system now” to reboot the device.
+ 12 Press keypad Enter key to select "reboot system now" to reboot the device.
 
  
 --------------------------------------------------------------------------------------------------
@@ -84,11 +84,11 @@ ANDROID OS Recovery Update Package (USB method)                                 
  4  Tap on Reset to reboot the device.
  5  When the device is rebooting hold the gun scan trigger to enter Recovery update mode.
  6  When the Recovery Mode home screen (Android logo) appears then release the gun scan trigger.
- 7  Use keypad arrow keys to select “apply update from emulated storage” option
+ 7  Use keypad arrow keys to select "apply update from emulated storage" option
  8  Press keypad Enter key to select the option
  9  Use keypad arrow keys to select <recovery update xyz>.zip file.
  10 Press keypad Enter key to select the <recovery update xyz>.zip file.
- 11 Press keypad Enter key to select “reboot system now” to reboot the device.
+ 11 Press keypad Enter key to select "reboot system now" to reboot the device.
  
  
 --------------------------------------------------------------------------------------------------
@@ -154,3 +154,7 @@ CE Factory Reset                                                                
      > SD:   Execute 92N0c60Ben_SD
      > TEMP: Execute 92N0c60Ben_TEMP
  3  The UPDATE will take about 1 minute
+ 
+ To remove the Autostart Apps:
+  1  Open the Application folder.
+  2  Delete Sample.C/ folder, StartUpCtl/ folder, Samples.C file, StartUp/StartUpCtl file

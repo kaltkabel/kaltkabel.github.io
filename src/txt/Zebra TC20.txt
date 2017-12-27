@@ -16,6 +16,12 @@ ANDROID Accessing the Recovery Menu                                             
  2  Press and hold down PTT buttons
  3  Release when the device vibrates or when the zebra Logo appears
  
+ Recovery Menu (Android 7.1.2)
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
+ > power off
+ 
  
 ----------------------------------------------------------------------------------------------
 ANDROID Installing a zip file (SD card method)                                         ANDROID
