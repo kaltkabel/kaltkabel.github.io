@@ -1,12 +1,14 @@
- COLDBOOT
----------------
-1. Simultaneously press "1" + "9" + POWER
-2. The Device will reboot
+--------------------------------------------------------------------------------------------------
+ Coldboot                                                                            
+--------------------------------------------------------------------------------------------------
+ 1  Simultaneously press "1" + "9" + POWER
+ 2  The Device will reboot
 
 
 
- FACTORY RESET CE
-------------------
+--------------------------------------------------------------------------------------------------
+CE Factory Reset                                                                                CE
+--------------------------------------------------------------------------------------------------
 1. Copy files to SD
 	 OSUpdate -> microSD:\
 	 or
@@ -28,20 +30,30 @@ To remove the Autostart Apps:
 6 Delete the StartUpCtl file.
 
 
+--------------------------------------------------------------------------------------------------
+ANDROID Accessing the Recovery Menu                                                        ANDROID
+--------------------------------------------------------------------------------------------------
+ > USB Debugging ADB method
+    1  Connect the device to PC via USB Debugging
+    2  Send command: adb device recovery
+ > Button combination method
+    1  Reboot the device
+    2  In the boot process press and hold the GUN-SCAN trigger
+	
+ Recovery Menu (Android 4.1.1):
+ > reboot system now
+ > apply update from sd
+ > apply update from adb
+	
 
- FACTORY RESET AND
--------------------
-1. Copy files to Storage
-	 cleaner.zip -> microSD:\
-	 or
-	 adb (Minimal ADB Directory)
-2. Boot into RECOVERY
-	 Press and hold the TRIGGER button while booting
-	 or
-	 ADB command: "adb reboot recovery"
-3. Apply UPDATE
-	 Select "apply from sd"
-	 Select the cleaner.zip
-	 or
-	 Select "apply from adb"
-	 ADB command: "adb sideload cleaner.zip"
+--------------------------------------------------------------------------------------------------
+ANDROID Factory Reset                                                                      ANDROID
+--------------------------------------------------------------------------------------------------
+ > Using the SD card:
+    1  Copy <cleaner>.zip to microSD:/
+    2  Reboot into Recovery
+    3  Apply update from SD
+ 
+ > Using the ADB:
+    1  Reboot into Recovery  ("adb reboot recovery")
+    2  Apply update from ADB ("adb sideload <cleaner>.zip")
