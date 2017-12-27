@@ -104,6 +104,18 @@
 					</select>
 				</div>
 				<div id="fancy" class="fancy text center">Fix it Up!</div>
+				<script>
+					$(".fancy").click(function() {
+						var dev = $("#dev option:selected").text();
+						var mod = $("#mod option:selected").text();
+						var text = dev+" "+mod+".txt";
+						$("#but").text("Current: "+text);
+						$.fancybox({
+							type: 'iframe',
+							href: "src/txt/"+dev+" "+mod+".txt"
+						});
+					});
+				</script>
 			</div>
 		</div>
 	</div>
