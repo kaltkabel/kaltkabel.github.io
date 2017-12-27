@@ -1,19 +1,20 @@
-</html>
+<!-- <!DOCTYPE html> -->
+<html>
 <head>
-	<title>JT - Fix it Up! Tool</title>
+	<title>JT - Fix it Up!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-	<link rel="stylesheet" href="src/css/front.css" type="text/css">
-	<link rel="stylesheet" href="src/css/mobile.css" type="text/css">
-	<link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="src/css/front.css" type="text/css" />
+	<link rel="stylesheet" href="src/css/mobile.css" type="text/css" />
+	<link rel="icon" href="src/img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="src/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<link rel="stylesheet" href="src/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<link rel="stylesheet" href="src/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 	<script src="src/js/jquery.js"></script>
-	<script type="text/javascript" src="src/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-	<script type="text/javascript" src="src/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<script type="text/javascript" src="src/fancybox/source/jquery.fancybox.pack.js?v=2.1.5" />
+	<script type="text/javascript" src="src/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" />
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5" />
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6" />
+	<script type="text/javascript" src="src/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7" />
 	<script>
 		$(window).on('load', function() {
 			$('#dev').on('change', function () {
@@ -34,111 +35,77 @@
 		}
 	</script>
 </head>
-
 <body>
-	<div id="outerbox">
-		<div id="innerbox">
-			<p class="center"><a class="link title text" href=".">JT Reset FAQ</a><p>
-			<div class="form">
-				<select id="dev" class="selection" onchange="unhide()">
-					<option disabled selected value="0">Choose Manufacturer</option>
-					<option value="dat">Datalogic</option>
-					<option value="elo">ELO</option>
-					<option value="get">Getac</option>
-					<option value="hon">Honeywell</option>
-					<option value="zeb">Zebra</option>
-				</select>
-				<br />
-				<select id="mod" class="selection" disabled required="required">
-					<option disabled selected="selected" class="default">Choose Model</option>
-					<!-- DATALOGIC -->
-					<option class="dat">DL-Axist</option>
-					<option class="dat">Elf</option>
-					<option class="dat">Falcon X3+</option>
-					<option class="dat">Kyman</option>
-					<option class="dat">Lynx</option>
-					<option class="dat">Memor</option>
-					<option class="dat">Memor X3</option>
-					<option class="dat">Scorpio X3</option>
-					<!-- ELO TOUCH -->
-					<option class="elo">I-Series</option>
-					<option class="elo">PayPoint</option>
-					<option class="elo">Windows</option>
-					<!-- GETAC -->
-					<option class="get">T800</option>
-					<option class="get">Z710</option>
-					<!-- HONEYWELL -->
-					<option class="hon">CK3X, CK3R</option>
-					<option class="hon">CK6X</option>
-					<option class="hon">CN51</option>
-					<option class="hon">70 Series</option>
-					<option class="hon">Dolphin 60s</option>
-					<option class="hon">Dolphin 6100</option>
-					<option class="hon">Dolphin 6110</option>
-					<option class="hon">Dolphin 6500</option>
-					<option class="hon">Dolphin 70e</option>
-					<option class="hon">Dolphin 75e</option>
-					<option class="hon">Dolphin 7800</option>
-					<option class="hon">Dolphin 99EX/GX/NI</option>
-					<option class="hon">Dolphin CT50</option>
-					<option class="hon">Scanpal 5100</option>
-					<option class="hon">Scanpal EDA50</option>
-					<option class="hon">Scanpal EDA50K</option>
-					<!-- ZEBRA -->
-					<option class="zeb">MC3000</option>
-					<option class="zeb">MC3200</option>
-					<option class="zeb">MC40</option>
-					<option class="zeb">MC55</option>
-					<option class="zeb">MC67</option>
-					<option class="zeb">MC9200</option>
-					<option class="zeb">TC20</option>
-					<option class="zeb">TC25</option>
-					<option class="zeb">TC51</option>
-					<option class="zeb">TC55</option>
-					<option class="zeb">TC70</option>
-					<option class="zeb">TC75</option>
-					<option class="zeb">TC8000</option>
-					<option class="zeb">WT40N0</option>
-					<option class="zeb">WT41N0</option>
-					<option class="zeb">WT6000</option>
-				</select>
+	<div id="container">
+		<div id="middle">
+			<div id="inner">
+				<p class="center"><a class="link title text" href=".">JT Reset FAQ</a></p>
+				<div class="form">
+					<select id="dev" class="selection" onchange="unhide()">
+						<option disabled selected value="0">Choose Manufacturer</option>
+						<option value="dat">Datalogic</option>
+						<option value="elo">ELO</option>
+						<option value="get">Getac</option>
+						<option value="hon">Honeywell</option>
+						<option value="zeb">Zebra</option>
+					</select>
+					<select id="mod" class="selection" disabled required="required">
+						<option disabled selected="selected" class="default">Choose Model</option>
+						<!-- DATALOGIC -->
+						<option class="dat">DL-Axist</option>
+						<option class="dat">Elf</option>
+						<option class="dat">Falcon X3+</option>
+						<option class="dat">Kyman</option>
+						<option class="dat">Lynx</option>
+						<option class="dat">Memor</option>
+						<option class="dat">Memor X3</option>
+						<option class="dat">Scorpio X3</option>
+						<!-- ELO TOUCH -->
+						<option class="elo">I-Series</option>
+						<option class="elo">PayPoint</option>
+						<option class="elo">Windows</option>
+						<!-- GETAC -->
+						<option class="get">T800</option>
+						<option class="get">Z710</option>
+						<!-- HONEYWELL -->
+						<option class="hon">CK3X, CK3R</option>
+						<option class="hon">CK6X</option>
+						<option class="hon">CN51</option>
+						<option class="hon">70 Series</option>
+						<option class="hon">Dolphin 60s</option>
+						<option class="hon">Dolphin 6100</option>
+						<option class="hon">Dolphin 6110</option>
+						<option class="hon">Dolphin 6500</option>
+						<option class="hon">Dolphin 70e</option>
+						<option class="hon">Dolphin 75e</option>
+						<option class="hon">Dolphin 7800</option>
+						<option class="hon">Dolphin 99EX/GX/NI</option>
+						<option class="hon">Dolphin CT50</option>
+						<option class="hon">Scanpal 5100</option>
+						<option class="hon">Scanpal EDA50</option>
+						<option class="hon">Scanpal EDA50K</option>
+						<!-- ZEBRA -->
+						<option class="zeb">MC3000</option>
+						<option class="zeb">MC3200</option>
+						<option class="zeb">MC40</option>
+						<option class="zeb">MC55</option>
+						<option class="zeb">MC67</option>
+						<option class="zeb">MC9200</option>
+						<option class="zeb">TC20</option>
+						<option class="zeb">TC25</option>
+						<option class="zeb">TC51</option>
+						<option class="zeb">TC55</option>
+						<option class="zeb">TC70</option>
+						<option class="zeb">TC75</option>
+						<option class="zeb">TC8000</option>
+						<option class="zeb">WT40N0</option>
+						<option class="zeb">WT41N0</option>
+						<option class="zeb">WT6000</option>
+					</select>
+				</div>
+				<div id="fancy" class="fancy text center">Fix it Up!</div>
 			</div>
-			<div id="fancy" class="fancy text center">Fix it Up!</div>
 		</div>
 	</div>
-
-<div class="reload">Click here to <a href="."><b>reload</b></a></div>
-<div class="hline"></div>
-<div id="but" class="current">Current:</div>
-
-		
-<script>
-	$(".fancy").click(function() {
-		var dev = $("#dev option:selected").text();
-		var mod = $("#mod option:selected").text();
-		var text = dev+" "+mod+".txt";
-		$("#but").text("Current: "+text);
-		$.fancybox({
-			type: 'iframe',
-			href: "src/txt/"+dev+" "+mod+".txt"
-		});
-	});
-	$( document ).ready(function() { 
-      $(".reload").click(function(event) { 
-        window.location.href = 'index.html';
-        event.preventDefault(); 
-      }); 
-	});
-	$("#dev").change(function(){
-		var text = $("#dev option:selected").text();
-		$("#but").text("Current: "+text);
-	});	
-	$("#mod").change(function(){
-		var dev = $("#dev option:selected").text();
-		var mod = $("#mod option:selected").text();
-		var text = dev+" "+mod+".txt";
-		$("#but").text("Current: "+text);
-	});
-</script>
 </body>
 </html>

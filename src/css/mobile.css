@@ -1,114 +1,81 @@
 @media screen and (max-width: 481px){
-body {
-	background-color: rgba(35, 35, 35, 1);
+*{
+	padding:0;
+	margin:0;
 }
-h3 {
-	font: normal normal normal 25px/1.2em 'Open Sans',sans-serif;
-	font-family: segoe ui;
-	font-size: 56px;
-	text-align: center;
-	color: #FFFFFF;
-}
-form {
-	margin: 0px auto;
-	max-width: 450px;
-	color: white;
-}
-.box select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border:none;
-	border-radius: 0;
-	font-size: 1em;
-	width: 100%;
-	color:grey;
-	transition: background 0.3s linear;
-} 
-select {
-	font-family: segoe ui;
-	border: 1px solid #bbb;
-	padding: .6em 5em .6em 1em;
-	background-color:rgba(52, 52, 52, 0.3);
-	background-position: right;
-	background-repeat: no-repeat;
-	color:grey;
-	transition: background 0.3s linear;
-}
-select:disabled {
-	background-color:rgba(52, 52, 52, 0.3);
-	color:rgba(77, 77, 77, 0.8);
-	transition: background 0.3s linear;
-}
-select:hover:enabled {
-	background-color:rgba(52, 52, 52, 0.6);
-	transition: background 0.3s linear;
+body{
+	background-color:rgba(35, 35, 35, 1);
+	
 }
 option {
 	background:rgb(52, 52, 52);
 }
-.box {
-	padding: 0px;
+#container {
+	display: table;
+	width: 100%;
+	height: 90%;
 }
-.fancy {
+#middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+#inner {
+	display: table;
+	margin: 0 auto;
+	max-width:400px;
+}
+.center{
 	text-align:center;
+}
+.selection{
+	width:100%;
+}
+.text{
+	color:white;
+	font-family:segoe ui;
+}
+.link{
+	text-decoration:none;
+}
+.title{
+	font-size:56px;
+	width:450px;
+}
+.form{
+	margin-top:40px;
+}
+.selection {
+	font-family: segoe ui;
+	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	appearance: none;
 	border:none;
-	border-radius: 0;
+	padding: .6em 5em .6em 1em;
+	margin: 10px 0;
 	font-size: 1em;
-	font-family: segoe ui;
-	max-width: 450px;
-	border: 0px solid #bbb;
-	padding: .5em 1em .5em 1em;
-	background-position: right;
-	background-repeat: no-repeat;
+	color:grey;
+	background-color:rgba(52, 52, 52, 0.3);
 	transition: background 0.3s linear;
+}
+.selection:disabled {
+	color:rgba(77, 77, 77, 0.8);
+	background-color:rgba(52, 52, 52, 0.3);
+	transition: background 0.3s linear;
+}
+.selection:hover:enabled {
+	cursor: pointer;
+	background-color:rgba(52, 52, 52, 0.6);
+	transition: background 0.3s linear;
+}
+.fancy {
+	padding: .5em 1em .5em 1em;
+	margin-top: 30px;
 	border-radius: 3px;
+	transition: background 0.3s linear;
 }
 .fancy:hover {
 	cursor: pointer;
 	position: relative;
 	background-color: rgba(0,191,255,0.5);
 	transition: background 0.3s linear;
-}
-
-.reload {
-	font-family: segoe ui;
-	text-align: center;
-	color: rgb(200,200,200);
-}
-a {
-	text-decoration: none;
-	color: white;
-	font-family: segoe ui;
-	font-size: 15px;
-}
-.hline {
-	background-color: rgba(200,200,200,0.3);
-	width: 240px;
-	height:  1px;
-	margin-top: 3px;
-	margin-left: auto;
-	margin-right: auto; 
-}
-.current {
-	font-family: segoe ui;
-	text-align: center;
-	color: rgb(200,200,200);
-}
-
-.outer {
-	display: table;
-	height: 80%;
-	width: 100%;
-}
-.middle {
-	display: table-cell;
-	vertical-align: middle;
-}
-.inner {
-	margin-left: auto;
-	margin-right: auto; 
 }
