@@ -34,7 +34,7 @@ ANDROID Installing a zip file (SD card method)                                  
  2  Reboot into RECOVERY
      Press and hold the POWER button and select Reboot
      When rebooting hold the PTT button
-	 Release when the device vibrates or when the zebra Logo appears
+     Release when the device vibrates or when the zebra Logo appears
      The Device will enter the RECOVERY
  3  Start the FACTORY RESET
      Use the ARROWS to navigate to "apply update from sdcard"
