@@ -124,6 +124,29 @@ WEH Factory Reset                                                               
 
 
 --------------------------------------------------------------------------------------------------
+WEH OS Update                                                                                  WEH
+--------------------------------------------------------------------------------------------------
+ 1  Copy files to Storage
+     > sdcard:\
+     > internal:\temp\
+ 2  Start the UPDATE
+     Navigate to the above path using the file explorer
+     Execute the STARTUPDLDR.EXE
+ 3  The UPDATE will take about 1 minute
+
+ or
+
+ 1  Copy files to Storage
+     > sdcard:\
+ 2. Connect the MC92N0-G to AC power. 
+ 3. Perform a cold boot.
+ 5. When the device starts to boot (and before Splash Screen appears) press and hold the Trigger.
+ 6. A progress bar displays until the update completes.
+ 7. The MC92N0-G re-boots.
+ 8. The calibration screen appears.
+
+
+--------------------------------------------------------------------------------------------------
 CE Coldboot                                                                             Windows CE
 --------------------------------------------------------------------------------------------------
  1  Partially eject the BATTERY
