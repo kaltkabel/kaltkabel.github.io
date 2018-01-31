@@ -28,7 +28,7 @@
 	function Include() {
 		var opt1 = $("#mod option:selected").attr('class');
 		var opt2 = $("#mod option:selected").val();
-		var file = opt1+"_"+opt2;
+		var file = "./"+opt1+"_"+opt2;
 		$("#include").load("_includes/"+file); 
 		$("#include").css("left", "0px");
 		$("#include").css("opacity", "0");
