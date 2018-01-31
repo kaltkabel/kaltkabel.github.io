@@ -1,0 +1,18 @@
+<script src="_javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>1  Remove Battery
+2  Press the RESET button
+3  Reinsert the Battery
+4  Turn on the system</p>
+</div>
+
+<div class="howto wce factory">
+<p>1  Perform a COLD BOOT
+2  Immediately press and hold RED phone key + ZERO key
+3  Release the keys when the message "Clean Boot has been detected" appears
+4  Confirm with ENTER
+5  The System will begin the FACTORY RESET</p>
+</div>
+
+<div id="LastEdit"></div>

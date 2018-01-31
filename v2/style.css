@@ -1,0 +1,41 @@
+*{
+	padding:0;
+	margin:0;
+}
+html {
+	font-family: segoe ui;
+}
+#include {
+	position: relative;
+	width: 800px;
+	margin: 10px;
+}
+.howto:before {
+	font-size: 20px;
+}
+.howto {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.howto>p {
+	padding-left: 6px;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: dark-grey;
+	font-size: 13px;
+	font-family: consolas;
+	border-left: 1px solid;
+	white-space: pre-wrap;
+}
+.coldboot:before {
+	content: "Coldboot";
+}
+.factory:before {
+	content: "Factory Reset";
+}
+.os:before {
+	content: "Firmware Upgrade";
+}
+.menu:before {
+	content: "Recovery Menu";
+}

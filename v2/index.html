@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="_javascript/jquery-3.3.1.min.js"></script>
+	<script>
+		$(window).on('load', function() {
+			$('#dev').on('change', function () {
+				var selected = $(this).val().toLowerCase();
+				if (selected != '0') {
+					$('#mod').show();
+					$('#mod option').hide();  //hide all options initially
+					$('#mod option:eq(0)').show();  //show the first option
+					$('#mod option.' + selected).show();  //show options with the right class        
+				} else {
+					$('#mod').hide();     
+					$('#mod option').hide();        
+				}
+			});
+		});
+		function unhide() {
+			document.getElementById("mod").disabled = false;
+		}
+	</script> 
+	<script> 
+	function Include() {
+		var opt1 = $("#mod option:selected").attr('class');
+		var opt2 = $("#mod option:selected").val();
+		var file = opt1+"_"+opt2;
+		$("#include").load("_includes/"+file); 
+		$("#include").css("left", "0px");
+		$("#include").css("opacity", "0");
+		$("#include").animate({
+			left: '+=30px',
+			opacity: '1'
+			}, "fast");
+	}
+	</script>
+</head>
+<body>
+	<select id="dev" onchange="unhide()">
+		<option disabled selected value="0">Choose Manufacturer</option>
+        <option value="dat">Datalogic</option>
+		<option value="elo">ELO</option>
+        <option value="get">Getac</option>
+		<option value="hon">Honeywell</option>
+		<option value="zeb">Zebra</option>
+	</select>
+	<select id="mod" disabled required="required">
+		<option disabled selected="selected" class="default">Choose Model</option>
+		<option class="dat" value="axi">DL-Axist</option>
+		<option class="dat" value="elf">Elf</option>
+        <option class="dat" value="fal">Falcon X3+</option>
+        <!-- <option class="dat" value="joy">Joya X2</option> -->
+		<option class="dat" value="kym">Kyman</option>
+        <option class="dat" value="lyn">Lynx</option>
+        <option class="dat" value="me1">Memor</option>
+		<option class="dat" value="me2">Memor X3</option>
+		<option class="dat" value="sco">Scorpio X3</option>
+	</select>
+
+<button onclick="Include()">Fix It Up!</button> 
+<div id="include"></div>
+    
+</body>
+</html>

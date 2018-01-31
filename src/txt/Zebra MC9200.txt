@@ -136,7 +136,7 @@ WEH OS Update                                                                   
 
  or
 
- 1  Copy files to Storage
+ 1  Copy all the files to root
      > sdcard:\
  2. Connect the MC92N0-G to AC power. 
  3. Perform a cold boot.

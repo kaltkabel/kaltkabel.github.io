@@ -1,0 +1,18 @@
+<script src="_javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>1  Turn on the Device
+2  Press "F1" + "F2" + SCAN + POWER
+3  Release all keys when the screen goes black</p>
+</div>
+
+
+<div class="howto wce factory">
+<p>1  Turn on the Device
+2  Perform a COLD BOOT    
+3  Immediately press and hold ESC and "0"
+4  Release the keys when the left orange LED starts blinking
+5  Confirm with "1"</p>
+</div>
+
+<div id="LastEdit"></div>
