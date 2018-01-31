@@ -1,4 +1,4 @@
-<script src="_javascript/LastEdit.js"></script>
+<script src="javascript/LastEdit.js"></script>
 
 <div class="howto wce coldboot">
 <p>1  Turn off the Device
@@ -7,12 +7,13 @@
 4  Reinsert the Battery and boot</p>
 </div>
 
+
 <div class="howto wce factory">
-<p>1  Perform a COLD BOOT
+<p>1  Perform COLD BOOT
 2  Turn on the Device
 3  Press and hold ESC and 0 keys
 4  Confirm with ENT
 5  The device will perform a CLEAN BOOT</p>
 </div>
 
- <div id="LastEdit"></div>
+<div id="LastEdit"></div>

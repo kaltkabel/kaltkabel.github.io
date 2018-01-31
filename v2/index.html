@@ -4,7 +4,7 @@
 	<title>Test</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
-	<script src="_javascript/jquery-3.3.1.min.js"></script>
+	<script src="javascript/jquery-3.3.1.min.js"></script>
 	<script>
 		$(window).on('load', function() {
 			$('#dev').on('change', function () {
@@ -29,7 +29,7 @@
 		var opt1 = $("#mod option:selected").attr('class');
 		var opt2 = $("#mod option:selected").val();
 		var file = opt1+"_"+opt2;
-		$("#include").load("./_includes/"+file); 
+		$("#include").load("includes/"+file); 
 		$("#include").css("left", "0px");
 		$("#include").css("opacity", "0");
 		$("#include").animate({
