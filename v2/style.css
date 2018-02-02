@@ -1,8 +1,6 @@
 *{
-	padding:0;
-	margin:0;
-}
-html {
+	padding: 0;
+	margin: 0;
 	font-family: segoe ui;
 }
 #include {
@@ -16,6 +14,16 @@ html {
 .howto {
 	padding: 5px;
 	margin-bottom: 10px;
+	width:600px;
+}
+.android {
+
+}
+.wce {
+	
+}
+.weh {
+	
 }
 .howto>p {
 	padding-left: 6px;
@@ -24,7 +32,7 @@ html {
 	color: dark-grey;
 	font-size: 13px;
 	font-family: consolas;
-	border-left: 1px solid;
+	//border-left: 1px solid;
 	white-space: pre-wrap;
 }
 .coldboot:before {
@@ -38,4 +46,7 @@ html {
 }
 .menu:before {
 	content: "Recovery Menu";
+}
+#LastEdit {
+
 }
