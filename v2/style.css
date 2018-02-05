@@ -3,18 +3,22 @@
 	margin: 0;
 	font-family: segoe ui;
 }
+#dev, #mod {
+	width: 150px;
+}
+#fixit{
+	width: 60px;
+}
 #include {
 	position: relative;
 	width: 800px;
 	margin: 10px;
 }
-.howto:before {
-	font-size: 20px;
-}
 .howto {
 	padding: 5px;
 	margin-bottom: 10px;
 	width:600px;
+	font-size: 20px;
 }
 .android {
 

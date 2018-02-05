@@ -9,25 +9,31 @@
 	<script src="javascript/Options.js"></script> 
 </head>
 <body>
-	<select id="dev" onchange="unhide()">
+	<select id="dev" class="dropdown" onchange="unhide()">
 		<option disabled selected value="0">Choose Manufacturer</option>
         <option value="dat">Datalogic</option>
 		<option value="elo">ELO</option>
-        <option value="get">Getac</option>
-		<option value="hon">Honeywell</option>
-		<option value="zeb">Zebra</option>
+        <!--<option value="get">Getac</option>
+		<option value="hon">Honeywell</option>-->
+		<option value="m3m">M3 Mobile</option>
+		<!--<option value="zeb">Zebra</option>-->
 	</select>
-	<select id="mod" disabled required="required">
+	<select id="mod" class="dropdown" disabled required="required">
 		<option disabled selected="selected" class="default">Choose Model</option>
 		<option class="dat" value="axi">DL-Axist</option>
 		<option class="dat" value="elf">Elf</option>
         <option class="dat" value="fal">Falcon X3+</option>
-        <!-- <option class="dat" value="joy">Joya X2</option> -->
 		<option class="dat" value="kym">Kyman</option>
         <option class="dat" value="lyn">Lynx</option>
         <option class="dat" value="me1">Memor</option>
 		<option class="dat" value="me2">Memor X3</option>
 		<option class="dat" value="sco">Scorpio X3</option>
+		
+		<option class="elo" value="iser">I-Series</option>
+		<option class="elo" value="payp">PayPoint</option>
+		<option class="elo" value="wind">Windows</option>
+		
+		<option class="m3m" value="sm15">SM-15</option>
 	</select>
 	
 	<button id="fixit" onclick="Include()">Fix It Up!</button> 

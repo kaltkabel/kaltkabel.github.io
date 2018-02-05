@@ -1,0 +1,16 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p></p>
+</div>
+
+<div class="howto android factory">
+<p></p>
+</div>
+
+<div class="howto android menu">
+<p>1  Power On the device
+2  Hold VOL+</p>
+</div>
+
+<div id="LastEdit"></div>
