@@ -1,0 +1,99 @@
+----------------------------------------------------------------------------------------------
+ANDROID Accessing the Recovery Menu                                                    ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Restart the device
+ 2  Android 6: Press and hold the Power button and the Vol- button (works on FW 6.0.1)
+    Android 4: Press and hold the Left Scan button and the Vol- button (works on FW 4.4.4)
+ 3  Release when "Recovery" is shown on the display
+ 4  Press the Power button to access the Recovery Menu
+
+ Recovery Menu (as seen in FW 6.0.1)
+  > Reboot system now
+  > Wipe data/factory reset
+  > Reboot to bootloader
+  > Apply update from ADB
+  > Apply update from SD card
+  > Apply update from IPSM
+  > Wipe cache partition
+  > Wipe IPSM partition
+  > Mount /system
+  > View recovery logs
+  > Power off
+ 
+ Recovery Menu (as seen in FW 4.4.4)
+  > reboot system now
+  > apply update from ADB
+  > wipe data/factory reset
+  > wipe cache partition
+  > apply update from sdcard
+  > apply update from ipsm
+  > wipe ipsm partition
+
+
+----------------------------------------------------------------------------------------------
+ANDROID Factory Reset                                                                  ANDROID
+----------------------------------------------------------------------------------------------
+ 1  Copy <Demotools> files to one of the following folder:
+     1> CommonES_vX.xx.zip -> microSD\honeywell\autoinstall
+     2> CommonES_vX.xx.zip -> IPSM\honeywell\autoinstall
+     3> via ADB
+ 2  Perform a Factory Reset using the following options
+     1> Use the Settings Menu (Settings > Backup & reset > Factory Data Reset)
+     2> Access the Recovery Menu and perform a Factory Reset 
+ 3  The Demotools will be installed on next Boot
+    or install them manually using the Recovery Menu (Apply update)
+
+	
+----------------------------------------------------------------------------------------------
+ANDROID OS Update Android4 -> Android6                                                 ANDROID
+----------------------------------------------------------------------------------------------
+ 1. Copy DEMO Files
+	 Delete CommonES_v3.xx.zip -> IPSM\honeywell\autoinstall
+	 Move   CommonES_v4.xx.zip -> IPSM\honeywell\autoinstall
+ 
+ 2. Copy Firmware Files
+	 HELSINKIAD_xxx.zip -> root directory of IPSM or a microSD
+
+ 3. Copy Licence Files
+	 CT50 WLAN: lic_CT50L0N_1.xml -> root directory of Internal Storage
+	 CT50 WWAN: lic_CT50LFN_1.xml -> root directory of Internal Storage
+	 
+ 4. Reboot into Recovery
+	 The Device will reboot automatically in recovery
+	 --> If not: with a button combination at boot: POWER + VOL-
+	 Install the HELSINKIAD_xxx.zip and reboot
+	 
+	 
+----------------------------------------------------------------------------------------------	 
+WEH Factory Reset (8 - 10)                                                                 WEH
+----------------------------------------------------------------------------------------------
+ Using the Application
+ 1. Goto ALL APPS > SETTINGS > ABOUT
+ 2. Scroll to the bottom and tap on RESET YOUR PHONE
+ 3. Confirm with YES > YES
+
+ or
+
+ Using the Bootloader
+ 1. Remove and replace the battery
+ 2. Press and hold POWER + VOLUME DOWN
+ 3. Release when an exclamation mark "!" appears
+ 4. Press VOLUME UP > VOLUME DOWN > POWER > VOLUME DOWN
+ 
+
+----------------------------------------------------------------------------------------------	 
+WEH OS Update Win8 -> Win10                                                                WEH
+----------------------------------------------------------------------------------------------
+ 1. Copy Firmware Files
+	 Rename the xxx.ffu file to Flash.ffu
+	 Flash.ffu -> root dir of the SDcard
+	 
+ 2. Copy Licence Files
+	 CT50 WLAN = lic_CT50L0N_1.xml -> to the root dir of the SDcard
+	 CT50 WWAN = lic_CT50LFN_1.xml -> to the root dir of the SDcard
+
+ 3. Start the Upgrade
+	 Powerup the device
+	 Goto Settings > Manual Flash > SD CARD
+	 The device will reboot and display a "lightning bolt with a gear"
+	 The Upgrade will take under 10 minutes

@@ -1,0 +1,70 @@
+-----------------------------------------------------------------------------------------------
+ANDROID Accessing the Recovery Menu                                                     ANDROID
+-----------------------------------------------------------------------------------------------
+ 1  Reboot the device
+ 2  Hold down Vol+ button
+
+ Recovery Menu (as seen in Android 4)
+ > reboot system now
+ > apply update from ADB
+ > wipe data/factory reset
+ > wipe cache partition
+ > apply update from sdcard
+
+ 
+-----------------------------------------------------------------------------------------------
+ANDROID Factory Reset                                                                   ANDROID
+-----------------------------------------------------------------------------------------------
+ CommonES / Powertools / Demotools are part of the Firmware and will be installed automatically
+ 
+ 1  Connect the Device to a Computer and delete everything from the internal storage
+ 2  GoTo All Apps -> Settings -> Backup & Restore
+ 3  Select Erase Everything
+ 
+ If the device is locked, follow the following steps:
+ 1  Reboot into Recovery Menu by rebooting the device and holding Vol+ button
+ 2  Select "wipe data/factory reset"
+ 3  Select "reboot system now"
+ 
+ 
+-----------------------------------------------------------------------------------------------
+ANDROID OS Upgrade (AutoInstall method)                                                 ANDROID
+-----------------------------------------------------------------------------------------------
+ A upgrade-license is need to upgrade to Android 7. SKU 454-084-001
+ 1  Copy the upgrade file "EDA50-ota-xxx.zip" to the following folder:
+     External Memory/Honeywell/AutoInstall/
+ 2  GoTo All Apps -> AutoInstall Settings
+ 3  Choose Packages Update, and the EDA50 will restart and install the upgrade file
+ 
+ 
+-----------------------------------------------------------------------------------------------
+ANDROID OS Upgrade (Bootloader method)                                                  ANDROID
+-----------------------------------------------------------------------------------------------
+ A upgrade-license is need to upgrade to Android 7. SKU 454-084-001
+ 1  Copy the upgrade file "EDA50-ota-xxx.zip" to the root dir of the SDcard
+ 2  Restart the EDA50
+ 3  When the green light is seen, press and hold the following at the same time:
+     "(left) Scan key" + "Volume down key"
+ 4  The green lights turns off and the EDA50 will restart and install the upgrade file
+ 
+ 
+-----------------------------------------------------------------------------------------------
+ANDROID OS Upgrade (Recovery menu method)                                               ANDROID
+-----------------------------------------------------------------------------------------------
+ A upgrade-license is need to upgrade to Android 7. SKU 454-084-001
+ 1  Copy the upgrade file "EDA50-ota-xxx.zip" to the root dir of the SDcard
+ 2  Reboot and press and hold "Volume up key" for about 15s
+ 3  The EDA50 will enter the Recovery Menu
+ 4  Select "apply update from SD card"
+ 5  The EDA50 will install the upgrade file
+ 
+ 
+-----------------------------------------------------------------------------------------------
+ANDROID OS Upgrade (ADB method)                                                         ANDROID
+-----------------------------------------------------------------------------------------------
+ A upgrade-license is need to upgrade to Android 7. SKU 454-084-001
+ 1  Connect the device to PC via USB Debugging
+ 2  Send command: adb reboot recovery
+ 3  In Recovery Mode, select "apply update from ADB"
+ 4  Send command: adb sideload "EDA50-ota-xxx.zip"
+ 5  When finished select "reboot system now"

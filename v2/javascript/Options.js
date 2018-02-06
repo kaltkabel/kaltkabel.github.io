@@ -15,3 +15,6 @@ $(window).on('load', function() {
 function unhide() {
 	document.getElementById("mod").disabled = false;
 }
+function unhide2() {
+	document.getElementById("include").disabled = false;
+}

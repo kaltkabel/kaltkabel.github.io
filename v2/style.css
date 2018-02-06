@@ -3,25 +3,86 @@
 	margin: 0;
 	font-family: segoe ui;
 }
-#dev, #mod {
-	width: 150px;
+body{
+	background-color: rgb(250,250,250);
+}
+#top {
+	background-color: #3F51B5;
+	width: 100%;
+	height: 64px;
+	margin-bottom: 20px;
+	box-shadow: 0px 1px 3px grey;
+}
+#title{
+	color: white;
+	float: left;
+	margin-left: 20%;
+	margin-top: 10px;
+	font-size: 28px;
+}
+#select {
+	width: 600px;
+	margin: auto;
+	padding-top: 15px;
+}
+.dropdown {
+	width: 180px;
+	height: 30px;
+	margin-right: 20px;
+	border: none;
+	border-bottom: 1px solid;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: none;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.dropdown:hover{
+	border-bottom: 2px solid;
+}
+.dropdown:disabled {
+	opacity: 0.5;
+}
+.dropdown:disabled:hover{
+	border-bottom: 1px solid;
+}
+.dropdown:active{
 }
 #fixit{
-	width: 60px;
+	height: 30px;
+	border: none;
+	padding-left: 16px;
+	padding-right: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	background: none;
+}
+#fixit:hover {
+	background-color: #448AFF;
+}
+#fixit:active {
+	background-color: #536DFE;
+}
+#fixit:disabled {
+	opacity: 0.5;
+	background: none;
 }
 #include {
 	position: relative;
 	width: 800px;
-	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .howto {
-	padding: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	width:600px;
 	font-size: 20px;
 }
 .android {
-
+	
 }
 .wce {
 	
@@ -36,8 +97,12 @@
 	color: dark-grey;
 	font-size: 13px;
 	font-family: consolas;
-	//border-left: 1px solid;
 	white-space: pre-wrap;
+}
+.howto:before{
+	width: 595px;
+	padding-left: 5px;
+	display: inline-block;
 }
 .coldboot:before {
 	content: "Coldboot";
