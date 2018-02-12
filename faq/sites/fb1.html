@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fachbereich 1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	<div class="w3-sidebar w3-bar-block w3-card w3-light-grey w3-animate-left w3-border-bottom" style="display:none" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large w3-dark-grey"
+			onclick="w3_close()">Close &times;</button>
+			
+		<a href="wf.html" class="w3-bar-item w3-button w3-border-bottom">Webfaktura</a>
+		<a href="fb1.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 1</a>
+		<a href="fb2.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 2</a>
+		<a href="fb3.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 3</a>
+
+			<div class="w3-bar-block w3-card">
+				<a href="../index.html" class="w3-btn w3-large w3-white w3-border w3-padding w3-display-top" style="width:100%">Home</a>
+			</div>
+	</div>
+
+	<div id="main">
+
+		<div class="w3-teal">
+			<button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+			<div class="w3-container">
+			<div onclick="w3_close()" style="box-sizing:content-box; position: absolute; background-color:; width: 100%; height: 100%"></div> <!-- Feld zum Schließen-->
+				<h1>Fachbereich 1</h1>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+		
+		
+	<div class="w3-container">
+		<div class="w3-panel w3-card-4 w3-leftbar w3-border-blue">
+			<h2>Infos auf dieser Seite: </h2>
+			<p>1. Metapace Scanner (mit welchen Scanner was gemacht wird)
+			<p>2. ADB Method
+			<p>3. GMS- non GMS (Bezeichung)
+			<p>4. Windows CE / Embedded Handheld (Factory Reset)
+		</div> 
+	</div>
+		
+<div class="w3-container">
+		<div class="w3-panel w3-card-4 w3-striped w3-bordered" style="width:80%">
+		<h2>1. Metapace Scanner</h2>
+			<table class="w3-table">
+				<tr>
+					<th>Artikel</th>
+					<th>Hersteller</th>
+					<th>Hersteller Art.-Nr.</th>
+					<th>Was damit gemacht wird</th>
+				</tr>
+				<tr>
+					<td>S-1</td>
+					<td>Motorola</td>
+					<td>LS1203</td>
+					<td>RMA bei Zebra</td>
+				</tr>
+				<tr>
+					<td>S-2</td>
+					<td>Cipherlab</td>
+					<td>156x</td>
+					<td>RMA bei Cipherlab</td>
+				</tr>
+				<tr>
+					<td>S-22</td>
+					<td>Cipherlab</td>
+					<td>15xx</td>
+					<td>RMA bei Cipherlab</td>
+				</tr>
+				<tr>
+					<td>S-3</td>
+					<td>Numa-Tech</td>
+					<td>KC-522ZB</td>
+					<td>austauschen & Sammelretoure</td>
+				</tr>
+				<tr>
+					<td>S-61</td>
+					<td>Metrologic</td>
+					<td>-</td>
+					<td>austauschen & entsorgen</td>
+				</tr>
+				<tr>
+					<td>S-62</td>
+					<td>Honeywell</td>
+					<td>-</td>
+					<td>austauschen & entsorgen</td>
+				</tr>
+			</table>
+			 <div class="w3-panel w3-pale-red w3-leftbar w3-border-red">
+				<p> Wenn nicht mehr in der Garantie, dann hier reparieren oder austauschen!
+			</div> 
+		</div> 
+	</div>		
+		
+
+
+	
+	
+	<div class="w3-container">
+		<div class="w3-panel w3-card-4">
+		<h2>2. ADB Method</h2>
+			<ul class="w3-ul">
+				<li>1. adb devices</li>
+				<li>2. adb reboot recovery</li>
+				<li>3. auf dem Gerät "apply update from adb" auswählen</li>
+				<li>4. adb sideload "xxx.zip"</li>
+				<li>5. "reboot system now" auswählen</li>
+		</div> 
+	</div>
+	
+	<div class="w3-container">
+		<div class="w3-panel w3-card-4">
+		<h2>3. GMS - non GMS</h2>
+			<p> GMS steht für <b>G</b>oogle <b>M</b>obile <b>S</b>ervices. Diese sind abhängig von den Geräten,
+				ob die mit installiert werden müssen oder nicht.
+		</div> 
+	</div>
+	
+	<div class="w3-container">
+		<div class="w3-panel w3-card-4">
+		<h2>4. Windows CE / Embedded Handheld (Factory Reset)</h2>
+			<p>Ein Factory Reset kann hier durch die Clean Files ausgeführt werden, die es auf dem Fileserver gibt (T:\Technik\_Fachbereich-1). Diese müssen dann auf dem Gerät in den "Temp" Ordner 
+				kopiert werden und anschließend vom Gerät aus, ausgeführt.
+			<p>Alternative: man führt auf dem Gerät eine Tastenkombi aus, die das Gerät auf FC setzt.
+		</div> 
+	</div>
+	
+	<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">
+		<p>	Auf dem Fileserver gibt es eine HTML-Seite 
+			(T:\Technik\_DEMODIENST\Mobile Terminals\JT Demo Tool WIP\index.html), 
+			wo zu fast allen Geräten beschrieben wird, wie man ein Factory Reset durchführt
+			oder T:\Lager\Rüstabteilung\Spars,Software\Datalogic
+		<p>Zudem gibt es dort noch weitere Verzeichnisse mit hilfreichen Informationen 
+			und allen Versionen
+	</div> 
+
+
+<script>
+function myAccFunc1() {
+    var x = document.getElementById("Acc1");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-blue";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-blue", "");
+    }
+}
+function myAccFunc2() {
+    var x = document.getElementById("Acc2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-blue";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-blue", "");
+    }
+}
+function myAccFunc3() {
+    var x = document.getElementById("Acc3");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-blue";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-blue", "");
+    }
+}
+
+function myDropFunc() {
+    var x = document.getElementById("demoDrop");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+</script>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "15%";
+  document.getElementById("mySidebar").style.width = "15%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
