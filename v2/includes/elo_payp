@@ -1,6 +1,6 @@
 <script src="javascript/LastEdit.js"></script>
 
-<div class="howto android">Home Menu
+<div class="howto android">&nbspHome Menu
 <p>1  Start EloView
 2  Go to the Home tab
 3  Press on the white Background 5 times
@@ -11,7 +11,7 @@ Info: You will be booted to Android Home every time device is rebooted after thi
 </div>
 	   
   
-<div class="howto android">Troubleshooting
+<div class="howto android">&nbspTroubleshooting
 <p>Default Password for Control Panel / EloView: 1elo</p>
 </div>
 

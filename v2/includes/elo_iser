@@ -12,7 +12,7 @@ Recovery Menu (FW 4.4.2)
 </div>
   
   
-<div class="howto android">Home Menu
+<div class="howto android">&nbspHome Menu
 <p>1  Start EloView
 2  Go to the Home tab
 3  Press on the white Background 5 times
@@ -23,7 +23,7 @@ Info: You will be booted to Android Home every time device is rebooted after thi
 </div>
 	   
   
-<div class="howto android">Troubleshooting
+<div class="howto android">&nbspTroubleshooting
 <p>Excuse us for a moment... / We'll be right back...
 -> Device is in sleep / hold / standby mode
 -> Simultanously press POWER and HOME button
