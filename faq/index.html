@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JT INFO TOOl</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="sites/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	<div class="w3-sidebar w3-bar-block w3-card w3-light-grey w3-animate-left w3-border-bottom" style="display:none" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large w3-dark-grey"
+			onclick="w3_close()">Close &times;</button>
+			
+		<a href="sites/wf.html" class="w3-bar-item w3-button w3-border-bottom">Webfaktura</a>
+		<a href="sites/fb1.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 1</a>
+		<a href="sites/fb2.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 2</a>
+		<a href="sites/fb3.html" class="w3-bar-item w3-button w3-border-bottom">Fachbereich 3</a>
+
+			<div class="w3-bar-block w3-card">
+				<a href="main.html" class="w3-btn w3-large w3-white w3-border w3-padding w3-display-top" style="width:100%">Home</a>
+			</div>
+	<!-- CLOSE --><div onclick="w3_close()" style="opacity: 0.2; background-color:#262626; position: fixed; bottom:0; right:0; width:calc(100vw - 290px); height:100vh;"></div>
+	</div>
+
+	<div id="main">
+
+		<div class="w3-teal">
+			<button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+			<div class="w3-container">
+				<h1>JT Info Tool</h1>
+			</div>
+			
+				
+			
+		</div>
+	</div>
+	
+	<div class="w3-container">	
+		
+			<div class="w3-display-middle">
+				 <a href="sites/wf.html" class="w3-btn w3-white w3-border w3-border-black w3-xxlarge">Los geht's!</a>
+			</div>
+	</div> 
+	
+
+<script>
+
+function myDropFunc() {
+    var x = document.getElementById("demoDrop");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+</script>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "15%";
+  document.getElementById("mySidebar").style.width = "15%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
+<!-- niw -->
