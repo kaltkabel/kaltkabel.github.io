@@ -7,11 +7,7 @@ function Include() {
 			next();
 			});
 		$("#include").load("includes/"+file); 
-		$("#include").css("left", "-30px");
 		$("#include").css("opacity", "0");
 		$("#include").delay('500');
-		$("#include").animate({
-			left: '+=30px',
-			opacity: '1'
-			}, "fast");
+		$("#include").animate({opacity: '1'}, "fast");
 }

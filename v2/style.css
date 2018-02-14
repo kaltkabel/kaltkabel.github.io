@@ -145,5 +145,6 @@ body{
 	content: "Recovery Menu";
 }
 #LastEdit {
-
+	padding-left: 10px;
+	font-family: segoe ui;
 }
