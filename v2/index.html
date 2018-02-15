@@ -9,11 +9,11 @@
 	<script src="javascript/Options.js"></script>
 </head>
 <body>
-<div id="top">
+<div id="topbar">
 <a id="title" href="">Test</a>
-<div id="select">
+<div id="selection">
 	<select id="dev" class="dropdown" onchange="unhide()">
-		<option disabled selected value="0">&nbspChoose Manufacturer</option>
+		<option disabled selected value="0">Choose Manufacturer</option>
         <option value="dat">Datalogic</option>
 		<option value="elo">ELO</option>
         <!--<option value="get">Getac</option>-->
@@ -22,7 +22,7 @@
 		<!--<option value="zeb">Zebra</option>-->
 	</select>
 	<select id="mod" class="dropdown" disabled required="required" onchange="unhide2()">
-		<option disabled selected="selected" class="default">&nbspChoose Model</option>
+		<option disabled selected="selected" class="default">Choose Model</option>
 		<option class="dat" value="axi">DL-Axist</option>
 		<option class="dat" value="elf">Elf</option>
         <option class="dat" value="fal">Falcon X3+</option>
@@ -38,13 +38,13 @@
 		
 		<option class="hon" value="70">70 Series</option>
 		<option class="hon" value="d75">Dolphin 75e</option>
+		<option class="hon" value="ct50">Dolphin CT50</option>
 		
 		<option class="m3m" value="sm15">SM-15</option>
 	</select>
-	
-	<button id="fixit" onclick="Include()" disabled>Submit</button>
+	<button id="submit" onclick="Include()" disabled>Submit</button>
 </div>
 </div>
-	<div id="include"></div>
+<div id="include"></div>
 </body>
 </html>

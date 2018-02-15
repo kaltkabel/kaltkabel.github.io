@@ -16,5 +16,5 @@ function unhide() {
 	document.getElementById("mod").disabled = false;
 }
 function unhide2() {
-	document.getElementById("fixit").disabled = false;
+	document.getElementById("submit").disabled = false;
 }

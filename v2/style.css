@@ -3,11 +3,22 @@
 	margin: 0;
 	font-family: segoe ui;
 }
-body{
-	background-color: rgb(250,250,250);
+
+:root {
+	--body-bg-color: #fafafa;
+	--navbar-bg-color: #3F51B5;
+	--navbar-color: white;
+	--submit-hover-color: #448AFF;
+	--submit-active-color: #536DFE;
 }
-#top {
-	background-color: #3F51B5;
+
+body{
+	background-color: var(--body-bg-color);
+}
+
+/* Navigation Bar */
+#topbar {
+	background-color: var(--navbar-bg-color);
 	width: 100%;
 	height: 64px;
 	box-shadow: 0px 1px 3px grey;
@@ -21,7 +32,7 @@ body{
 	font-size: 28px;
 	text-decoration: none;
 }
-#select {
+#selection {
 	width: 500px;
 	margin: auto;
 	padding-top: 15px;
@@ -36,12 +47,11 @@ body{
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	background: none;
-	color: white;
+	color: var(--navbar-color);
 	font-weight: bold;
 	font-size: 15px;
 	transition: box-shadow 0.5s;
 }
-
 .dropdown:hover{
 	box-shadow: 0 2px 0 0px;
 }
@@ -53,27 +63,29 @@ body{
 }
 .dropdown:active{
 }
-#fixit{
+#submit{
 	height: 30px;
 	border: none;
 	padding-left: 16px;
 	padding-right: 16px;
 	text-transform: uppercase;
 	font-weight: bold;
-	color: white;
+	color: var(--navbar-color);
 	background: none;
 	transition: background-color 0.5s;
 }
-#fixit:hover {
-	background-color: #448AFF;
+#submit:hover {
+	background-color: var(--submit-hover-color);
 }
-#fixit:active {
-	background-color: #536DFE;
+#submit:active {
+	background-color: var(--submit-active-color);
 }
-#fixit:disabled {
+#submit:disabled {
 	opacity: 0.5;
 	background: none;
 }
+
+/* Included content */
 #include {
 	opacity: 0;
 	box-sizing: border-box;
