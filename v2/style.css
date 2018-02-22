@@ -10,6 +10,11 @@
 	--navbar-color: white;
 	--submit-hover-color: #448AFF;
 	--submit-active-color: #536DFE;
+	
+	--win-image: url("./images/windows128.png");
+	--wce-image: url("./images/wce128.png");
+	--weh-image: url("./images/windows128.png");
+	--and-image: url("./images/android128.png");
 }
 
 body{
@@ -20,27 +25,29 @@ body{
 #topbar {
 	background-color: var(--navbar-bg-color);
 	width: 100%;
-	height: 64px;
+	/height: 64px;
 	box-shadow: 0px 1px 3px grey;
-	z-index: 2;
 }
 #title{
-	color: white;
+	color: var(--navbar-color);
 	float: left;
-	margin-left: 20%;
+	margin-left: 10%;
 	margin-top: 10px;
-	font-size: 28px;
+	font-size: 29px;
+	font-weight: bold;
 	text-decoration: none;
 }
 #selection {
-	width: 500px;
+	max-width: 550px;
 	margin: auto;
 	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .dropdown {
 	width: 180px;
 	height: 30px;
 	margin-right: 20px;
+	margin-left: 20px;
 	border: none;
 	box-shadow: 0 1px 0 0px;
 	appearance: none;
@@ -107,25 +114,25 @@ body{
 	padding-left: 20px;
 }
 .android {
-	background-image: url("./images/android128.png");
+	background-image: var(--and-image);
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	background-size: 20px 20px;
 }
 .wce {
-	background-image: url("./images/wce128.png");
+	background-image: var(--wce-image);
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	background-size: 20px 20px;
 }
 .weh {
-	background-image: url("./images/windows128.png");
+	background-image: var(--weh-image);
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	background-size: 20px 20px;
 }
 .windows {
-	background-image: url("./images/windows128.png");
+	background-image: var(--win-image);
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	background-size: 20px 20px;

@@ -1,0 +1,20 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>1  Press and immediatly release POWER and the RESET button
+2  The Device will successfully perform a COLD BOOT if "COLD BOOT (H/W) RESET" is shown</p>
+</div>
+
+
+<div class="howto wce factory">
+<p>Instruct Bootloader to FACTORY RESET:
+1  Perform a Cold Boot
+2  When the "COLD (H/W) RESET" displays:
+   Enter: 1 > 2 > 7 > 7
+3  When a Menu displays:
+   Enter: 1 > 2 > ENTER
+4  The device will first perform a RAM TEST
+5  After the Test the device will perform a FACTORY RESET</p>
+</div>
+
+<div id="LastEdit"></div>
