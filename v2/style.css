@@ -61,6 +61,7 @@ body{
 }
 .dropdown:hover{
 	box-shadow: 0 2px 0 0px;
+	cursor: pointer;
 }
 .dropdown:disabled {
 	opacity: 0.5;
@@ -83,6 +84,7 @@ body{
 }
 #submit:hover {
 	background-color: var(--submit-hover-color);
+	cursor: pointer;
 }
 #submit:active {
 	background-color: var(--submit-active-color);
