@@ -1,7 +1,8 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android factory">
-<p>1  Connect device to PC via USB debugging
+<p>Via USB Debugging:
+1  Connect device to PC via USB debugging
 2  Send command: adb reboot recovery
    if this does not work:
      Press and hold POWER for 8 seconds until the device reboots
@@ -10,14 +11,12 @@
      Select RECOVERY MODE and enter with POWER
 3  In Recovery Mode, select Factory Reset
 4  In Recovery Mode, select "apply update from ADB"
-5  Send command: adb sideload CommonES.zip
+5  Send command: "adb sideload CommonES.zip"
     Android 4: CommonES_v3.zip
-    Android 6: CommonES_v4.zip</p>
-</div>
+    Android 6: CommonES_v4.zip
 
-	
-<div class="howto android factory">
-<p>1  Connect device to PC
+Via Internal Storage:
+1  Connect device to PC
 2  Copy CommonES.zip to IPSM/honeywell/autoinstall
     Android 4: CommonES_v3.zip
     Android 6: CommonES_v4.zip
