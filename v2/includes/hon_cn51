@@ -1,0 +1,123 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Android 4.2:
+ 1  Turn off the device
+ 2  Remove the Battery and reinsert the Battery after a minute
+ 3  Press and hold TOP(left) + BOTTOM(left) + TOP(right) + POWER buttons
+ 4  When the "Intermec/Honeywell" logo appears, release only the POWER button
+ 5  When the "Android" logo appears, release all other buttons
+ 6  Navigate to RECOVERY MODE using TOP(left) and BOTTOM(left)
+ 7  Press the TOP(right) button
+ 8  When the "Android" logo with a RED TRIANGLE appears, press the RED button
+ 
+Android 6.0:
+ 1  Turn off the device
+ 2  Press and hold "Power Button + Volume Down"
+ 3  Continue to hold all buttons until the 'Honeywell' logo appears on the screen with "Recovery Mode"</p>
+</div>
+
+<div class="howto android factory">
+<p>Warning: If the Android 6 device has been setup with a Google Account, the Factory Reset Protection does not allow to setup a device without using the same User Account and Password as before the Factory Reset!
+
+Using the application:
+ 1  Goto All Apps > Settings > Backup & RESET
+ 2  Tap on FACTORY DATA RESET
+ 3  Confirm RESET PHONE and ERASE EVERYTHING
+
+Using the Bootloader:
+ 1  Boot into Recovery (adb reboot recovery is possible)
+ 2  Select "wipe cache partition"
+ 3  Select "wipe data/factory reset"</p>
+</div>
+
+<div class="howto android os">
+<p>Android 4.2 -> Android 6.0 or WEH 6.5 -> Android 6.0
+Note: To upgrade a CN51 from Android 4.2 to Android 6.0 there are two choices
+Note: To convert a CN51 WEH 6.5 to Android 6.0 the only choice is to use the SD card method
+
+Licenses:
+Convert WEH6.5 to Android4.2     : PN 238-000-002
+Convert WEH6.5 to Android6.0     : PN 454-078-001
+Upgrade Android4.2 to Android6.0 : PN 454-077-001
+A CN51 which was converted from WEH6.5 to Android 4.2 with license 238-000-002 will also need need license 454-077-001 for the conversion to Android 6.0
+
+Automatic Licensing:
+The CN51 Android 6 can then be licensed automatically as follows:
+ 1  Connect the device over USB to a PC.
+ 2  Copy the license .xml file -> InternalStorage\Honeywell\license\
+The file will be processed automatically and the watermark should disappear 
+Note: The .xml file will be deleted and is backed up to a secure area of the device
+
+SD Card Upgrade Method:
+ 1  The SD card needs been formatted as FAT32
+ 2  Unzip the sd-CN51-build.zip and copy to -> microSD\
+ 3  Insert this card into the device and power it on, the update should start and take about 20 minutes
+ 4  After the Upgrade, the device will reboot into the new OS
+ 5  Follow the instructions until the desktop appears
+ 6  To confirm the upgrade version
+       Go to 'setting' > 'About phone' > 'Build number'
+ 7  Power off the device and remove the SD card
+ 
+OTA Upgrade Method:
+ 1  Create a "ota_install" folder in the internal storage -> InternalStorage\ota_install\
+ 2  Copy Android M full-OTA package -> ota_install\ and rename to "update.zip.2"
+ 3  Copy CommonESv4.zip             -> ota_install\ and rename to "Honeywell_CommonES.zip.2"
+ 4  Copy JB_upgrade_to_M_update.zip -> ota_install\
+ 5  Go to 'Setting' > 'About phone' > 'System updates' > click on 'JB_upgrade_to_M_update.zip' and click 'ok'
+ 6  Wait for the end of Full-OTA upgrade, then device will boot into OS.
+ 7  The device will reboot to install CommonES
+ 8  After finished the ES packages installation, the device will boot into the Android OS and is ready to use.
+       During the whole update progress, more than 5 reboot cycles are needed
+       The whole progress will take about 30 minutes
+ 9  After the update is complete, check 'Setting' > 'About phone' > 'Build number'</p>
+</div>
+
+
+<div class="howto weh coldboot">
+<p>1. Press and hold the POWER button for at least 8 seconds
+2. The Computer turns off
+3. Press the POWER button again. The Computer cold boots.</p>
+</div>
+
+
+<div class="howto weh factory">
+<p>1. Copy DEMO files
+	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+	 
+2. Instruct the Bootloader to FACTORY RESET
+	 REBOOT the Device (Press the POWER button for 2 seconds and tap on REBOOT)
+	 When the white bar at the start up screen appears:
+		Press and hold the POWER button
+		Release when instructed "Release IO Button"
+	 When the message "Enter first key in 20s" appears:
+		Press "9" > "6" > "9" > "6"
+	 The Computer starts the cleanboot process.</p>
+</div>
+
+<div class="howto weh os">
+<p>1. Identify the Firmware
+	 The Part Number (PN) defines the Firmware Version
+	 Example:
+		PN CN51AN1KCF1W1000 = W1
+		PN CN51xxxxxxxW1xxx = W1
+	 W0 = "A4_WEH65_NOWAN_WWE" = WEH 6.5 WWE, WLAN only
+	 W1 = "A4_WEH65_WAN_WWE"   = WEH 6.5 WWE
+	 W2 = "A4_WEH65_NOWAN_LP"  = WEH 6.5 LP,  WLAN only
+	 W3 = "A4_WEH65_WAN_LP"    = WEH 6.5 LP
+		WWE = World Wide English
+		LP  = Laungage Pack (multilingual)
+
+2. Copy DEMO files
+	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+	 
+3. Update the OS
+	 AutoFlash.img, IBOOT.nb0 -> root of microSD card
+	 Remove the battery and insert the SD card
+	 Reinsert battery and place device on charge - The OS upgrade will begin
+	 When the “Autoflash Complete” message is displayed 
+		Remove the SD card
+	 Reboot the device</p>
+</div>
+
+<div id="LastEdit"></div>

@@ -2,73 +2,100 @@
 
 <div class="howto android factory">
 <p>Via USB Debugging:
-1  Connect device to PC via USB debugging
-2  Send command: adb reboot recovery
-   if this does not work:
-     Press and hold POWER for 8 seconds until the device reboots
-     Press and hold POWER + VOL-
-     A Menu will be shown. Use VOLUME UP, DOWN to navigate
-     Select RECOVERY MODE and enter with POWER
-3  In Recovery Mode, select Factory Reset
-4  In Recovery Mode, select "apply update from ADB"
-5  Send command: "adb sideload CommonES.zip"
-    Android 4: CommonES_v3.zip
-    Android 6: CommonES_v4.zip
+ 1  Connect device to PC via USB debugging
+ 2  Send command: adb reboot recovery
+    if this does not work:
+      Press and hold POWER for 8 seconds until the device reboots
+      Press and hold POWER + VOL-
+      A Menu will be shown. Use VOLUME UP, DOWN to navigate
+      Select RECOVERY MODE and enter with POWER
+ 3  In Recovery Mode, select Factory Reset
+ 4  In Recovery Mode, select "apply update from ADB"
+ 5  Send command: "adb sideload CommonES.zip"
+     Android 4: CommonES_v3.zip
+     Android 6: CommonES_v4.zip
 
 Via Internal Storage:
-1  Connect device to PC
-2  Copy CommonES.zip to IPSM/honeywell/autoinstall
-    Android 4: CommonES_v3.zip
-    Android 6: CommonES_v4.zip
-3  Go to Settings
-4  Navigate to Backup & reset
-5  Do not check IPSM
-6  Perform a Factory Reset</p>
+ 1  Connect device to PC
+ 2  Copy CommonES.zip to IPSM/honeywell/autoinstall
+     Android 4: CommonES_v3.zip
+     Android 6: CommonES_v4.zip
+ 3  Go to Settings
+ 4  Navigate to Backup & reset
+ 5  Do not check IPSM
+ 6  Perform a Factory Reset
+ 
+Full Factory Reset (FW 6.0+):
+ 1  Become developer
+ 2  Go to 'Settings' > 'Developer options' > 'Honeywell developer options'
+ 3  Tap 'Erase the user data/IPSM/OEM partition' and confirm by tapping on 'RESET PHONE'
+ 4  Move CommonES_v4.xx.zip -> IPSM\honeywell\autoinstall\
+ 5  Select the 'Autoinstall' icon and click 'Package Update' to install the new package
+ 6  The device will reboot</p>
 </div>
 
 
 <div class="howto android os">
-<p>1  Copy DEMO Files
-    Delete CommonES_v3.xx.zip -> IPSM\honeywell\autoinstall
-    Move   CommonES_v4.xx.zip -> IPSM\honeywell\autoinstall
-2  Copy Kernel Files
-    PARISIAD_xxx.zip -> root directory of IPSM or a microSD
-3  Copy lisence Files
-    lic_xxx.xml -> root directory of Internal Storage
-4  Reboot into Recovery
-    The Device should reboot automatically in recovery, when rebooted
-    --> If not: with a button combination at boot: POWER + VOL-
-    Install the PARISIAD_xxx.zip and reboot</p>
+<p>Android 4.4 -> Android 6.0
+1  Obtain the following files:
+    CommonES: CommonES_v4.xx.zip
+    75E GMS: PARISAD_69.xx.xx.xxxx.zip
+    75E Non-GMS: PARISAD_68.xx.xx.xxxx.zip
+    License File: lic_75eL0N_1.xml
+    Note: The license filename is case sensitive, and should have the extension .xml (in lower case)
+2  Preparations:
+    Delete CommonES_v3.xx.zip -> IPSM\honeywell\autoinstall\
+    Delete folder "persist"   -> IPSM\honeywell\
+    Move CommonES_v4.xx.zip   -> IPSM\honeywell\autoinstall\
+    Copy Kernel Files .zip    -> IPSM\ or microSD\
+    Copy license file .xml    -> InternalStorage\ or microSD\
+3  Reboot the device while pressing the following button combination:
+    For D75E with new kernel in IPSM folder  use: 'Home' + 'Volume Up'
+    For D75E with new kernel on SD Card      use: 'Home' + 'Volume Down'
+4  The system will now upgrade
+
+Troubleshooting "Data Collection has stopped":
+ 1  On the device, become a developer.
+ 2  Go to 'Settings' > 'Developer options' > 'Honeywell developer options'
+ 3  Tap 'Erase the user data/IPSM/OEM partition' and confirm by tapping on 'RESET PHONE'
+ 4  Created in the IPSM folder a new folder 'honeywell', and in there subfolder 'autoinstall'
+ 5  Copy again the CommonES V4.xx zip file to the folder 'IPSM\honeywell\autoinstall'
+ 6  Select the 'Autoinstall' icon and click 'Package Update' to install the new package.
+ 7  After the device has installed that package and has automatically rebooted, it should be fully functional.
+Note: At this moment, it is NOT possible to successfully upgrade the kernel by placing it in the IPSM folder 'honeywell\autoinstall' and perform a regular system update.
+It looks to install itself correctly, but in the end the devices will continuously show a 'Data Collection has stopped' notification.</p>
 </div>
 
-<div class="howto windows factory">
-<p>> Using the Application
-   1  Navigate to Settings > about
-   2  Scroll down and tap on RESET YOUR PHONE
-   3  Confirm with Yes > Yes
-   4  The Device will reboot
-> Using the Bootloader (if PW is unknown etc..)
-   1  Turn off the device
-   2  Press and hold VOLUME DOWN and POWER button until a "!" appears
-   3  Press in order: VOLUME UP > VOLUME DOWN > POWER > VOLUME DOWN
-   4  The Devie will perform a FACTORY RESET</p>
+<div class="howto weh factory">
+<p>Using the Application:
+ 1  Navigate to Settings > about
+ 2  Scroll down and tap on RESET YOUR PHONE
+ 3  Confirm with Yes > Yes
+ 4  The Device will reboot
+ 
+Using the Bootloader (if PW is unknown etc..):
+ 1  Turn off the device
+ 2  Press and hold VOLUME DOWN and POWER button until a "!" appears
+ 3  Press in order: VOLUME UP > VOLUME DOWN > POWER > VOLUME DOWN
+ 4  The Devie will perform a FACTORY RESET</p>
 </div>
 	
 	
-<div class="howto windows os">
-<p>1. .ffu File -> microSD root
-   .xml File -> microSD root
-2. rename to the .ffu to "Flash.ffu"
+<div class="howto weh os">
+<p>1  Copy Firmware Files
+   Rename the xxx.ffu file to Flash.ffu
+   Flash.ffu -> root dir of the SDcard
+	 
+2  Copy Licence Files
+   lic_75eL0N_1.xml -> root dir of the SDcard
 
-3. Connect the device to power
-4. Navigate to "Settings" -> "Manual Flash"
-5. Select the SD card
-
-6. The device reboots and display a "lightning bolt with a gear"
-7. The Update takes about 10 minutes
-
-8. After the Update is done, navigate to "DiagnosticInfoW10" and verify the Update
-9. Power down and remove microSD</p>
+3  Start the Upgrade
+   Powerup the device
+   Goto Settings > Manual Flash > SD CARD
+   The device will reboot and display a "lightning bolt with a gear"
+   The Upgrade will take under 10 minutes
+   After the Update is done, navigate to "DiagnosticInfoW10" and verify the Update
+   Power down and remove microSD</p>
 </div>
 
 <div id="LastEdit"></div>

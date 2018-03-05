@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="burger.css" />
 	<script src="javascript/jquery-3.3.1.min.js"></script>
 	<script src="javascript/Include.js"></script>
 	<script src="javascript/Options.js"></script>
@@ -38,7 +39,7 @@
 		<option class="elo" value="wind">Windows</option>
 		
 		<option disabled class="hon" value="cx3x">CX3X Series (CK3X, CK3R)</option>
-		<option disabled class="hon" value="cn51">CN51</option>
+		<option class="hon" value="cn51">CN51</option>
 		<option class="hon" value="70er">CX70 Series (CK70, CK71, CN70, CN70e)</option>
 		<option disabled class="hon" value="75er">CX75 Series (CN75, CN75e, CK75)</option>
 		<option disabled class="hon" value="6100">Dolphin 6100</option>
@@ -63,6 +64,25 @@
 	<button id="submit" onclick="Include()" disabled>Submit</button>
 </div>
 </div>
-<div id="include"></div>
+<input type="checkbox" id="navcheck" role="button" title="menu">
+<label for="navcheck" aria-hidden="true" title="menu">
+	<span class="burger">
+		<span class="bar">
+			<span class="visuallyhidden">Menu</span>
+		</span>
+	</span>
+</label>
+<nav id="menu">
+	<a href="../faq/">JT-FAQ</a>
+	<a href="#">Android Information</a>
+	<a href="#">Windows Information</a>
+	<a href="#"></a>
+	<a href="https://github.com/kaltkabel/kaltkabel.github.io/tree/master/v2">Sourcecode</a>
+	<a href="mailto:david.bierwerth@jarltech.de">Feedback</a>
+</nav>
+<main>
+		<div class="content" id="include"></div>
+</main>
+
 </body>
 </html>

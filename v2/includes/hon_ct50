@@ -40,36 +40,57 @@ Recovery Menu (OS 4.4.4)
     Option 1: Use the Settings Menu (Settings > Backup & reset > Factory Data Reset)
     Option 2: Access the Recovery Menu and perform a Factory Reset 
 3  The Demotools will be installed on next Boot
-   or install them manually using the Recovery Menu (Apply update)</p>
+   or install them manually using the Recovery Menu (Apply update)
+   
+Full Factory Reset (FW 6.0+):
+ 1  Become developer
+ 2  Go to 'Settings' > 'Developer options' > 'Honeywell developer options'
+ 3  Tap 'Erase the user data/IPSM/OEM partition' and confirm by tapping on 'RESET PHONE'
+ 4  Move CommonES_v4.xx.zip -> IPSM\honeywell\autoinstall\
+ 5  Select the 'Autoinstall' icon and click 'Package Update' to install the new package
+ 6  The device will reboot</p>
 </div>
 
 	
 <div class="howto android os">
-<p>1  Copy DEMO Files
-   Delete CommonES_v3.xx.zip -> IPSM\honeywell\autoinstall
-   Move   CommonES_v4.xx.zip -> IPSM\honeywell\autoinstall
- 
-2  Copy Firmware Files
-   HELSINKIAD_xxx.zip -> root directory of IPSM or a microSD
+<p>Android 4.4 -> Android 6.0
+1  Obtain the following files:
+    CommonES: CommonES_v4.xx.zip
+    CT50 GMS: HELSINKIAD_71.xx.xx.xxxx.zip
+    CT50 Non-GMS: HELSINKIAD_70.xx.xx.xxxx.zip
+    License File: lic_CT50L0N_1.xml (WLAN) or lic_CT50LFN_1.xml (WWAN)
+    Note: The license filename is case sensitive, and should have the extension .xml (in lower case)
+2  Preparations:
+    Delete CommonES_v3.xx.zip -> IPSM\honeywell\autoinstall
+    Delete folder "persist"   -> IPSM\honeywell\
+    Move CommonES_v4.xx.zip   -> IPSM\honeywell\autoinstall
+    Copy Kernel Files .zip    -> IPSM\ or microSD\
+    Copy license file .xml    -> InternalStorage\ or microSD\
+3  Reboot the device while pressing the following button combination:
+    For CT50 with new kernel in IPSM folder  use: 'Left Scan' + 'Volume Up'
+    For CT50 with new kernel on SD Card      use: 'Left Scan' + 'Volume Down'
+4  The system will now upgrade
 
-3  Copy Licence Files
-   CT50 WLAN: lic_CT50L0N_1.xml -> root directory of Internal Storage
-   CT50 WWAN: lic_CT50LFN_1.xml -> root directory of Internal Storage
-	 
-4  Reboot into Recovery
-   The Device will reboot automatically in recovery
-   --> If not: with a button combination at boot: POWER + VOL-
-   Install the HELSINKIAD_xxx.zip and reboot</p>
+Troubleshooting "Data Collection has stopped":
+ 1  On the device, become a developer.
+ 2  Go to 'Settings' > 'Developer options' > 'Honeywell developer options'
+ 3  Tap 'Erase the user data/IPSM/OEM partition' and confirm by tapping on 'RESET PHONE'
+ 4  Created in the IPSM folder a new folder 'honeywell', and in there subfolder 'autoinstall'
+ 5  Copy again the CommonES V4.xx zip file to the folder 'IPSM\honeywell\autoinstall'
+ 6  Select the 'Autoinstall' icon and click 'Package Update' to install the new package.
+ 7  After the device has installed that package and has automatically rebooted, it should be fully functional.
+Note: At this moment, it is NOT possible to successfully upgrade the kernel by placing it in the IPSM folder 'honeywell\autoinstall' and perform a regular system update.
+It looks to install itself correctly, but in the end the devices will continuously show a 'Data Collection has stopped' notification.</p>
 </div>
 	 
 	 
-<div class="howto windows factory">
+<div class="howto weh factory">
 <p>Using the Application:
  1  Goto ALL APPS > SETTINGS > ABOUT
  2  Scroll to the bottom and tap on RESET YOUR PHONE
  3  Confirm with YES > YES
 
-Using the Bootloader:
+Using the Bootloader (if PW is unknown etc..):
  1  Remove and replace the battery
  2  Press and hold POWER + VOLUME DOWN
  3  Release when an exclamation mark "!" appears
@@ -77,14 +98,14 @@ Using the Bootloader:
 </div>
  
 
-<div class="howto windows os">
+<div class="howto weh os">
 <p>1  Copy Firmware Files
    Rename the xxx.ffu file to Flash.ffu
    Flash.ffu -> root dir of the SDcard
 	 
 2  Copy Licence Files
-   CT50 WLAN = lic_CT50L0N_1.xml -> to the root dir of the SDcard
-   CT50 WWAN = lic_CT50LFN_1.xml -> to the root dir of the SDcard
+   CT50 WLAN = lic_CT50L0N_1.xml -> root dir of the SDcard
+   CT50 WWAN = lic_CT50LFN_1.xml -> root dir of the SDcard
 
 3  Start the Upgrade
    Powerup the device
