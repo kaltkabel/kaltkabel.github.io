@@ -1,15 +1,14 @@
- COLDBOOT
-----------
-1. Turn on the Device
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh coldboot">
+<p>1. Turn on the Device
 2. Press and hold the POWER button until the options menu appears
 3. Select HARD RESET or REBOOT
-4. A COLD BOOT will be performed
+4. A COLD BOOT will be performed</p>
+</div>
 
-
-
- FACTORY RESET WEH
--------------------
-Copy DEMO Files
+<div class="howto weh factory">
+<p>Copy DEMO Files
 1. Connect the Device to the Computer
 2. Powertools and Demos -> IPSM/Honeywell/Autoinstall
 
@@ -18,13 +17,11 @@ Instruct Bootloader to FACTORY RESET:
 2. Hold left and right SCAN until a Box shows up
 3. Enter GREEN PHONE > RED PHONE > HOME
 4. Confirm with middle SCAN key
-5. The Device reboots
+5. The Device reboots</p>
+</div>
 
-
-
- FACTORY RESET AND
--------------------
-Copy DEMO Files
+<div class="howto android factory">
+<p>Copy DEMO Files
 1. Connect the Device to the Computer
 2. Powertools and Demos -> SD:\Honeywell\Autoinstall\xx.zips
 
@@ -34,13 +31,11 @@ Instruct Bootloader to FACTORY RESET:
 3. Enter SEARCH + VOLUME DOWN
 4. The Device will perform a FACTORY RESET
 
-or in Settings Menu
+or in Settings Menu</p>
+</div>
 
-
-
- OS UPDATE AND
----------------
-1. Copy the Files to the SD Card
+<div class="howto android os">
+<p>1. Copy the Files to the SD Card
 	 Kernel file -> SD:\xx.zip
 	 SD Image    -> SD:\Honeywell\Autoinstall\yy.zips
 2. Instruct Bootloader to FORMAT IPSM
@@ -56,4 +51,7 @@ or in Settings Menu
 	 When "Ready for Hotkeys.." is displayed:
 		 Enter: SEACH + VOLUME DOWN
 	 The Device reboots
-5. The OS Update is finished when the device asks to calibrate the screen
+5. The OS Update is finished when the device asks to calibrate the screen</p>
+</div>
+
+<div id="LastEdit"></div>

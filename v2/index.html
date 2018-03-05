@@ -11,59 +11,6 @@
 	<script src="javascript/Options.js"></script>
 </head>
 <body>
-<div id="topbar">
-<div id="title" onclick="location.href='';">HOWTO.GUIDE</div>
-<div id="selection">
-	<select id="dev" class="dropdown" onchange="unhide()">
-		<option disabled selected value="0">Choose Manufacturer</option>
-        <option value="dat">Datalogic</option>
-		<option value="elo">ELO</option>
-        <option disabled value="get">Getac</option>
-		<option value="hon">Honeywell</option>
-		<option value="m3m">M3 Mobile</option>
-		<option disabled value="zeb">Zebra</option>
-	</select>
-	<select id="mod" class="dropdown" disabled required="required" onchange="unhide2()">
-		<option disabled selected="selected" class="default">Choose Model</option>
-		<option class="dat" value="axi">DL-Axist</option>
-		<option class="dat" value="elf">Elf</option>
-        <option class="dat" value="fal">Falcon X3+</option>
-		<option class="dat" value="kym">Kyman</option>
-        <option class="dat" value="lyn">Lynx</option>
-        <option class="dat" value="me1">Memor</option>
-		<option class="dat" value="me2">Memor X3</option>
-		<option class="dat" value="sco">Scorpio X3</option>
-		
-		<option class="elo" value="iser">I-Series</option>
-		<option class="elo" value="payp">PayPoint</option>
-		<option class="elo" value="wind">Windows</option>
-		
-		<option disabled class="hon" value="cx3x">CX3X Series (CK3X, CK3R)</option>
-		<option class="hon" value="cn51">CN51</option>
-		<option class="hon" value="70er">CX70 Series (CK70, CK71, CN70, CN70e)</option>
-		<option disabled class="hon" value="75er">CX75 Series (CN75, CN75e, CK75)</option>
-		<option disabled class="hon" value="6100">Dolphin 6100</option>
-		<option class="hon" value="6110">Dolphin 6110</option>
-		<option disabled class="hon" value="6500">Dolphin 6500</option>
-		<option disabled class="hon" value="6510">Dolphin 6510</option>
-		<option disabled class="hon" value="7800">Dolphin 7800</option>
-		<option disabled class="hon" value="d60">Dolphin 60s</option>
-		<option disabled class="hon" value="d70">Dolphin 70e</option>
-		<option class="hon" value="d75">Dolphin 75e</option>
-		<option disabled class="hon" value="d99">Dolphin 99EX, 99GX, 99NI</option>
-		<option class="hon" value="ct50">Dolphin CT50</option>
-		<option disabled class="hon" value="ct60">Dolphin CT60</option>
-		<option class="hon" value="5100">Scanpal 5100</option>
-		<option class="hon" value="eda50">Scanpal EDA50</option>
-		<option class="hon" value="eda50k">Scanpal EDA50K</option>
-		<option disabled class="hon" value="mx7">Tecton MX7</option>
-		<option disabled class="hon" value="mx9">Tecton MX9</option>
-		
-		<option class="m3m" value="sm15">SM-15</option>
-	</select>
-	<button id="submit" onclick="Include()" disabled>Submit</button>
-</div>
-</div>
 <input type="checkbox" id="navcheck" role="button" title="menu">
 <label for="navcheck" aria-hidden="true" title="menu">
 	<span class="burger">
@@ -78,10 +25,64 @@
 	<a href="#">Windows Information</a>
 	<a href="#"></a>
 	<a href="https://github.com/kaltkabel/kaltkabel.github.io/tree/master/v2">Sourcecode</a>
-	<a href="mailto:david.bierwerth@jarltech.de">Feedback</a>
+	<a href="mailto:david.bierwerth@jarltech.de?subject=HOWTO.GUIDE">Feedback</a>
 </nav>
 <main>
-		<div class="content" id="include"></div>
+	<div class="content" id="topbar">
+		<div id="title" onclick="location.href='';">HOWTO.GUIDE</div>
+		<div id="selection">
+			<select id="dev" class="dropdown" onchange="unhide()">
+				<option disabled selected value="0">Choose Manufacturer</option>
+				<option value="dat">Datalogic</option>
+				<option value="elo">ELO</option>
+				<option disabled value="get">Getac</option>
+				<option value="hon">Honeywell</option>
+				<option value="m3m">M3 Mobile</option>
+				<option disabled value="zeb">Zebra</option>
+			</select>
+			<select id="mod" class="dropdown" disabled required="required" onchange="unhide2()">
+				<option disabled selected="selected" class="default">Choose Model</option>
+				<option class="dat" value="axi">DL-Axist</option>
+				<option class="dat" value="elf">Elf</option>
+				<option class="dat" value="fal">Falcon X3+</option>
+				<option class="dat" value="kym">Kyman</option>
+				<option class="dat" value="lyn">Lynx</option>
+				<option class="dat" value="me1">Memor</option>
+				<option class="dat" value="me2">Memor X3</option>
+				<option class="dat" value="sco">Scorpio X3</option>
+				
+				<option class="elo" value="iser">I-Series</option>
+				<option class="elo" value="payp">PayPoint</option>
+				<option class="elo" value="wind">Windows</option>
+				
+				<option class="hon" value="cx3x">CX3X Series (CK3X, CK3R)</option>
+				<option class="hon" value="cx6x">CX6X Series (CK6X)</option>
+				<option class="hon" value="cn51">CN51</option>
+				<option class="hon" value="70er">CX70 Series (CK70, CK71, CN70, CN70e)</option>
+				<option disabled class="hon" value="75er">CX75 Series (CN75, CN75e, CK75)</option>
+				<option class="hon" value="6100">Dolphin 6100</option>
+				<option class="hon" value="6110">Dolphin 6110</option>
+				<option class="hon" value="6500">Dolphin 6500</option>
+				<option disabled class="hon" value="6510">Dolphin 6510</option>
+				<option class="hon" value="7800">Dolphin 7800</option>
+				<option class="hon" value="d60">Dolphin 60s</option>
+				<option class="hon" value="d70">Dolphin 70e</option>
+				<option class="hon" value="d75">Dolphin 75e</option>
+				<option class="hon" value="d99">Dolphin 99EX, 99GX, 99NI</option>
+				<option class="hon" value="ct50">Dolphin CT50</option>
+				<option disabled class="hon" value="ct60">Dolphin CT60</option>
+				<option class="hon" value="5100">Scanpal 5100</option>
+				<option class="hon" value="eda50">Scanpal EDA50</option>
+				<option class="hon" value="eda50k">Scanpal EDA50K</option>
+				<option disabled class="hon" value="mx7">Tecton MX7</option>
+				<option disabled class="hon" value="mx9">Tecton MX9</option>
+				
+				<option class="m3m" value="sm15">SM-15</option>
+			</select>
+			<button id="submit" onclick="Include()" disabled>Submit</button>
+		</div>
+	</div>
+	<div class="content" id="include"></div>
 </main>
 
 </body>

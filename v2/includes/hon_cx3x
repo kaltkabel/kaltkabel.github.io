@@ -1,7 +1,7 @@
---------------------------------------------------------------------------------------------------
- FACTORY RESET WEH
---------------------------------------------------------------------------------------------------
-1. Copy DEMO files
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh factory">
+<p>1. Copy DEMO files
 	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
 	 
 2. Instruct the Bootloader to FACTORY RESET
@@ -11,13 +11,11 @@
 		Release when instructed "Release IO Button"
 	 When the message "Enter first key in 20s" appears:
 		Press "9" > "6" > "9" > "6"
-	 The Computer starts the cleanboot process.
-	 
-	 
---------------------------------------------------------------------------------------------------	 
- OS UPDATE WEH
---------------------------------------------------------------------------------------------------
-1. Copy files
+	 The Computer starts the cleanboot process.</p>
+</div>
+
+<div class="howto weh factory">
+<p>1. Copy files
 	 FeaturesDemo.cab -> Flash File Store:\CABFILES\
 	 Servicepacks.cab -> Flash File Store:\CABFILES\
 	 Autoflash.img    -> microSD:\
@@ -31,4 +29,7 @@
 3. Finish
 	 When "AutoFlash Complete" appears turn off the Device
 	 Remove the microSD card
-	 Demotools and the Servicepacks will be installed once the Language is set
+	 Demotools and the Servicepacks will be installed once the Language is set</p>
+</div>
+
+<div id="LastEdit"></div>

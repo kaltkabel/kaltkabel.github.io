@@ -1,0 +1,87 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh coldboot">
+<p>1. Turn on the Device
+2. Simultanously press BLUE key and GREEN Phone key
+3. The Device will reboot and will perform a COLD BOOT</p>
+</div>
+
+<div class="howto weh factory">
+<p>Instruct Bootloader to FACTORY RESET:
+1. Cold Boot (BLUE Key + GREEN Phone Key)
+2. When the Notification LED flashes:
+	 Enter on  QWERTY keyboard: W > E > Z > Z
+     or
+	 Enter on numeric keyboard: 1 > 2 > 7 > 7
+3. Confirm with Enter > Enter</p>
+</div>
+
+<div class="howto weh os">
+<p>Determine the Hardware Revision
+	 PN: 7800LGN- , 7800LGQ-   -> GOBI
+	 PN: 7800LCN- , 7800LCQ-   -> CDMA
+	 PN: 7800LWN- , 7800LWQ-   -> PH8
+	 PN: 7800L0N- , 7800L0Q-   -> NOWAN
+
+Copy files to device
+	 1. The content of AUTOINSTALL (.cabs) -> IPSM\Honeywell\Autoinstall
+	 2. The Kernel Update file (.upg)      -> IPSM\
+
+Start the Updating Process
+	 1. Turn on the System
+	 2. Using the File Explorer navigate to IPSM\
+	 3. Start the Update by executing the Kernel Update file (.upg)
+	 4. After the Update the Kernel Update file can be deleted from the device</p>
+</div>
+
+<div class="howto android coldboot">
+<p>1. Turn on the Device
+2. Simultanously press BLUE key and GREEN Phone key
+3. The Device will reboot and will perform a COLD BOOT</p>
+</div>
+
+<div class="howto android factory">
+<p>FACTORY RESET by using application:
+1. Boot the Device
+2. Navigate to:
+	 Launcher > Settings > Privacy > Factory Reset
+3. Perform a Factory Reset
+4. The Device reboots
+
+Instruct Bootloader to FACTORY RESET:
+1. Cold Boot (BLUE Key + GREEN Key)
+2. When the Notification LED (Red and on the right side) flashes: (This occures after the 
+   recovery version is shown)
+	 Enter on  QWERTY keyboard: W > E > Z > Z
+     or
+	 Enter on numeric keyboard: 1 > 2 > 7 > 7
+3. The Device reboots</p>
+</div>
+
+<div class="howto android os">
+<p>1. Copy the Files to the SD Card
+	 Kernel file -> SD:\xx.zip
+	 SD Image    -> SD:\Honeywell\Autoinstall\yy.zips
+2. Instruct Bootloader to FORMAT IPSM
+	 Perform a Cold Boot (BLUE Key + GREEN Key)
+	 When the Notification LED flashes:
+		 Enter on  QWERTY keyboard: F > Y > E > S
+		 or
+		 Enter on numeric keyboard: 5 > 9 > 3 > 7
+	 The Device reboots
+3. Instruct Bootloader to UPGRADE FROM SD
+	 When the Notification LED flashes:
+		 Enter on  QWERTY keyboard: D
+		 or
+		 Enter on numeric keyboard: 3
+	 The Device reboots
+4. Instruct Bootloader to FACTORY RESET
+	 When the Notification LED flashes:
+		 Enter on  QWERTY keyboard: W > E > Z > Z
+		 or
+		 Enter on numeric keyboard: 1 > 2 > 7 > 7
+	 The Device reboots several times
+5. The OS Update is finished when the device asks to calibrate the screen</p>
+</div>
+
+<div id="LastEdit"></div>

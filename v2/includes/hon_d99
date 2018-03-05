@@ -1,14 +1,13 @@
- COLDBOOT WEH
---------------
-1. Turn on the Device
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh coldboot">
+<p>1. Turn on the Device
 2. Simultanously press BLUE key and GREEN phone key or CTRL+ESC
-3. The Device will reboot and will perform a COLD BOOT
+3. The Device will reboot and will perform a COLD BOOT</p>
+</div>
 
-
-
- FACTORY RESET WEH
--------------------
-Copy Files
+<div class="howto weh factory">
+<p>Copy Files
 1. Connect the Device to the Computer
 2. Powertools and Demos -> IPSM/Honeywell/Autoinstall
 
@@ -21,4 +20,7 @@ Instruct Bootloader to FACTORY RESET:
 3. Choose the first Option:
      Enter "1" or ENT
 	 Confirm with "Y" or with ENT
-4. The Device reboots
+4. The Device reboots</p>
+</div>
+
+<div id="LastEdit"></div>

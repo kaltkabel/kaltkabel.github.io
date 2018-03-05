@@ -1,16 +1,16 @@
- COLDBOOT
-----------
-1. Press and hold the RESET button (with stylus)
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh coldboot">
+<p>1. Press and hold the RESET button (with stylus)
 2. Press and release the POWER button
 3. Release the RESET button
 OR
 1. Hold the POWER button until a menu appears
-2. Select HARD RESET
+2. Select HARD RESET</p>
+</div>
 
-
- FACTORY RESET WEH
--------------------
-Copy Files
+<div class="howto weh factory">
+<p>Copy Files
 1. Connect the Device to the Computer
 2. Powertools and Demos -> IPSM/Honeywell/Autoinstall
 
@@ -18,4 +18,7 @@ Instruct Bootloader to FACTORY RESET:
 1. Perform a Hard Reset / Cold boot (Power Menu)
 2. When the Notification LED flashes:
 	 Enter on numeric keyboard: 1 > 2 > 7 > 7
-3. Confirm with Enter > Enter
+3. Confirm with Enter > Enter</p>
+</div>
+
+<div id="LastEdit"></div>
