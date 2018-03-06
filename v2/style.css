@@ -21,7 +21,8 @@ body {
 	background-color: var(--body-bg-color);
 }
 
-/* Navigation Bar */
+/* ------------------ Navigation Bar ------------------ */
+/* 1 of 3 - Misc */
 #topbar {
 	background-color: var(--navbar-bg-color);
 	width: 100%;
@@ -46,6 +47,9 @@ body {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+
+/* ------------------ Navigation Bar ------------------ */
+/* 2 of 3 - Dropdown Menu */
 .dropdown {
 	width: 180px;
 	height: 30px;
@@ -66,14 +70,18 @@ body {
 	box-shadow: 0 2px 0 0px;
 	cursor: pointer;
 }
+.dropdown:active {
+}
 .dropdown:disabled {
 	opacity: 0.5;
 }
 .dropdown:disabled:hover {
 	box-shadow: 0 1px 0 0px;
+	cursor: default;
 }
-.dropdown:active {
-}
+
+/* ------------------ Navigation Bar ------------------ */
+/* 3 of 3 - Submit Button */
 #submit {
 	height: 30px;
 	border: none;
@@ -96,8 +104,12 @@ body {
 	opacity: 0.5;
 	background: none;
 }
+#submit:disabled:hover {
+	cursor: default;
+}
 
-/* Included content */
+/* ------------------ Included content ------------------ */
+/* 1 of 3 - Misc */
 #include {
 	opacity: 0;
 	box-sizing: border-box;
@@ -118,6 +130,18 @@ body {
 	font-size: 20px;
 	padding-left: 20px;
 }
+.howto>p {
+	padding-left: 6px;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: dark-grey;
+	font-size: 13px;
+	font-family: consolas;
+	white-space: pre-wrap;
+}
+
+/* ------------------ Included content ------------------ */
+/* 2 of 3 - Prefix Image */
 .android {
 	background-image: var(--and-image);
 	background-repeat: no-repeat;
@@ -142,15 +166,9 @@ body {
 	background-position: 0px 5px;
 	background-size: 20px 20px;
 }
-.howto>p {
-	padding-left: 6px;
-	margin-left: 10px;
-	margin-top: 10px;
-	color: dark-grey;
-	font-size: 13px;
-	font-family: consolas;
-	white-space: pre-wrap;
-}
+
+/* ------------------ Included content ------------------ */
+/* 3 of 3 - Prefix Title */
 .howto:before{
 	width: 595px;
 	padding-left: 5px;
@@ -168,6 +186,8 @@ body {
 .menu:before {
 	content: "Recovery Menu";
 }
+
+/* ------------------ Included javascript ------------------ */
 #LastEdit {
 	padding-left: 10px;
 	font-family: segoe ui;
