@@ -1,14 +1,12 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android coldboot">
-
 <p>POWER BUTTON + LEFT TRIGGER + FUNCTION BUTTON (middle button right side)</p>
-
 </div>
 
 <div class="howto android menu">
 <p>During BOOT press and hold the FUNCTION BUTTON
-	
+
 In Recovery mode you can do the following:
 > Reboot system now
 > Apply update from external storage
@@ -16,23 +14,19 @@ In Recovery mode you can do the following:
 > Enterprise Reset
 > OTA Update Options
 > Secure Settings</p>
-
 </div>
 
 
 <div class="howto android factory">
-
 <p>Using the System Settings:
  -> Settings -> Backup & Reset -> Factory Reset
 
 Usinge the Recovery Menu:
  -> Access the Recovery Menu and select Factory Reset</p>
-
 </div>
 
 
 <div class="howto android os">
-
 <p>With DXU (Datalogic Configuration Utility for Android devices):
    Connect the device to DXU and perform the Upgrade
 	
@@ -41,7 +35,6 @@ With System Upgrade / Local Upgrade in System Settings:
 2  Select Settings -> System Upgrade -> Local Upgrade
 3  Select the upgrade.zip file
 4  Perform a Upgrade</p>
-
 </div>
 
 <div id="LastEdit"></div>

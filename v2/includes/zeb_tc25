@@ -1,0 +1,46 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press the Power and Volume Up buttons for at least five seconds.
+2  When the screen turns off, release the buttons.
+3  The TC25 reboots.
+ 
+CAUTION Performing a hard reset with a SD card installed in the TC25 may cause damage or 
+data corruption to the SD card.</p>
+</div>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down PTT buttons
+3  Release when the device vibrates or when the zebra Logo appears
+ 
+Recovery Menu (Android 7.1.2)
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
+ > power off</p>
+</div>
+
+
+<div class="howto android factory">
+<p>T2XXJNXXXREXXxyz -> Enterprise Reset   (Erases /Data)
+T2XXJNXXXRFXXxyz -> Factory Reset      (Erases /Data, /Enterprise)
+T2XXJNXXXRWXXxyz -> Full Factory Reset (Erases /Data, /Enterprise, External SD Card)
+
+(SD Card method)
+1  Copy Cleaner file <xyz>.zip -> SD:\<xyz>.zip
+2  Reboot into RECOVERY
+3  Start the FACTORY RESET
+    Use the ARROWS to navigate to "apply update from sdcard"
+    Select the <xyz>.zip to start the RESET
+4  Wait until the process is finished and restart the device
+
+(ADB method)
+1  Connect the device to PC via USB Debugging
+2  Send command: adb reboot recovery
+3  In Recovery Mode, select "apply update from ADB"
+4  Send command: adb sideload <xyz>.zip
+5  When finished select "reboot system now"</p>
+</div>
+
+<div id="LastEdit"></div>

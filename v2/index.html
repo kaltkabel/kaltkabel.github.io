@@ -35,10 +35,10 @@
 				<option disabled selected value="0">Choose Manufacturer</option>
 				<option value="dat">Datalogic</option>
 				<option value="elo">ELO</option>
-				<option disabled value="get">Getac</option>
+				<option value="get">Getac</option>
 				<option value="hon">Honeywell</option>
 				<option value="m3m">M3 Mobile</option>
-				<option disabled value="zeb">Zebra</option>
+				<option value="zeb">Zebra</option>
 			</select>
 			<select id="mod" class="dropdown" disabled required="required" onchange="unhide2()">
 				<option disabled selected="selected" class="default">Choose Model</option>
@@ -54,6 +54,9 @@
 				<option class="elo" value="iser">I-Series</option>
 				<option class="elo" value="payp">PayPoint</option>
 				<option class="elo" value="wind">Windows</option>
+				
+				<option class="dat" value="t800">T800</option>
+				<option class="dat" value="z710">Z710</option>
 				
 				<option class="hon" value="cx3x">CX3X Series (CK3X, CK3R)</option>
 				<option class="hon" value="cx6x">CX6X Series (CK6X)</option>
@@ -78,6 +81,10 @@
 				<option disabled class="hon" value="mx9">Tecton MX9</option>
 				
 				<option class="m3m" value="sm15">SM-15</option>
+								
+				<option class="zeb" value="mc33">MC33XX</option>
+				<option class="zeb" value="tc20">TC20</option>
+				<option class="zeb" value="tc25">TC25</option>
 			</select>
 			<button id="submit" onclick="Include()" disabled>Submit</button>
 		</div>

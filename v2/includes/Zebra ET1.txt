@@ -1,0 +1,18 @@
+ FACTORY RESET AND
+-------------------
+
+1. Copy files to microSD
+	 
+	 ET1N0xxx.zip -> root
+	 ET1N2xxx.zip -> root
+
+2. Boot into RECOVERY
+
+	 Press and hold RIGHT ACTION BUTTON (on the back) while booting
+	 or
+	 ADB command: "adb reboot recovery"
+	 
+3. Apply UPDATE
+
+	 Select "apply update from SD"
+	 Select the .zip file

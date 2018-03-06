@@ -1,0 +1,28 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press the Power button, 1 and 9 keys for five seconds.
+2  When the screen turns off, release the buttons.
+3  The devuice reboots.
+
+CAUTION Performing a hard reset with a SD card installed in the MC33XX may cause damage or 
+data corruption to the SD card.</p>
+</div>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down GUN trigger
+3  When Zebra Technologies logo appears on the screen release the trigger
+	
+Recovery Menu (Android 7.1.2):
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
+ > Power off</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</div>
+
+<div id="LastEdit"></div>
