@@ -45,6 +45,7 @@ Bootloader Menu (Android 7.1.1)
 Android 4: Copy the CommenES files to IPSM/Honeywell/AutoInstall/
  
 (Button combination method)
+This does not format IPSM Storage!
 1  Reboot the device
 2  Hold down (right) Scan key + Vol+
  

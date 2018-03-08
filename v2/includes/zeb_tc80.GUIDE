@@ -3,7 +3,7 @@
 <div class="howto android menu">
 <p>1  Restart the device
 2  Press and hold the Power Button and the Scan Trigger
-3  Release when "checking battery percentage" is shown
+3  Release when the device vibrates
  
 Recovery Menu (as seen in FW 5.1.1)
  > reboot system now
@@ -14,7 +14,11 @@ Recovery Menu (as seen in FW 5.1.1)
 </div>
 
 <div class="howto android factory">
-<p>1  Copy cleaner.zip to one of the Storages:
+<p>T8KN0LXXVREXX21002.zip -> Enterprise Reset (Android 5.1)
+T8KN0LXXVRFXX21002.zip -> Factory Reset (Android 5.1)
+TC8K0K3F0RFWW10071.zip -> Factory Reset (Android 4.4.3)
+
+1  Copy cleaner.zip to one of the Storages:
     Option #1 -> INTERNAL STORAGE
     Option #2 -> SD CARD
     Option #3 -> ADB DIRECTORY
