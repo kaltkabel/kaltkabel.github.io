@@ -28,18 +28,18 @@ T2XXJNXXXRFXXxyz -> Factory Reset      (Erases /Data, /Enterprise)
 T2XXJNXXXRWXXxyz -> Full Factory Reset (Erases /Data, /Enterprise, External SD Card)
 
 (SD Card method)
-1  Copy Cleaner file <xyz>.zip -> SD:\<xyz>.zip
+1  Copy Cleaner file xyz.zip -> SD:\xyz.zip
 2  Reboot into RECOVERY
 3  Start the FACTORY RESET
     Use the ARROWS to navigate to "apply update from sdcard"
-    Select the <xyz>.zip to start the RESET
+    Select the xyz.zip to start the RESET
 4  Wait until the process is finished and restart the device
 
 (ADB method)
 1  Connect the device to PC via USB Debugging
 2  Send command: adb reboot recovery
 3  In Recovery Mode, select "apply update from ADB"
-4  Send command: adb sideload <xyz>.zip
+4  Send command: adb sideload xyz.zip
 5  When finished select "reboot system now"</p>
 </div>
 

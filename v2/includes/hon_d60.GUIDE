@@ -13,10 +13,9 @@
 
 Instruct Bootloader to FACTORY RESET:
 1. Cold Boot (BLUE Key + GREEN CALL Key)
-2. When the Notification LED flashes(or when the Honeywell Logo is shown):
-	 Enter on  QWERTY keyboard: W > E > Z > Z
-     or
-	 Enter on numeric keyboard: 1 > 2 > 7 > 7
+2. When the Notification LED flashes (or when the Honeywell Logo is shown):
+    Enter on  QWERTY keyboard: W > E > Z > Z
+    Enter on numeric keyboard: 1 > 2 > 7 > 7
 3. Confirm with Enter > Enter</p>
 </div>
 

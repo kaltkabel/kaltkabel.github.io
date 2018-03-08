@@ -14,6 +14,8 @@ $(window).on('load', function() {
 });
 function unhide() {
 	document.getElementById("mod").disabled = false;
+	document.getElementById("submit").disabled = true;
+	document.getElementById("mod").value=0;
 }
 function unhide2() {
 	document.getElementById("submit").disabled = false;
