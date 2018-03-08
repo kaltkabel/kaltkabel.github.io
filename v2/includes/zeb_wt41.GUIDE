@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>1  Simoultanously press and hold following buttons
+    > On a normal WT41N0    : "1" + "9" + POWER
+    > On a Voice Only WT41N0: "P1" + "P2" 
+2  The Device will reboot</p>
+</div>
+
+<div class="howto wce factory">
+<p>1  Copy Cleaner-files to SD
+    OSUpdate\ -> internal:\temp\
+2  Excecute OSUpdate
+    Navigate to OSUpdate using the explorer
+    Double tap on
+     > when using temp folder: 32N0c70Ben_TEMP.lnk
+     > when using SD card: 32N0c70Ben_SD.lnk
+3  The System starts to FACTORY RESET</p>
+</div>
+
+<div id="LastEdit"></div>

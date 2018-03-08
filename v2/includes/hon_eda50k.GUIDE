@@ -1,30 +1,62 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android menu">
-<p>1  Reboot the device
+<p>Access the Recovery Menu:
+1  Reboot the device
 2  Hold down Vol+ button
+
+Access the Bootloader Menu:
+1  Reboot the device
+2  Hold down Vol- button
  
-Recovery Menu (as seen in Android 4)
-> reboot system now
-> apply update from ADB
-> wipe data/factory reset
-> wipe cache partition
-> apply update from sdcard
-> apply update from ipsm
-> wipe ipsm partition</p>
+Recovery Menu (Android 4)
+ > reboot system now
+ > apply update from ADB
+ > wipe data/factory reset
+ > wipe cache partition
+ > apply update from sdcard
+ > apply update from ipsm
+ > wipe ipsm partition
+
+Recovery Menu (Android 7.1.1)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe data/factory reset
+ > Wipe cache partition
+ > Wipe IPSM partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Power off
+
+Bootloader Menu (Android 7.1.1)
+ > Start System
+ > Power Off
+ > Control Debug
+ > Recovery Mode
+ > Restart Bootloader</p>
 </div>
  
 <div class="howto android factory">
-<p>1  Copy the CommenES files to IPSM/Honeywell/AutoInstall/
+<p>Anrdoid 7: CommonES / Powertools / Demotools are part of the Firmware and will be installed automatically
+Android 4: Copy the CommenES files to IPSM/Honeywell/AutoInstall/
  
-2  Connect the Device to a Computer and delete everything from the internal storage
-3  GoTo All Apps -> Settings -> Backup & Restore
-4  Select Erase Everything
+(Button combination method)
+1  Reboot the device
+2  Hold down (right) Scan key + Vol+
  
-If the device is locked, follow the following steps instead:
-2  Reboot into Recovery Menu by rebooting the device and holding Vol+ button
-3  Select "wipe data/factory reset"
-4  Select "reboot system now"</p>
+(Settings Menu method)
+1  Connect the Device to a Computer and delete everything from the internal storage
+2  GoTo All Apps -> Settings -> Backup & Restore
+3  Select Erase Everything
+ 
+(Recovery Menu method)
+1  Reboot into Recovery Menu by rebooting the device and holding Vol+ button
+2  Select "wipe data/factory reset"
+3  Select "reboot system now"</p>
 </div>
  
  

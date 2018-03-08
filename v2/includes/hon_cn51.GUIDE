@@ -75,49 +75,50 @@ OTA Upgrade Method:
 
 
 <div class="howto weh coldboot">
-<p>1. Press and hold the POWER button for at least 8 seconds
-2. The Computer turns off
-3. Press the POWER button again. The Computer cold boots.</p>
+<p>1  Press and hold the POWER button for at least 8 seconds
+2  The Computer turns off
+3  Press the POWER button again. The Computer cold boots.</p>
 </div>
 
 
 <div class="howto weh factory">
-<p>1. Copy DEMO files
-	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
-	 
-2. Instruct the Bootloader to FACTORY RESET
-	 REBOOT the Device (Press the POWER button for 2 seconds and tap on REBOOT)
-	 When the white bar at the start up screen appears:
-		Press and hold the POWER button
-		Release when instructed "Release IO Button"
-	 When the message "Enter first key in 20s" appears:
-		Press "9" > "6" > "9" > "6"
-	 The Computer starts the cleanboot process.</p>
+<p>1  Copy DEMO files
+    FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+2  Instruct the Bootloader to FACTORY RESET
+    1 REBOOT the Device (Press the POWER button for 2 seconds and tap on REBOOT)
+    2 When the white bar at the start up screen appears:
+      > Press and hold the POWER button
+      > Release when instructed "Release IO Button"
+    3 When the message "Enter first key in 20s" appears:
+      > Press "9" > "6" > "9" > "6"
+    4 The Computer starts the cleanboot process.</p>
 </div>
 
 <div class="howto weh os">
-<p>1. Identify the Firmware
-	 The Part Number (PN) defines the Firmware Version
-	 Example:
-		PN CN51AN1KCF1W1000 = W1
-		PN CN51xxxxxxxW1xxx = W1
-	 W0 = "A4_WEH65_NOWAN_WWE" = WEH 6.5 WWE, WLAN only
-	 W1 = "A4_WEH65_WAN_WWE"   = WEH 6.5 WWE
-	 W2 = "A4_WEH65_NOWAN_LP"  = WEH 6.5 LP,  WLAN only
-	 W3 = "A4_WEH65_WAN_LP"    = WEH 6.5 LP
-		WWE = World Wide English
-		LP  = Laungage Pack (multilingual)
+<p>1  Identify the Firmware
+    The Part Number (PN) defines the Firmware Version
+	
+    W0 = "A4_WEH65_NOWAN_WWE" = WEH 6.5 WWE, WLAN only
+    W1 = "A4_WEH65_WAN_WWE"   = WEH 6.5 WWE
+    W2 = "A4_WEH65_NOWAN_LP"  = WEH 6.5 LP,  WLAN only
+    W3 = "A4_WEH65_WAN_LP"    = WEH 6.5 LP
+	
+    WWE = World Wide English
+    LP  = Laungage Pack (multilingual)
+    
+    Example:
+    PN CN51AN1KCF1W1000 = W1
+    PN CN51xxxxxxxW1xxx = W1 = WEH 6.5 WWE
 
-2. Copy DEMO files
-	 FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
+2  Copy DEMO files
+    FeaturesDemo.cab -> Flash File Store:\CABFILES\FeaturesDemo.cab
 	 
-3. Update the OS
-	 AutoFlash.img, IBOOT.nb0 -> root of microSD card
-	 Remove the battery and insert the SD card
-	 Reinsert battery and place device on charge - The OS upgrade will begin
-	 When the “Autoflash Complete” message is displayed 
-		Remove the SD card
-	 Reboot the device</p>
+3  Update the OS
+    1 AutoFlash.img, IBOOT.nb0 -> root of microSD card
+    2 Remove the battery and insert the SD card
+    3 Reinsert battery and place device on charge - The OS upgrade will begin
+    4 When the “Autoflash Complete” message is displayed, remove the SD card
+    5 Reboot the device</p>
 </div>
 
 <div id="LastEdit"></div>

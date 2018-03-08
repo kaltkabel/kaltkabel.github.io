@@ -1,0 +1,95 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press POWER + SCAN(left) + VOL UP
+2  The Device will reboot</p>
+</div>
+
+<div class="howto android menu">
+<p>(USB Debugging ADB method)
+ 1  Connect the device to PC via USB Debugging
+ 2  Send command: adb device recovery
+(Button combination method)
+ 1  Reboot the device
+ 2  Press and hold down PTT
+ 3  Release when the device vibrates
+
+Recovery Menu (FW 4.4.2)
+ > reboot system now
+ > apply update from ADB
+ > apply update from External SD card
+ > apply update from Internal SD card
+ 
+Recovery Menu (FW 5.1.1)
+ > reboot system now
+ > apply update from ADB
+ > apply update from External SD card
+ > apply update from Internal SD card
+ > reboot to bootloader
+ > power down
+ > view recovery logs</p>
+</div>
+
+<div class="howto android factory">
+<p>(SD card method)
+1  Copy Cleaner files T75xxxxxx.zip or any newer version -> SD:\T75xxxxxx.zip
+2  Reboot into RECOVERY
+3  Start the FACTORY RESET
+    Use the ARROWS to navigate to "apply update from External SD card"
+    Select the T75xxxxxx.zip to start the RESET
+4  Wait until the process is finished and restart the device
+
+(USB method)
+1  Copy Cleaner files T75xxxxx.zip or any newer version -> internal:\T75xxxxxx.zip
+2  Reboot into RECOVERY
+3  Start the FACTORY RESET
+    Use the ARROWS to navigate to "apply update from Internal SD card"
+    Select the T75xxxxxx.zip to start the RESET
+4  Wait until the process is finished and restart the device
+ 
+(ADB method)
+1  Connect the device to PC via USB Debugging
+2  Send command: adb reboot recovery
+3  In Recovery Mode, select "apply update from ADB"
+4  Send command: adb sideload T75xxxxxx.zip
+5  When finished select "reboot system now"</p>
+</div>
+
+<div class="howto android os">
+<p>(SD card method)
+1  Copy the recovery_update_xyz.zip file to a SD card.
+2  Insert the SD card.
+3  Press power key to resume device.
+4  Press and hold the Power button on the device until the Device options menu appears.
+5  Tap on Reset to reboot the device.
+6  When the device is rebooting hold the PTT button to enter Recovery update mode.
+7  When the device vibrates release the PTT button.
+8  Use VOL keys to select "apply update from External SD card" option
+9  Press PTT key to select the option
+10 Use VOL keys to select recovery_update_xyz.zip file.
+11 Press PTT key to select the recovery_update_xyz.zip file.
+12 Press PTT key to select "reboot system now" to reboot the device.
+
+(USB method)
+1  Connect the device to PC via USB (note, PC must support MTP).
+2  Copy the recovery_update_xyz.zip file the internal memory of the the device. The internal 
+   memory will be shown in PC file browser as \Internal storage.
+3  Press and hold the Power button on the device until the Device options menu appears.
+4  Tap on Reset to reboot the device.
+5  When the device is rebooting hold the PTT button to enter Recovery update mode.
+6  When the device vibrates release the PTT button.
+8  Use VOL keys to select "apply update from Internal SD card" option
+9  Press PTT key to select the option
+10 Use VOL keys to select recovery_update_xyz.zip file.
+11 Press PTT key to select the recovery_update_xyz.zip file.
+12 Press PTT key to select "reboot system now" to reboot the device.
+ 
+(ADB method]
+1  Connect the device to PC via USB Debugging
+2  Send command: adb reboot recovery
+3  In Recovery Mode, select "apply update from ADB"
+4  Send command: adb sideload recovery_update_xyz.zip
+5  When finished select "reboot system now"</p>
+</div>
+
+<div id="LastEdit"></div>

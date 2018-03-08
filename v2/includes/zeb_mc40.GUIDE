@@ -1,0 +1,37 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press POWER + LEFT SCAN / ACTION + VOLUME UP
+2  The Device will reboot</p>
+</div>
+
+<div class="howto android menu">
+<p>(Button combination)
+ 1  Reboot the device
+ 2  Press and hold (left) Scan + (left) Action button
+
+(ADB command)
+ 1  Enable USB debugging
+ 2  Connect device to PC
+ 3  Send command: "adb reboot recovery"</p>
+</div>
+
+<div class="howto android factory">
+<p>(SD Card method)
+ 1  Copy .zip file
+     > JB: 40N0JxxFRxxxxxxx.zip -> microSD:\
+     > KK: 40N0KxxFRxxxxxxx.zip -> microSD:\
+ 2  Boot into Recovery
+ 3  Navigate to "update from SD card" and select the .zip file
+
+(ADB method)
+ 1  Obtain the .zip file
+     > JB: 40N0JxxFRxxxxxxx.zip
+     > KK: 40N0KxxFRxxxxxxx.zip
+ 2  Boot into Recovery
+ 3  Select "update from ADB"
+ 4  Send file with command: "adb sideload .zip"
+</p>
+</div>
+
+<div id="LastEdit"></div>

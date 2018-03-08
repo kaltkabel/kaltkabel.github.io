@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>(Button combination)
+1  Reboot the device 
+2  Press and hold RIGHT ACTION BUTTON (on the back
+
+(ADB command)
+1  Enable USB Debugging
+2  Connect the device to PC
+3  Send ADB command: "adb reboot recovery"
+</p>
+</div>
+
+<div class="howto android factory">
+<p>1  Copy ET1N0xxx.zip or ET1N2xxx.zip to the root of a microSD 
+2  Boot into RECOVERY
+3  Apply "apply update from SD" and select the .zip file</p>
+</div>
+
+<div id="LastEdit"></div>

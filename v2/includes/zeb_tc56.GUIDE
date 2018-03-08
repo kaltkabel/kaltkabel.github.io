@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press and hold the following buttons for 5 seconds
+    > Power button + Scan button + Volume Up button
+2  Release the buttons when the device reboots</p>
+</div>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Hold down the PTT button
+3  Release when Zebra splash Logo appears
+ 
+Recovery Menu (as seen in FW 6.0.1)
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
+ > Power off</p>
+</div>
+
+<div id="LastEdit"></div>

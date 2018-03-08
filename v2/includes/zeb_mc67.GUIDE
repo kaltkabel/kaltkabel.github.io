@@ -1,0 +1,28 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto weh coldboot">
+<p>1  Simultaneously press "1" + "9" + POWER
+2  The Device will reboot
+
+AZERTY/QWERTZ/QWERTY Cold Boot Procedure
+ > Press and hold the '1' key, '9' key and the power key. 
+ > The display will go blank indicating the cold boot has started.
+
+PIM Cold Boot Procedure
+ > Press and hold the GREEN PHONE key (aka SEND), the RIGHT ARROW key and the power key. 
+ > The display will go blank indicating the cold boot has started.</p>
+</div>
+
+<div class="howto weh factory">
+<p>1  Copy files to SD or temp folder
+    Cleaner -> microSD:\
+    Cleaner -> internal:\temp\
+2  Excecute the Cleaner
+    Navigate to temp\ or microSD:\ using the file explorer
+    Double tap on StartUpdLdr.exe
+3  The System starts to FACTORY RESET
+ 
+Note: Image updates / Factory resets require AC power</p>
+</div>
+
+<div id="LastEdit"></div>
