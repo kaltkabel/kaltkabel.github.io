@@ -15,7 +15,18 @@ Recovery Menu (as seen in FW 6.0.1)
  > Reboot system now
  > Apply update from ADB
  > Apply update from SD card
+ > Power off
+
+Recovery Menu (as seen in FW 7.1.2)
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
  > Power off</p>
+</div>
+
+<div class="howto android menu">
+<p>PN TC56xx-1xxxxx-xx = WITH GMS
+PN TC56xx-2xxxxx-xx = NO GMS</p>
 </div>
 
 <div id="LastEdit"></div>
