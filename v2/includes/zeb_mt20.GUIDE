@@ -1,0 +1,14 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>Press and hold 2 + TRIGGER buttons for 10 seconds</p>
+</div>
+
+<div class="howto wce os">
+<p>1  ActiveSync MT2000 to PC
+2  Unzip the appropriate OSUpdate for the model (MT2070 or MT2090)
+3  Run the “ActiveSyncOSUpdate.bat”
+4  After the Update, the MT2000 will reboot</p>
+</div>
+
+<div id="LastEdit"></div>

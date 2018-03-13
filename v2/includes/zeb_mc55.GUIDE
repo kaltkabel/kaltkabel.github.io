@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android coldboot">
+<p>1  Simultaneously press buttons
+   > Numeric Keypad:      POWER + 1 + 9
+   > Alphanumeric Keypad: POWER + W + C
+   > PIM Keypad:          POWER + GREEN CALL + ARROR RIGHT
+2  The Device will reboot</p>
+</div>
+
+<div class="howto weh factory">
+<p>1  Copy files to SD
+   > Cleaner -> microSD:\
+   > Cleaner -> internal:\temp\
+2  Execute the Cleaner
+    Navigate to temp\ or microSD:\ using the explorer
+    Double tap on StartUpdLdr.exe
+3  The System starts to FACTORY RESET</p>
+</div>
+
+<div id="LastEdit"></div>

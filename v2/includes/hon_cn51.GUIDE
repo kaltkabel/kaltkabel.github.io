@@ -11,10 +11,34 @@
  7  Press the TOP(right) button
  8  When the "Android" logo with a RED TRIANGLE appears, press the RED button
  
-Android 6.0:
- 1  Turn off the device
- 2  Press and hold "Power Button + Volume Down"
- 3  Continue to hold all buttons until the 'Honeywell' logo appears on the screen with "Recovery Mode"</p>
+Access the Bootloader Menu (Android 6):
+ 1  Power off the device
+ 2  Power on the device
+ 3  Press and hold the Vol- Button
+ 4  The device will soon start the Bootloader Menu
+
+Access the Recovery Menu (Android 6):
+ 1  Start the Bootloader Menu
+ 2  Select Enter Recovery
+
+Bootloader Menu (Android 6):
+ > Restart Bootloader
+ > Enter Recovery
+ > Power Off
+ > Start
+
+Recovery Menu (Android 6):
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe data/factory reset
+ > Wipe cache partition
+ > Wipe ipsm partition
+ > Mount /system
+ > View recovery logs
+ > Power off</p>
 </div>
 
 <div class="howto android factory">

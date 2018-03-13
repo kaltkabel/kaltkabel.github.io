@@ -1,0 +1,71 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Access the Bootloader Menu (Android 6):
+ 1  Power off the device
+ 2  Power on the device
+ 3  When the LED lights up in green, press the Power and the Vol- Buttons for about 2 seconds
+ 4  The device will soon start the Bootloader Menu
+
+Access the Recovery Menu (Android 6):
+ 1  Start the Bootloader Menu
+ 2  Select Enter Recovery
+
+Bootloader Menu (Android 6):
+ > Restart Bootloader
+ > Enter Recovery
+ > Enable Field Debug
+ > Power Off
+ > Start
+
+Recovery Menu (Android 6):
+ > Reboot system now
+ > Wipe data/factory reset
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe cache partition
+ > Wipe ipsm partition
+ > Mount /system
+ > View recovery logs
+ > Power off</p>
+</div>
+
+<div class="howto android factory">
+<p>(Settings method)
+ 1  Format or delete all contents from IPSM
+ 2  Copy the CommenES.zip to IPSM\honeywell\autoinstall
+ 3  Enter Settings > Backup & Reset
+ 4  Select Factory Reset
+
+(Recovery Menu method)
+ 1  Enter Recovery Menu
+ 2  Wipe data/factory reset
+ 3  Wipe ipsm partition
+ 4  Apply update from ..
+ 5  Send command: "adb sideload CommenES.zip"</p>
+</div>
+
+<div class="howto android os">
+<p>The CK75 and CN75 can be upgraded to Android from WM 6.5 and will require licensing
+There is no option for going from Android (originally ordered) to WM 6.5
+
+(Bootloader method)
+ 1  Format a SD card to FAT32
+ 2  Unzip the content of the Firmware.zip to the root of the SD card
+ 3  Place the SD card to the device
+ 4  Power on the device. The OS update procedure should start
+ 5  Copy the CommenES.zip to IPSM\honeywell\autoinstall 
+ 6  Restart the terminal
+
+(USB Debugging ADB method)
+ 1  Reboot to Recovery Menu
+ 2  Navigate to "Apply update from ADB"
+ 3  Send command: "adb sideload Firmware.zip"
+ 4  Exit the Recovery Menu
+ 5  Copy the CommenES.zip to IPSM\honeywell\autoinstall 
+ 6  Restart the terminal</p>
+</div>
+
+<div id="LastEdit"></div>

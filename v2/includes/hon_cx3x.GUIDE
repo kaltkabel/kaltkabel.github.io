@@ -14,7 +14,7 @@
 	 The Computer starts the cleanboot process.</p>
 </div>
 
-<div class="howto weh factory">
+<div class="howto weh os">
 <p>1. Copy files
 	 FeaturesDemo.cab -> Flash File Store:\CABFILES\
 	 Servicepacks.cab -> Flash File Store:\CABFILES\

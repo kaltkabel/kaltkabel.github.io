@@ -1,0 +1,55 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>1  Simultaneously press "1" + "9" + POWER
+2  The Device will reboot</p>
+</div>
+
+<div class="howto wce factory">
+<p>1 Copy files to SD
+  > OSUpdate -> microSD:\
+  > OSUpdate -> internal:\temp\
+2  Excecute OSUpdate
+    Navigate to OSUpdate\ using the explorer
+    Double tap on
+    > when using temp:    32N0c70Ben_TEMP.lnk
+    > when using microSD: 32N0c70Ben_SD.lnk
+3  The System starts to FACTORY RESET
+
+
+To remove the Autostart Apps:
+1  Open the Application folder.
+2  Delete the Sample.C folder and its contents.
+3  Delete the StartUpCtl folder and its contents.
+4  Delete the Samples.C file.
+5  Open the StartUp folder.
+6  Delete the StartUpCtl file.</p>
+</div>
+
+<div class="howto android menu">
+<p>(USB Debugging ADB method)
+ 1  Connect the device to PC via USB Debugging
+ 2  Send command: adb device recovery
+
+(Button combination method)
+ 1  Reboot the device
+ 2  In the boot process press and hold the GUN-SCAN trigger
+	
+Recovery Menu (Android 4.1.1):
+ > reboot system now
+ > apply update from sd
+ > apply update from adb</p>
+</div>
+
+<div class="howto android factory">
+<p>(Using the SD card)
+ 1  Copy <cleaner>.zip to microSD:/
+ 2  Reboot into Recovery
+ 3  Apply update from SD
+ 
+(Using the ADB)
+ 1  Reboot into Recovery  ("adb reboot recovery")
+ 2  Apply update from ADB ("adb sideload <cleaner>.zip")</p>
+</div>
+
+<div id="LastEdit"></div>
