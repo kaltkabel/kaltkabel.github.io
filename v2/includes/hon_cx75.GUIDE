@@ -68,4 +68,18 @@ There is no option for going from Android (originally ordered) to WM 6.5
  6  Restart the terminal</p>
 </div>
 
+<div class="howto weh coldboot">
+<p>1  Remove the BATTERY
+2  Press the RESET button (left button)
+3  Insert the BATTERY</p>
+</div>
+
+
+<div class="howto weh factory">
+<p>1  Perform a COLD BOOT
+2  Press and hold POWER button
+3  Release the button when "Release IO" appears
+4  Confirm with 1 key -> 2 key -> 1 key -> 2key</p>
+</div>
+
 <div id="LastEdit"></div>

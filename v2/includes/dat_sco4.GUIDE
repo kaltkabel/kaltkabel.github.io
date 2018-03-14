@@ -15,4 +15,12 @@
 5  The device will perform a CLEAN BOOT</p>
 </div>
 
+<div class="howto wce os">
+<p>Use the newest version of Datalogic X-Firmware Utility (DXU)
+The device has to be connected to the Computer via ActiveSync (Windows Mobile Devices)
+Cradle is not needed to connect to a computer. 
+A USB connection can be established with the DCIN-Port on the back of the device.
+Note: Windows 10 might have issues with ActiveSync and CE devices. Contact David for a solution.</p>
+</div>
+
 <div id="LastEdit"></div>
