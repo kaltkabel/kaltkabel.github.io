@@ -1,14 +1,37 @@
 <script src="javascript/LastEdit.js"></script>
 
+<div class="howto android menu">
+<p>1  Press and hold POWER for 8 seconds until the device reboots
+2  Press and hold POWER + VOL-
+3  A Menu will be shown. Use VOLUME UP, DOWN to navigate
+4  Select RECOVERY MODE and enter with POWER
+
+Recovery Menu (Android 6.0.1)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe data/factory reset
+ > Wipe cache partition
+ > Wipe IPSM partition
+ > Mount /system
+ > View recovery logs
+ > Power off
+ 
+Bootloader Menu (Android 6.0.1)
+ > Start
+ > Recovery Menu
+ > Restart Bootloader
+ > Enable Dload
+ > Enable Debug
+ > Power Off</p>
+</div>
+
 <div class="howto android factory">
 <p>Via USB Debugging:
  1  Connect device to PC via USB debugging
- 2  Send command: adb reboot recovery
-    if this does not work:
-      Press and hold POWER for 8 seconds until the device reboots
-      Press and hold POWER + VOL-
-      A Menu will be shown. Use VOLUME UP, DOWN to navigate
-      Select RECOVERY MODE and enter with POWER
+ 2  Enter Recovery
  3  In Recovery Mode, select Factory Reset
  4  In Recovery Mode, select "apply update from ADB"
  5  Send command: "adb sideload CommonES.zip"

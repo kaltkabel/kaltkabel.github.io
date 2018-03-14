@@ -1,18 +1,18 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android menu">
-<p>To Access the Recovery Menu:
-1  Connect the device to a PC with ADB enabled
-2  Perform the command: abd reboot recovery
-3  The device will reboot
-4  When "no command" is displayed, tap shortly Power button and the Vol+ button
-5  Navigate with Vol+ and Vol-
+<p>Accessing the Recovery Menu:
+ 1  Connect the device to a PC with ADB enabled
+ 2  Perform the command: abd reboot recovery
+ 3  The device will reboot
+ 4  When "no command" is displayed, tap shortly Power button and the Vol+ button
+ 5  Navigate with Vol+ and Vol-
 
-To Access the Bootloader Menu:
-1  Restart the device
-2  Press and hold the Power button and the Vol- Button
-3  Release when "START" is shown on the display
-4  Navigate with Vol+ and Vol-
+Accessing the Bootloader Menu:
+ 1  Restart the device
+ 2  Press and hold Power button and the Vol- Button
+ 3  Release when "START" is shown on the display
+ 4  Navigate with Vol+ and Vol-
 
 Recovery Menu (OS 7.1.1)
  > Reboot system now
@@ -42,20 +42,15 @@ Bootloader Menu (OS 7.1.1)
 Factory Reset: erases internal storage, settings and the IPSM partition
 
 Using the Bootloader Menu:
-1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
-2  Tap the Vol- 2 times
-3  Hit the Power button, when Factory Reset is selected
-4  A Factory Reset will be performed
+ 1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
+ 2  Tap the Vol- 2 times
+ 3  Hit the Power button, when Factory Reset is selected
+ 4  A Factory Reset will be performed
 
 Using the Settings Menu:
-1  Power on the device
-2  Navigate to Settings -> Backup & reset
-3  Perform a Factory Reset</p>
-</div>
-
-	
-<div class="howto android os">
-<p></p>
+ 1  Power on the device
+ 2  Navigate to Settings -> Backup & reset
+ 3  Perform a Factory Reset</p>
 </div>
 
 <div id="LastEdit"></div>
