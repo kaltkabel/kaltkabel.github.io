@@ -1,0 +1,51 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>(USB debugging method)
+ 1  Enable USB debugging
+ 2  Send command: adb reboot recovery
+
+(Button combination method)
+ 1  Turn off the device
+ 2  Press the Power key with a metallic clip and, immediately after, press the Scan Key
+
+Recovery Menu (Android 6)
+ > Reboot system now
+ > Apply update from external storage
+ > Factory Reset
+ > Enterprise Reset
+ > OTA Update Options
+ > Power off</p>
+</div>
+
+<div class="howto android factory">
+<p>(Application method)
+ 1  Power up the device
+ 2  Go to Settings > Backup & reset
+ 3  Select Factory data reset
+
+(Recovery Menu method)
+ 1  Reboot into Recovery Menu
+ 2  Select "Factory Reset"</p>
+</div>
+
+<div class="howto android os">
+<p>(External Storage method)
+ Note: In Recovery mode, you can only apply updates from external storage (SD Card)
+ 1  Reboot into Recovery Menu
+ 2  Select "Apply update from external storage"
+ 3  Select your firmware.zip
+
+(Internal Storage method)
+ 1  Go to Settings > System upgrade > Local Upgrade
+ 2  Select your firmware.zip
+
+(DXU method)
+ 1  Enable USB debugging
+ 2  Start the DXU Agent on the device
+ 3  Go to the DXU on the PC
+ 4  Select the device
+ 5  Navigate to Firmware utility</p>
+</div>
+
+<div id="LastEdit"></div>
