@@ -8,13 +8,26 @@
 
 <div class="howto wce factory">
 <p>Instruct Bootloader to FACTORY RESET:
-1  Perform a Cold Boot
+1  Press and immediatly release POWER and the RESET button
 2  When the "COLD (H/W) RESET" displays:
    Enter: 1 > 2 > 7 > 7
 3  When a Menu displays:
    Enter: 1 > 2 > ENTER
 4  The device will first perform a RAM TEST
 5  After the Test the device will perform a FACTORY RESET</p>
+</div>
+
+<div class="howto wce os">
+<p>1  Copy PM_xx_xx_WWE.PFU and SelfUpdate(X.X).exe to the root of an SD card
+2  Insert the Micro SD card into the device
+3  Press and immediatly release POWER and the RESET button
+4  When the "COLD (H/W) RESET" displays:
+   Enter: 1 > 2 > 7 > 7
+5  When a Menu displays:
+   Enter: 1 > 1 > ENTER
+6  The device will show a menu with 3 options
+   Dial 1 > 1 and then the "ENT" key
+   The "DownloadMode" process will start</p>
 </div>
 
 <div id="LastEdit"></div>
