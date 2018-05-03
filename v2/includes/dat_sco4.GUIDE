@@ -1,5 +1,27 @@
 <script src="javascript/LastEdit.js"></script>
 
+<div class="howto android menu">
+<p>1  Press Back + 0 simultanously
+2  Reset the device
+3  Release when recovery menu is displayed
+
+Recovery Menu (Android 4.4)
+> Reboot system now
+> Apply update from external storage
+> Factory Reset
+> Enterprise Reset
+> OTA Update Options</p>
+</div>
+
+<div class="howto android os">
+<p>Use the newest version of Datalogic X-Firmware Utility (DXU)
+1  Enable USB Debugging
+2  Connect the device with the DCIN-port to a PC
+3  Open DXU Agent on the device
+4  Start DXU on the PC
+5  Select Firmware Utility</p>
+</div>
+
 <div class="howto wce coldboot">
 <p>1  Turn off the Device
 2  Remove Battery

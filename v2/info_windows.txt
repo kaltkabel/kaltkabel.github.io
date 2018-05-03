@@ -1,49 +1,37 @@
+Windows CE
+
+Windows CE 1.0
+Windows CE 1.01
+Windows CE 2.0
+Windows CE 2.10
+Windows CE 2.11
+Windows CE 3.0
+Windows CE .NET 4.0
+Windows CE .NET 4.1
+Windows CE .NET 4.2
+Windows CE 5.0 	Juli 2004
+Windows Embedded CE 6.0
+Windows Embedded CE 6.0 R3
+Windows Embedded Compact 7
+Windows Embedded 8
+Windows Embedded 8 Industry
+Windows Embedded Compact 2013 
 
 
-Microsoft has renamed the Windows Mobile Platform to Windows Embedded Handheld.
 
-There where releases in the following order:
+Windows Embedded Handheld / Mobile
 
-    Pocket Pc 2000
-        Blue desktop theme as a default. Coloured windows logo inside the start button.
-    Pocket Pc 2002
-        Blue desktop theme as a default. Coloured windows logo inside the start button.
-    Pocket Pc 2003
-        Blue desktop theme as a default. Coloured windows logo inside the start button.
-    Pocket Pc 2003 SE
-        Blue desktop theme as a default. Coloured windows logo inside the start button.
-    Windows Mobile 5.0
-        Blue desktop theme as a default.
-    Windows Mobile 6.0
-        Green desktop theme as a default.
-    Windows Mobile 6.1
-        More optimized than 6.0.
-    Windows Mobile 6.5
-        Change: New dark blue desktop theme as a default.
-    Windows Embedded Handheld 6.5.3
-        Change: Like Windows Mobile 6.5 but with the Start-Button on the bottom
-    Windows Embedded Handheld 6.5
-        Change: Just renamed 6.5.3 back to Windows Embedded Handheld 6.5 to add confusion.
-
-From Windows Mobile 5.0 or later they come with a Windows CE 5 kernel and have the 32 MB of virtual RAM per process limit, so they didn't benefit form new Windows CE releases, which naming is as fucked up like the Windows Mobile naming.
-
-On Windows CE you got:
-
-    Windows CE 5
-    Windows Embedded CE 6
-    Windows Embedded CE 6 R2
-    Windows Embedded CE 6 R3
-    Windows Embedded Compact 7
-    Windows Embedded 8
-    Windows Embedded 8 Industry
-    Windows Embedded Compact 2013
-
-But wait, there is more. The Windows Mobile Platform died is no longer supplied with features/improvements, since the Microsoft .NET Compact Framework Team was moved to develop the Windows Phone Plattform. So these are the bastard childs and the spiritual continuation of Windows Mobile based on Windows Phone with some framework additions for datacapturing. Which include:
-
-    Windows Embedded Handheld 8 (also named Windows Embedded 8 Handheld)
-        Based on Windows Phone 8
-    Windows Embedded Handheld 8.1 (also named Windows Embedded 8.1 Handheld)
-        Based on Windows Phone 8.1
-    Windows 10 IoT Mobile Enterprise
-        Based on Windows 10 Mobile, which is based on the Windows Phone platform. We got a new rename, yay.
-
+Pocket PC 2000
+Pocket PC 2002
+Windows Mobile 2002
+Windows Mobile 2003
+Windows Mobile 2003 Second Edition
+Windows Mobile 5.0
+Windows Mobile 6
+Windows Mobile 6.1
+Windows Mobile 6.5
+Windows Mobile 6.5.3
+Windows Embedded Handheld 6.5
+Windows Embedded Handheld 8
+Windows Embedded Handheld 8.1
+Windows 10 IoT Mobile Enterprise
