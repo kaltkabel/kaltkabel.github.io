@@ -8,12 +8,17 @@
 <div class="howto android menu">
 <p>(Button combination)
  1  Reboot the device
- 2  Press and hold (left) Scan + (left) Action button
+ 2  Press and hold (left) Scan button
 
 (ADB command)
  1  Enable USB debugging
  2  Connect device to PC
- 3  Send command: "adb reboot recovery"</p>
+ 3  Send command: "adb reboot recovery"
+ 
+Recovery Menu
+> reboot system now
+> apply update from sdcard
+> apply update from ADB</p>
 </div>
 
 <div class="howto android factory">
