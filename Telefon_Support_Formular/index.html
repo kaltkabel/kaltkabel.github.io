@@ -3,61 +3,103 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 	<title>Telefon Support Form</title>
+	<script src="../v2/javascript/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<span class="bold-red">Das Formular wird aktuell noch bearbeitet</span>
-	<form action="mailto()" method="post" enctype="text/plain">
+	<h1>Telefon Support Formular</h1>
+	<form action="javascript:submit()" method="post" enctype="text/plain">
+	
+		<div class="wrapper">
+		<div class="one">Kundenummer:</div>
+		<div class="two"><input id="KDN" type="text" name="Kundenummer: "></div>
+		</div>
 		
-		Fachbereich:<br>
-		 <select name="fachbereich">
- 			<option value="fb1">Fachbereich 1</option>
-  			<option value="fb2">Fachbereich 2</option>
-  			<option value="fb3">Fachbereich 3</option>
-		</select> <br><br>
-
-		Kundenummer:<br>
-		<input type="text" name="kndNr"><br>
-		Name:<br>
-		<input type="text" name="name"><br>
-		Hersteller:<br>
-		<input type="text" name="hersteller"><br>
-		Modell:<br>
-		<input type="text" name="modell"><br>
-		Problem:<br>
-		<textarea type="text" name="problem"></textarea><br>
-		Was hat der Kunde schon probiert?<br>
-		<textarea type="text" name="kndProbiert"></textarea><br>
-		Interface:<br>
-		<input type="text" name="interface" size="50"><br>
-		OS:<br>
-		<input type="text" name="os" size="50"><br>
-		Kunde E-mail:<br>
-		<input type="text" name="kndEmail" size="50"><br>
-		Kunde Telefon:<br>
-		<input type="text" name="kndTelefon" size="50"><br>
-
-		<hr>
-
-		<h2>An wen senden?</h2>
-		E-mail:<br>
-		<input type="text" name="kndEmail" size="50"><br>
+		<div class="wrapper">
+		<div class="one">Ansprechpartner:</div>
+		<div class="two"><input id="KDN_Name" type="text" name="Kundenname: "></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">E-mail:</div>
+		<div class="two"><input id="KDN_Mail" type="text" name="Email: " size="50"></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">Telefon:</div>
+		<div class="two"><input id="KDN_Tel" type="text" name="Telefon: " size="50"></div>
+		</div>
+		
 		<br>
-
+		
+		<div class="wrapper">
+		<div class="one">Produkt:</div>
+		<div class="two"><input id="PN" type="text" name="Produkt: "></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">Seriennummer:</div>
+		<div class="two"><input id="SN" type="text" name="SN: "></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">Fachbereich:</div>
+		<div class="two"><select id="FB">
+			<option selected disabled>Fachbereich</option>
+ 			<option value="FB1">Fachbereich 1</option>
+  			<option value="FB2">Fachbereich 2</option>
+  			<option value="FB3">Fachbereich 3</option>
+		</select></div>
+		</div>
+		
+		<br>
+		
+		<div class="wrapper">
+		<div class="one1">Problem:</div>
+		<div class="two"><textarea id="ERR" type="text" name="Problem: "></textarea></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one1">Was hat der Kunde schon probiert?</div>
+		<div class="two"><textarea id="ERR2" type="text" name="Probiert wurde: "></textarea></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">Interface:</div>
+		<div class="two"><input id="IF" type="text" name="Interface: " size="50"></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">Betriebssystem:</div>
+		<div class="two"><input id="OS" type="text" name="Betriebssystem: " size="50"></div>
+		</div>
+		
+		<br>
+		
 <!-- Send / Reset -->
-		<input type="submit" value="Send" name="mailto">
-		<input type="reset" value="Reset">
+		<input id="submit" type="submit" value="Send" name="mailto">
+		<input id="reset" type="reset" value="Reset">
 	</form>
-</body>
-
-<script type="text/javascript">
-function mailto() {
-        var link = "mailto:example@mail.com"
-                 + "?cc=myCCaddress@example.com"
-                 + "&subject=" + escape("This is my subject")
-                 + "&body=" + escape(document.getElementById('myText').value)
-        ;
-
-        window.location.href = link;
-    }
+	
+	<script type="text/javascript">
+	function submit() {
+		if ($("#FB option:selected").val() == "FB1") var mail = "mailto:benjamin.godzi@jarltech.de?cc=oliver.schulz@jarltech.de"
+		if ($("#FB option:selected").val() == "FB2") var mail = "mailto:florian.glasser@jarltech.de?cc=maik.paetschke@jarltech.de"
+		if ($("#FB option:selected").val() == "FB3") var mail = "mailto:marc.roeder@jarltech.de?cc=dominik.quillmann@jarltech.de"
+	    var link = mail
+                 + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
+                 + "&body=" 
+				 + $("#KDN").attr('name') + $("#KDN").val() + "%0D%0A"
+				 + $("#KDN_Name").attr('name') + $("#KDN_Name").val() + "%0D%0A"
+				 + $("#KDN_Mail").attr('name') + $("#KDN_Mail").val() + "%0D%0A"
+				 + $("#KDN_Tel").attr('name') + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
+				 + $("#PN").attr('name') + $("#PN").val() + "%0D%0A"
+				 + $("#SN").attr('name') + $("#SN").val() + "%0D%0A%0D%0A"
+				 + $("#ERR").attr('name') + $("#ERR").val() + "%0D%0A"
+				 + $("#ERR2").attr('name') + $("#ERR2").val() + "%0D%0A"
+				 + $("#IF").attr('name') + $("#IF").val() + "%0D%0A"
+				 + $("#OS").attr('name') + $("#OS").val() + "%0D%0A"
+        window.location=link
+	}
 </script>
+</body>
 </html>

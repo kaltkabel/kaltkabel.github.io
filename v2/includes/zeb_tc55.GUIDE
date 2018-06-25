@@ -16,7 +16,7 @@ Recovery Menu (as seen in FW 4.1.2)
 </div>
 
 <div class="howto android factory">
-<p>1  Copy <Factory Reset>.zip to the following path
+<p>1  Copy Factory Reset.zip to the following path
     JB: T55N0JxxVRFENxx.zip -> microSD:\ or internal:\
      KK: T55N0KxxVRFENxx.zip -> microSD:\ or internal:\
 2  Boot into RECOVERY
