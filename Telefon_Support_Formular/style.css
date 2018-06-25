@@ -54,3 +54,7 @@ form {
 
   background: #FFF url(background.jpg);
 }
+ span.bold-red {
+    color: red;
+    font-weight: bold;
+}
