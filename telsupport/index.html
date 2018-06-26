@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Telefon Support Formular</h1>
-	<form action="javascript:senden()" method="post" enctype="text/plain">
+	<form action="javascript:submit()" method="post" enctype="text/plain">
 	
 		<div class="wrapper">
 		<div class="one">Kundenummer:</div>
@@ -81,7 +81,7 @@
 	</form>
 	
 	<script type="text/javascript">
-	function senden() {
+	function submit() {
 		if ($("#FB option:selected").val() == "FB1") var mail = "mailto:benjamin.godzi@jarltech.de?cc=oliver.schulz@jarltech.de"
 		if ($("#FB option:selected").val() == "FB2") var mail = "mailto:florian.glasser@jarltech.de?cc=maik.paetschke@jarltech.de"
 		if ($("#FB option:selected").val() == "FB3") var mail = "mailto:marc.roeder@jarltech.de?cc=dominik.quillmann@jarltech.de"
