@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Telefon Support Formular</h1>
-	<form action="javascript:submit()" method="post" enctype="text/plain">
+	<form action="javascript:senden()" method="post" enctype="text/plain">
 	
 		<div class="wrapper">
 		<div class="one">Kundenummer:</div>
@@ -43,7 +43,7 @@
 		
 		<div class="wrapper">
 		<div class="one">Fachbereich:</div>
-		<div class="two"><select id="FB">
+		<div class="two"><select id="FB" onchange="insertmail()">
 			<option selected disabled>Fachbereich</option>
  			<option value="FB1">Fachbereich 1</option>
   			<option value="FB2">Fachbereich 2</option>
@@ -75,17 +75,40 @@
 		
 		<br>
 		
+		<div class="wrapper">
+		<div class="one">Senden an:</div>
+		<div class="two"><input id="Send" type="text" name="" size="50"></div>
+		</div>
+		
+		<div class="wrapper">
+		<div class="one">CC an:</div>
+		<div class="two"><input id="CC" type="text" name="" size="50"></div>
+		</div>
+		
 <!-- Send / Reset -->
 		<input id="submit" type="submit" value="Send" name="mailto">
 		<input id="reset" type="reset" value="Reset">
 	</form>
 	
 	<script type="text/javascript">
-	function submit() {
-		if ($("#FB option:selected").val() == "FB1") var mail = "mailto:benjamin.godzi@jarltech.de?cc=oliver.schulz@jarltech.de"
-		if ($("#FB option:selected").val() == "FB2") var mail = "mailto:florian.glasser@jarltech.de?cc=maik.paetschke@jarltech.de"
-		if ($("#FB option:selected").val() == "FB3") var mail = "mailto:marc.roeder@jarltech.de?cc=dominik.quillmann@jarltech.de"
-	    var link = mail
+	function insertmail() {
+		if ($("#FB option:selected").val() == "FB1") {
+			var send = "benjamin.godzi@jarltech.de"
+			var cc = "oliver.schulz@jarltech.de"
+		}
+		if ($("#FB option:selected").val() == "FB2") {
+			var send = "florian.glasser@jarltech.de"
+			var cc = "maik.paetschke@jarltech.de"
+		}
+		if ($("#FB option:selected").val() == "FB3") {
+			var send = "marc.roeder@jarltech.de"
+			var cc = "dominik.quillmann@jarltech.de"
+		}
+		$("#Send").val(send)
+		$("#CC").val(cc)
+	}
+	function senden() {
+	    var link = "mailto:" + $("#Send").val() + "&cc=" + $("#CC").val()
                  + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                  + "&body=" 
 				 + $("#KDN").attr('name') + $("#KDN").val() + "%0D%0A"

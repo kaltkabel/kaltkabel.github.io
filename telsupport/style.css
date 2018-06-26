@@ -70,6 +70,6 @@ form {
 }
 .wrapper {
 	margin-top:10px;
-	margin-bottom:20px;
+	margin-bottom:15px;
 }
-#submit, #reset{ width: 212px; height:40px;}
+#submit, #reset{ width: 215px; height:40px;}
