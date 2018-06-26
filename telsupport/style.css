@@ -43,7 +43,7 @@ input,
 textarea,
 select,
 option {
-  font: 0.6em "handwriting", sans-serif;
+  font: .9em/1.5em "handwriting", sans-serif;
   border: 1px solid grey;
   width: 300px;
   padding-left: 5px;
