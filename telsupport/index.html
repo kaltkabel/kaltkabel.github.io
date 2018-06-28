@@ -100,7 +100,7 @@
          	$("#CC").val(cc)
          }
          function submit() {
-             var link = "mailto:" + $("#Send").val() + "&cc=" + $("#CC").val()
+             var link = "mailto:" + $("#Send").val() + "?cc=" + $("#CC").val()
                          + "?subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                          + "?body=" 
          			 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
