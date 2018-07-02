@@ -101,7 +101,7 @@
          }
          function submit() {
                 var link = "mailto:" + $("#Send").val() + "&cc=" + $("#CC").val()
-                          + $("#FB option:selected").val() + " - Neue Supportanfrage"
+                          + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
  		var body = "&body=" 
          			 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
          			 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
