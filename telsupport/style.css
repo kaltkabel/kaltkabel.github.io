@@ -86,6 +86,7 @@ form {
 }
 
 h3{
-  color: red;
-  font-weight: bold;
+  margin-top: 1px;
+  padding-top: 1px;
+  color: #900;  
 }
