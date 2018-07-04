@@ -85,7 +85,7 @@ form {
   height: 40px;
 }
 
-span.bold-red {
+span{
   color: red;
   font-weight: bold;
 }
