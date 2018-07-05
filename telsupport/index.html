@@ -86,36 +86,40 @@
       <script type="text/javascript">
          function insertmail() {
          	if ($("#FB option:selected").val() == "FB1") {
-         		var send = "benjamin.godzi@jarltech.de"
+         		var an = "benjamin.godzi@jarltech.de"
          		var cc = "oliver.schulz@jarltech.de"
          	}
          	if ($("#FB option:selected").val() == "FB2") {
-         		var send = "florian.glasser@jarltech.de"
+         		var an = "florian.glasser@jarltech.de"
          		var cc = "maik.paetschke@jarltech.de"
          	}
          	if ($("#FB option:selected").val() == "FB3") {
-         		var send = "marc.roeder@jarltech.de"
+         		var an = "marc.roeder@jarltech.de"
          		var cc = "dominik.quillmann@jarltech.de"
          	}
-         	$("#Send").val(send)
+         	$("#Send").val(an)
          	$("#CC").val(cc)
          }
          function submit() {
-                var link = "mailto:" + $("#Send").val() + "&cc=" + $("#CC").val()
-                          + $("#FB option:selected").val() + " - Neue Supportanfrage"
- 		var body = "&body=" 
-         			 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
-         			 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
-         			 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
-         			 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
-         			 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
-         			 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
-         			 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
-         			 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
-         			 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
-         			 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
-		window.location=link2
-		var link2 = link + body
+				var an = $("#Send").val()
+				var cc = "&cc=" + $("#CC").val()
+				if (!$("#CC").val()) {
+					cc = ""
+				}
+                var link = "mailto:" + an + cc
+                         + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
+                         + "&body=" 
+						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
+						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
+						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
+						 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
+						 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
+						 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
+						 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
+						 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
+						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
+						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
+				window.location=link
          }
       </script>
 	   
