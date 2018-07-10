@@ -1,0 +1,26 @@
+METAPACE
+---------------------------------------------------------------------------
+ S-1   -> (Motorola)      PN: LS1203           RMA bei Zebra
+ S-2   -> (Cipherlab)     PN: 156X             RMA bei Cipherlab
+ S-22  -> (Cipherlab)     PN: 15xx             RMA bei Cipherlab
+ S-3   -> (Numa-Tech)     PN: KC-5200ZB        austauschen & Sammelretoure
+ S-61  -> (Metrologic)                         austauschen & entsorgen
+ S-62  -> (Honeywell)                          austauschen & entsorgen
+ T-1   -> (Bixolon)       PN: SRP-350          RMA bei Bixolon (innerhalb 5 Jahre)  
+ T-2   -> (Bixolon)       PN: SRP-350Plus      RMA bei Bixolon
+ T-25  -> (Star)          PN: BSC-10           wird hier repariert
+ T-3   -> (Bixolon)       PN: SRP-350II        RMA bei Bixolon (innerhalb 2 Jahre)
+ T-3II -> (Bixolon)       PN: SRP-350III       RMA bei Bixolon (innerhalb 2 Jahre)
+ T-4   -> (Bixolon)       PN: SRP-150          RMA bei Bixolon
+ T-40  -> (SNBC)          PN: BTP-S80	       "Die sollen wir sammeln und dem Andy melden. Wir bekommen bald eine Schulung dann reparieren wir die selber."
+ L-1   -> (Bixolon)       PN: SRP-770II        RMA bei Bixolon
+ L-2   -> (Bixolon)       PN: SLP-T400         RMA bei Bixolon
+ L-22  -> (Bixolon)       PN: SLP-DX220        RMA bei Bixolon
+ L-3   -> (POSTEK)        PN: TX2              wird hier repariert (aber wie?)
+ L-42D -> (Bixolon)       PN: SLP-DX420        RMA bei Bixolon
+ L-42DT-> (Bixolon)       PN: SLP-TX420        RMA bei Bixolon
+ L-42T -> (Bixolon)       PN: SLP-TX400        RMA bei Bixolon
+ C-1   -> (Pointman)      PN: TP-9100          wird hier repariert / Restposten Ersatzteile
+ M-20i -> (Bixolon)       PN: SPP-R200IIIiK    RMA bei Bixolon
+
+ Wenn nicht mehr in der Garantie, dann hier reparieren oder austauschen!

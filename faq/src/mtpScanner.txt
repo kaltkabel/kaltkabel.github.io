@@ -1,0 +1,10 @@
+METAPACE
+---------------------------------------------------------------------------
+ S-1   -> (Motorola)      PN: LS1203           RMA bei Zebra
+ S-2   -> (Cipherlab)     PN: 156X             RMA bei Cipherlab
+ S-22  -> (Cipherlab)     PN: 15xx             RMA bei Cipherlab
+ S-3   -> (Numa-Tech)     PN: KC-5200ZB        austauschen & Sammelretoure
+ S-61  -> (Metrologic)                         austauschen & entsorgen
+ S-62  -> (Honeywell)                          austauschen & entsorgen
+
+ Wenn nicht mehr in der Garantie, dann hier reparieren oder austauschen!
