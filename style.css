@@ -6,6 +6,12 @@
 			color: white;
 			overflow: hidden
 		}
+		*::-moz-selection {
+			background: rgba(255, 0, 0, 0.2);
+		}
+		*:hover{
+			cursor: default;
+		}
 		body{
 			width: 100vw;
 			height: 100vh;
@@ -65,5 +71,6 @@
 			text-decoration: none;
 		}
 		a:hover{
-			color: #c1c1c1;
+			color: #c1c1c1; 
+			cursor: pointer;
 		}
