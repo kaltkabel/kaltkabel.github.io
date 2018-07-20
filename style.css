@@ -55,6 +55,12 @@
 		.item.three{
 			animation-delay: 1.1s;
 		}
+		.item.four{
+			animation-delay: 1.4s;
+		}
+		.item.five{
+			animation-delay: 1.7s;
+		}
 		a{
 			text-decoration: none;
 		}
