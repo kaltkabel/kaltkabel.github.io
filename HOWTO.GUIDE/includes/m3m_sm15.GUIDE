@@ -5,4 +5,15 @@
 2  Hold VOL+</p>
 </div>
 
+<div class="howto android">&nbspInformation
+<p>- Enable Developer Mode: *#991#
+
+- For APK installation enable Dev Mode!
+
+- Kiosk Mode Password: mobile
+  Password can be changed in: 
+  "internal storage/Android/data/com.m3.appcenter/appcenter_login.xml"
+  -> &lsaquo;password value="new password" ....</p>
+</div>
+
 <div id="LastEdit"></div>

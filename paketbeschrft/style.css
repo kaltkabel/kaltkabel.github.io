@@ -29,9 +29,6 @@
 			margin-top:10px;
 			margin-bottom:10px;
 		}
-		.FBA.wrapper{
-			margin-top:30px;
-		}
 		.one{
 			font-size:40px;
 			width:270px;
@@ -39,15 +36,9 @@
 			text-align:right;
 			padding-right:10px;
 		}
-		.FBA.one{
-			width:70px;
-		}
 		.two{
 			width:450px;
 			overflow: hidden;
-		}
-		.FBA.two{
-			width:650px;
 		}
 		.input{
 			width:448px;
@@ -73,9 +64,6 @@
 			font-size:40px; 
 			border:1px solid grey;
 		}
-		.hr{
-			display:none;
-		}
 		.print{
 			width:730px;
 			font-size:30px;
@@ -97,7 +85,6 @@
 			.main{ width:100%; }
 			.print{ display:none; }
 			.title{ display:none; }
-			.hr{ display:block; }
 			.RMA{ font-size:100px; }
 			.RMA.wrapper{ border-bottom:4px solid black; padding-left:40px; padding-bottom:2px;}
 			.RMA.one, .RMA.two{ margin-top:150px; }
@@ -106,8 +93,6 @@
 			.BEA.one, .BEA.two{ margin-top:50px; }
 			.INF.top{ margin-left:20px; margin-top:50px; }
 			.INF.bot{ margin-left:20px; margin-right:40px; }
-			.FBA.wrapper { margin-top:50px; padding-bottom:2px; padding-top:2px;}
-			.FBA.one{ display:none; }
 			.select, option{ width:700px; border:none; font-size:70px; margin-left:20px; }
 			
 		}
