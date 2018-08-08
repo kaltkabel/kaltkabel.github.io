@@ -67,6 +67,9 @@
 		.item.five{
 			animation-delay: 1.2s;
 		}
+		.item.six{
+			animation-delay: 1.5s;
+		}
 		a{
 			text-decoration: none;
 		}
