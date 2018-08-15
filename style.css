@@ -56,19 +56,19 @@
 			animation-delay: 0.3s;
 		}
 		.item.two{
-			animation-delay: 0.5s;
+			animation-delay: 0.4s;
 		}
 		.item.three{
-			animation-delay: 0.7s;
+			animation-delay: 0.5s;
 		}
 		.item.four{
-			animation-delay: 0.9s;
+			animation-delay: 0.6s;
 		}
 		.item.five{
-			animation-delay: 1.2s;
+			animation-delay: 0.7s;
 		}
 		.item.six{
-			animation-delay: 1.5s;
+			animation-delay: 0.8s;
 		}
 		a{
 			text-decoration: none;

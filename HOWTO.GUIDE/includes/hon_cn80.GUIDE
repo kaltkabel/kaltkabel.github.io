@@ -1,0 +1,56 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Accessing the Recovery Menu:
+ 1  Connect the device to a PC with ADB enabled
+ 2  Perform the command: abd reboot recovery
+ 3  The device will reboot
+ 4  When "no command" is displayed, tap shortly Power button and the Vol+ button
+ 5  Navigate with Vol+ and Vol-
+
+Accessing the Bootloader Menu:
+ 1  Restart the device
+ 2  Press and hold Power button and the Vol- Button
+ 3  Release when "START" is shown on the display
+ 4  Navigate with Vol+ and Vol-
+
+Recovery Menu (OS 7.1.1)
+ > Reboot system now
+ > Reboot to Bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Wipe date/factory reset
+ > Wipe IPSM partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Power off
+
+Bootloader Menu (OS 7.1.1)
+ > START                (starts the device)
+ > Restart bootloader   (restarts this menu)
+ > Full Factory Reset   (erase internal storage, settings and the IPSM partition)
+ > Enterprise Reset     (erase internal storage and settings)
+ > Enable Field Debug
+ > Enable Download Mode
+ > Boot to FFBM         (enter the test mode)
+ > Power off            (turns the device off)</p>
+</div>
+
+<div class="howto android factory">
+<p>Enterprise Reset: erases internal storage and settings
+Factory Reset: erases internal storage, settings and the IPSM partition
+
+Using the Bootloader Menu:
+ 1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
+ 2  Tap the Vol- 2 times
+ 3  Hit the Power button, when Full Factory Reset is selected
+ 4  A Factory Reset will be performed
+
+Using the Settings Menu:
+ 1  Power on the device
+ 2  Navigate to Settings -> Backup & reset
+ 3  Perform a Full Factory Reset</p>
+</div>
+
+<div id="LastEdit"></div>
