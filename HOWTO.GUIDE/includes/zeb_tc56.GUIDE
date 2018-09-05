@@ -1,5 +1,10 @@
 <script src="javascript/LastEdit.js"></script>
 
+<div class="howto android">&nbspInformation
+<p>PN TC56xx-1xxxxx-xx = WITH GMS
+PN TC56xx-2xxxxx-xx = NO GMS</p>
+</div>
+
 <div class="howto android coldboot">
 <p>1  Simultaneously press and hold the following buttons for 5 seconds
     > Power button + Scan button + Volume Up button
@@ -22,11 +27,6 @@ Recovery Menu (as seen in FW 7.1.2)
  > Apply update from ADB
  > Apply update from SD card
  > Power off</p>
-</div>
-
-<div class="howto android">&nbspInformation
-<p>PN TC56xx-1xxxxx-xx = WITH GMS
-PN TC56xx-2xxxxx-xx = NO GMS</p>
 </div>
 
 <div id="LastEdit"></div>

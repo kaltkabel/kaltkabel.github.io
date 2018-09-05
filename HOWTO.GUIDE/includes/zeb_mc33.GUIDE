@@ -1,5 +1,10 @@
 <script src="javascript/LastEdit.js"></script>
 
+<div class="howto android">&nbspInformation
+<p>PN MC330x-xxxxGxxx = WITH GMS
+PN MC330x-xxxxAxxx = NO GMS</p>
+</div>
+
 <div class="howto android coldboot">
 <p>1  Simultaneously press the Power button, 1 and 9 keys for five seconds.
 2  When the screen turns off, release the buttons.
