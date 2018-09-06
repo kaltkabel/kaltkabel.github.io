@@ -1,27 +1,17 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto wce coldboot">
-<p>1  Press ESC + ENTER + POWER</p>
+<p>Press ESC + MIDDLE ARROW KEY + POWER</p>
 </div>
 
 
 <div class="howto wce factory">
 <p>1  Perform a COLD BOOT
-     Press ESC + ENT + POWER
+     Press ESC + MIDDLE ARROW KEY + POWER
 2  Quickly release the keys when the screen goes black
 3  Within 1 second press and hold down ESC + "0" keys
      Release the keys when a confirmation window shows up
 4  Confirm with "1"</p>
-</div>
-
-
-<div class="howto wce os">
-<p>1  Copy DLUpdate.bin ----> \MemorX3\Backup
-2  Copy DLUPDEX_Run.exe -> \MemorX3\Backup
-3  Start DLUPDEX_Run.exe from the MemorX3
-4  Perform Factory Reset
-
-or with DFU Tool</p>
 </div>
 
 <div id="LastEdit"></div>
