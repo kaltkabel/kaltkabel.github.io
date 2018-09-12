@@ -99,19 +99,27 @@ Using the Bootloader (if PW is unknown etc..):
  
 
 <div class="howto weh os">
-<p>1  Copy Firmware Files
-   Rename the xxx.ffu file to Flash.ffu
-   Flash.ffu -> root dir of the SDcard
-	 
+<p>WEH 8.1 -> Win10IoT
+1  Copy Firmware Files
+    Rename the xxx.ffu file to Flash.ffu
+    Flash.ffu -> root dir of the SDcard
 2  Copy Licence Files
-   CT50 WLAN = lic_CT50L0N_1.xml -> root dir of the SDcard
-   CT50 WWAN = lic_CT50LFN_1.xml -> root dir of the SDcard
-
+    CT50 WLAN = lic_CT50L0N_1.xml -> root dir of the SDcard
+    CT50 WWAN = lic_CT50LFN_1.xml -> root dir of the SDcard
 3  Start the Upgrade
-   Powerup the device
-   Goto Settings > Manual Flash > SD CARD
-   The device will reboot and display a "lightning bolt with a gear"
-   The Upgrade will take under 10 minutes</p>
+    Powerup the device
+    Goto Settings > Manual Flash > SD CARD
+    The device will reboot and display a "lightning bolt with a gear"
+    The Upgrade will take under 10 minutes
+	
+Update Win10IoT
+1  Copy Firmware Files
+    Rename the xxx.ffu file to upg_platform_00.00.ffu
+    platform is CT50LFN, CT50L0N or 75EL0N and corresponds to the first 6 characters of the System SKU 
+    This value can be found on DiagnosticInfoW10.
+    upg_platform_00.00.ffu -> root dir of the SDcard
+2  Start the Upgrade
+    Power up the device</p>
 </div>
 
 <div id="LastEdit"></div>
