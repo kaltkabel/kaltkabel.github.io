@@ -43,13 +43,13 @@ Recovery Menu (Android 4.1.1):
 
 <div class="howto android factory">
 <p>(Using the SD card)
- 1  Copy <cleaner>.zip to microSD:/
+ 1  Copy cleaner.zip to microSD:/
  2  Reboot into Recovery
  3  Apply update from SD
  
 (Using the ADB)
  1  Reboot into Recovery  ("adb reboot recovery")
- 2  Apply update from ADB ("adb sideload <cleaner>.zip")</p>
+ 2  Apply update from ADB ("adb sideload cleaner.zip")</p>
 </div>
 
 <div id="LastEdit"></div>
