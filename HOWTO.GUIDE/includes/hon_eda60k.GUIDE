@@ -1,0 +1,40 @@
+<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>Access the Recovery Menu: 
+1 Reboot the device 
+2 Hold down Vol+ button
+
+Access the Bootloader Menu: 
+1 Reboot the device 
+2 Hold down Vol- button
+
+Recovery Menu (Android 7.1.1)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe date/factory reset
+ > Wipe cache partition
+ > Wipe IPSM partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics rest
+ > Power pff
+ > Apply update from udick
+ > Reboot to FFBM mode
+
+Bootloader Menu (Android 7.1.1)
+ > Resart Bootloader
+ > Start System
+ > Power Off
+ > Control Debug
+ > Recovery Mode</p></div><div class="howto android factory"><p>An extra CommonES.zip is not needed for EDA60K!
+
+(Settings Menu method) 
+1 Connect the Device to a Computer and delete everything from the internal storage 
+2 GoTo All Apps -> Settings -> Backup & Restore 
+3 Select Erase Everything
+
+(Recovery Menu method) 
+1 Reboot into Recovery Menu by rebooting the device and holding Vol+ button 
+2 Select "wipe data/factory reset" 
+3 Select "reboot system now"</p></div><div id="LastEdit"></div>

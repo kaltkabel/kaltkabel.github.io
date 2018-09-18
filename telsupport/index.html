@@ -3,15 +3,25 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <link rel="stylesheet" href="../navbar/style.css">
       <link rel="stylesheet" href="style.css">
       <title>Telefon Support Form</title>
       <script src="../HOWTO.GUIDE/javascript/jquery-3.3.1.min.js"></script>
    </head>
    <body>
-      <h1>Telefon Support Formular</h1>
-	   <!-- <h3>In Bearbeitung</h3> -->
+   
+	   <nav>
+			<a id="home" href="../">JT Frontpage</a>
+			<div id="navbarmenu">
+			<a id="logo" href="./">TELSUPPORT</a>
+			</div>
+		</nav>
+   
+   <div id="content">
+	  <h1></h1>
       <form action="javascript:submit()" method="post" enctype="text/plain">
-	      
+	  <div id="main">  
+	  <div id="left"> 
          <div class="wrapper">
             <div class="one">Kundenummer:</div>
             <div class="two"><input id="KDN" type="text" name="Kundenummer:" /></div>
@@ -38,19 +48,7 @@
             <div class="one">Seriennummer:</div>
             <div class="two"><input id="SN" type="text" name="SN:" /></div>
          </div>
-         <div class="wrapper">
-            <div class="one">Fachbereich:</div>
-            <div class="two">
-               <select id="FB" onchange="insertmail()">
-                  <option selected disabled>Fachbereich</option>
-                  <option value="FB1">Fachbereich 1</option>
-                  <option value="FB2">Fachbereich 2</option>
-                  <option value="FB3">Fachbereich 3</option>
-               </select>
-            </div>
-         </div>
-         <br />
-	      
+	     <br />
          <div class="wrapper">
             <div class="one1">Problem:</div>
             <div class="two"><textarea id="ERR" type="text" name="Problem:"></textarea></div>
@@ -67,8 +65,20 @@
             <div class="one">Betriebssystem:</div>
             <div class="two"><input id="OS" type="text" name="Betriebssystem:" /></div>
          </div>
-         <br />
-	      
+       </div>
+	   
+	   <div id="right">
+	     <div class="wrapper">
+            <div class="one">Fachbereich:</div>
+            <div class="two">
+               <select id="FB" onchange="insertmail()">
+                  <option selected disabled>Fachbereich</option>
+                  <option value="FB1">FB1 - Scanner & MDE</option>
+                  <option value="FB2">FB2 - Drucker</option>
+                  <option value="FB3">FB3 - Kassensysteme</option>
+               </select>
+            </div>
+         </div>
          <div class="wrapper">
             <div class="one">Senden an:</div>
             <div class="two"><input id="Send" type="text" /></div>
@@ -77,11 +87,13 @@
             <div class="one">CC an:</div>
             <div class="two"><input id="CC" type="text" /></div>
          </div>
-	      
          <!-- Send / Reset -->
          <input id="submit" type="submit" value="Send" />
          <input id="reset" type="reset" value="Reset" />
+	   </div> 
+	   </div>	 
       </form>
+	</div>
 	   
       <script type="text/javascript">
          function insertmail() {

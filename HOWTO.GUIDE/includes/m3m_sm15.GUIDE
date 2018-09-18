@@ -2,7 +2,19 @@
 
 <div class="howto android menu">
 <p>1  Power On the device
-2  Hold VOL+</p>
+2  Hold VOL+
+
+Recovery Menu (Android 7.1.1)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Wipe data/factory reset
+ > Wipe cache partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Power off</p>
 </div>
 
 <div class="howto android">&nbspInformation

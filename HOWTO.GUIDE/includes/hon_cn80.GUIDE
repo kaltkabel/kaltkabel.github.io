@@ -53,4 +53,13 @@ Using the Settings Menu:
  3  Perform a Full Factory Reset</p>
 </div>
 
+<div class="howto android os">
+<p>Using the HUpgrader:
+ 1  Copy the Firmware zipfile to InternalStorage/Download/
+ 2  On the device, tap on HUpgrader
+ 3  Tap on the three dots on the upper right corner and tap on "Select OTA from Storage"
+ 4  Tap on the Firmware zipfile
+ 5  The device will prompt you to reboot the device once the update is complete</p>
+</div>
+
 <div id="LastEdit"></div>
