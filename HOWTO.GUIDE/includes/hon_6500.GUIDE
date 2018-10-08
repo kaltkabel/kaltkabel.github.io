@@ -8,4 +8,16 @@
 2. The screen turns white and the decode/scan LED flashes blue for approximately 18 seconds</p>
 </div>
 
+<div class="howto wce factory">
+<p>Copy Files
+1  Connect the Device to the Computer
+2  Powertools and Demos -> IPSM/Honeywell/Autoinstall
+
+Instruct Bootloader to FACTORY RESET:
+1  Perform a Hard Reset / Cold boot (Power Menu)
+2  When the LED turns Blue:
+   Enter on numeric keyboard: 1 > 2 > 7 > 7
+3  Confirm with Enter > Enter</p>
+</div>
+
 <div id="LastEdit"></div>

@@ -41,16 +41,17 @@ Bootloader Menu (OS 7.1.1)
 <p>Enterprise Reset: erases internal storage and settings
 Factory Reset: erases internal storage, settings and the IPSM partition
 
-Using the Bootloader Menu:
- 1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
- 2  Tap the Vol- 2 times
- 3  Hit the Power button, when Full Factory Reset is selected
- 4  A Factory Reset will be performed
-
 Using the Settings Menu:
  1  Power on the device
  2  Navigate to Settings -> Backup & reset
- 3  Perform a Full Factory Reset</p>
+ 3  Perform a Full Factory Reset
+
+Using the Bootloader Menu:
+This might activate the Factory Reset Protection, when a Google Account is logged to the device
+ 1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
+ 2  Tap the Vol- 2 times
+ 3  Hit the Power button, when Full Factory Reset is selected
+ 4  A Factory Reset will be performed</p>
 </div>
 
 <div class="howto android os">
