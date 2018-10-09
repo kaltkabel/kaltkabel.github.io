@@ -48,6 +48,19 @@
 			<li>- Mehr Verbrauchsmaterial, kompliziertere Handhabung.</li>
 		</ul>
 	</p>
+	
+	<h2>Druckersprachen</h2>
+	<p>Viele Hersteller können andere Druckersprachen emulieren, jedoch sollte man, soweit möglich, die Herstellerspezifische Sprache des Druckers verwenden um Fehler auszuschließen.</p>
+	<p>Bei Ansteuerung der Etikettendrucker durch Windowsdruckertreiber übersetzen diese das zu druckende Layout in die für den Drucker verständliche Sprache. Da die meisten Programme die Daten als Grafik ausgeben (ausnahmen sind die Druckertreiberhersteller eigenen Layoutprogramme, z.B. Bartender von Seagull, hier werden die Layoutobjekte, soweit möglich, in Objekte der Druckersprache umgesetzt), ist es sinnvoll, bei Barcodes diese direkt mittels der Druckersprache zu generieren, um Pixelfehler durch Falschberechnung und/oder Rundungsfehler auszuschließen.</p>
+	<p>Um die Druckfiles zu erzeugen können in vielen Programmen Skripte oder Dateien hinterlegt werden, welche die Erzeugung der Druckfiles übernehmen. Diese werden dann direkt an den Drucker gesendet.</p>
+	<p>
+		<ul>
+			<li>Zebra verwendet <b>ZPL</b> und teilweise noch <b>EPL</b></li>
+			<li>Datamax benutzt <b>DPL</b></li>
+			<li>TSC benutzt <b>TSPL</b></li>
+			<li>Intermec benutzt <b>IPL</b> oder Fingerprint</li>
+		</ul>
+	</p>
 
 	<h2>Epson - Nett to know</h2>
 	<p>Beim Cutter Tausch den Zähler zurücksetzen.</p>
