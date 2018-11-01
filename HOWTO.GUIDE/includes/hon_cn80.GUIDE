@@ -56,9 +56,12 @@ This might activate the Factory Reset Protection, when a Google Account is logge
 
 <div class="howto android os">
 <p>Using the HUpgrader:
- 1  Copy the Firmware zipfile to InternalStorage/Download/
+ 1  Copy the Firmware zipfile to InternalStorage/Download/ or microSD/Download/
+    or to the root of the microSD card
  2  On the device, tap on HUpgrader
  3  Tap on the three dots on the upper right corner and tap on "Select OTA from Storage"
+    Note: Select the appropriate location, depending on whether the zipfile is in the '/sdcard/Download' 
+          directory on Internal Storage,or on a physical MicroSD Card from the tabs at the top.
  4  Tap on the Firmware zipfile
  5  The device will prompt you to reboot the device once the update is complete</p>
 </div>

@@ -62,7 +62,8 @@ This does not format IPSM Storage!
  
  
 <div class="howto android os">
-<p>A upgrade-license is needed to upgrade to Android 7. SKU 454-084-001
+<p>The upgrade-licence is NOT needed anymore for FW-packages newer than 208.0X.00.0016
+A upgrade-license is needed to upgrade to Android 7. SKU 454-084-001
 
 (AutoInstall method) 
 1  Copy the upgrade file "EDA50K-ota-xxx.zip" to the following folder:
