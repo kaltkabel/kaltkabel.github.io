@@ -23,6 +23,14 @@ Recovery Menu (Android 7.1.2):
  > Reboot system now
  > Apply update from ADB
  > Apply update from SD card
+ > Power off
+ 
+Recovery Menu (Android 8.1.0):
+ > Reboot system now
+ > Apply upgrade from ADB
+ > Apply upgrade from SD card
+ > Apply downgrade from SD card
+ > Apply downgrade from SD card
  > Power off</p>
 </div>
 

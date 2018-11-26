@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto wce coldboot">
+<p>A cold boot is necessary when the Windows Embedded Compact 7
+operating system locks up and the warm boot command does not
+work.
+To perform a cold boot, lightly press the cold boot button with a
+metallic clip for 10 seconds.</p>
+</div>
+
+<div class="howto wce factory">
+<p>A clean boot is a complete restore to factory default and backup
+folder content erase of the Joya Touch. You will loose any
+applications and data (registry too).
+To perform a clean boot first execute a cold boot while keeping
+pressed the scan key.
+A pop-up will ask you to confirm, confirm by pressing and releasing
+the scan key for three times, or wait for 3 seconds to cancel.</p>
+</div>
+
+<div id="LastEdit"></div>
