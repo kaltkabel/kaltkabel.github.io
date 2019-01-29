@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reset the device
+2  Hold down PTT button
+3  Release when Zebra Logo appears
+ 
+Recovery Menu (FW 8.1.0)
+ > Reboot system now
+ > Apply upgrade from ADB
+ > Apply upgrade from SD card
+ > Apply upgrade from USB drive
+ > Apply downgrade from ADB
+ > Apply downgrade from SD card
+ > Apply downgrade from USB drive
+ > View recovery logs
+ > Power off
+ > Ship mode</p>
+</div>
+
+<div id="LastEdit"></div>
