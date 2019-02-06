@@ -1,0 +1,17 @@
+Base               1.0
+Base_1.1           1.1
+Cupcake            1.5
+Donut              1.6
+Eclair             2.0
+Froyo              2.2
+Gingerbread        2.3
+Honeycomb          3.0
+IceCreamSandwich   4.0
+JellyBean          4.1
+KitKat             4.4
+Lollipop           5.0
+Marshmallow        6.0
+Nougat             7.0
+Oreo               8.0
+P                  9.0
+Q                 10.0
