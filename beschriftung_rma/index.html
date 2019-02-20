@@ -1,56 +1,48 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"> 
-	<title>Beschriftung Pakete</title>
-	<link rel="stylesheet" href="./style.css" type="text/css" />
-<head>
-<body>
-	<div class="main">
-	<div class="title">Paketbeschriftung</div>
-	
-	<div class="details">
-		<div class="RMA wrapper">
-			<div class="RMA one">RMA:</div>
-			<div class="RMA two"><input class="RMA input" autofocus></input></div>
+	<head>
+		<meta charset="utf-8">
+		<title>JT - Paketbeschriftung</title>
+		<link rel="stylesheet" type="text/css" href="./css/sheets-of-paper-a4.css">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body class="document">
+		<div class="print" onclick="window.print();">Drucken</div>
+		<div class="page" contenteditable="false">
+			<input class="titleinput" autofocus></input>
+			
+			<div class="one">Bearbeiter:</div>
+			<div class="two"><input class="input"></input></div>
+					
+			<div class="one">Produkt:</div>
+			<div class="two"><input class="input"></input></div>
+					
+			<div class="one">Datum:</div>
+			<div class="two"><input class="input" id="datum"></input></div>
+					
+			<div class="top">Information:</div>
+			<div class="bot"><textarea rows="2"></textarea></div>
+			
+			<div class="top2">1. mal nachgefasst:</div>
+			<div class="bot2"><textarea rows="1"></textarea></div>
+			
+			<div class="top2">2. mal nachgefasst:</div>
+			<div class="bot2"><textarea rows="1"></textarea></div>
+			
+			<div class="top2">3. mal nachgefasst:</div>
+			<div class="bot2"><textarea rows="1"></textarea></div>
 		</div>
-		
-		<div class="BEA wrapper">
-			<div class="BEA one">Bearbeiter:</div>
-			<div class="BEA two"><input class="BEA input"></input></div>
-		</div>
-		
-		<div class="PRO wrapper">
-			<div class="PRO one">Produkt:</div>
-			<div class="PRO two"><input class="PRO input"></input></div>
-		</div>
-		
-		<div class="DAT wrapper">
-			<div class="DAT one">Datum:</div>
-			<div class="DAT two"><input class="DAT input" id="datum"></input></div>
-		</div>
-		
-		<div class="INF top">Information:</div>
-		<div class="INF bot"><textarea rows="2" class="INF text"></textarea></div>
-		
-	</div>
-	
-	<button class="print" onclick="myFunction()">Drucken</button>
-
-	<script>
-	function myFunction() {
-		window.print();
-	}
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
-	if(dd<10) {dd = '0'+dd} 
-	if(mm<10) {mm = '0'+mm} 
-	today = dd + '.' + mm + '.' + yyyy;
-	document.getElementById("datum").value = today; ;
-	</script>
-
-	</div>
-<body>
+		<script>
+		function myFunction() {
+			window.print();
+		}
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+		if(dd<10) {dd = '0'+dd} 
+		if(mm<10) {mm = '0'+mm} 
+		today = dd + '.' + mm + '.' + yyyy;
+		document.getElementById("datum").value = today; ;
+		</script>
+	</body>
 </html>
