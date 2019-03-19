@@ -16,6 +16,8 @@
 
 <div class="howto weh os">
 <p>Please use 2GB - 4GB SD Card formatted in FAT32 for maximum compatiblity
+Before starting, please check, if the following setting is unchecked:
+Settings -> System -> Intermec Settings -> Device Settings -> Language
 
 1. Copy files
 	 FeaturesDemo.cab -> Flash File Store:\CABFILES\

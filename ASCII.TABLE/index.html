@@ -1,0 +1,614 @@
+<head>
+	<meta charset="utf-8">
+	<title>JT - ASCII TABLE</title>
+	<style>
+	:root {font-family:segoe ui;}
+	th {text-align:left; text-transform:uppercase; border-bottom:2px black solid; padding-bottom:5px; padding-top:5px;}
+	.ascii-dec, .ascii-def, .ascii-hex, .ascii-type {min-width:5px; padding-right:8px; padding-left:8px;}
+	.ascii-place {min-width:70px;}
+	.ascii-dec {font-weight:bold; text-align:right;}
+	td {line-height:1.4em;}
+	tr:hover td {background-color: #eee;}
+	</style>
+<head>
+
+	<table border="0" cellspacing="0" cellpadding="0" >
+		<thead>
+		<tr>
+		<th class="ascii-dec" scope="col">dec</th>
+		<th class="ascii-hex" scope="col">hex</th>
+		<th class="ascii-type" scope="col">type</th>
+		<th class="ascii-def" scope="col">def</th>
+		<th class="ascii-place" scope="col">&nbsp;</th>
+		<th class="ascii-dec" scope="col">dec</th>
+		<th class="ascii-hex" scope="col">hex</th>
+		<th class="ascii-type" scope="col">type</th>
+		<th class="ascii-place" scope="col">&nbsp;</th>
+		<th class="ascii-dec" scope="col">dec</th>
+		<th class="ascii-hex" scope="col">hex</th>
+		<th class="ascii-type" scope="col">type</th>
+		<th class="ascii-place" scope="col">&nbsp;</th>
+		<th class="ascii-dec" scope="col">dec</th>
+		<th class="ascii-hex" scope="col">hex</th>
+		<th class="ascii-type" scope="col">type</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td class="ascii-dec">0</td>
+		<td class="ascii-hex">00</td>
+		<td class="ascii-type">C+@</td>
+		<td class="ascii-def">NULL</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">32</td>
+		<td class="ascii-hex">20</td>
+		<td class="ascii-type">SP</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">64</td>
+		<td class="ascii-hex">40</td>
+		<td class="ascii-type">@</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">96</td>
+		<td class="ascii-hex">60</td>
+		<td class="ascii-type">`</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">1</td>
+		<td class="ascii-hex">01</td>
+		<td class="ascii-type">C+A</td>
+		<td class="ascii-def">SOH</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">33</td>
+		<td class="ascii-hex">21</td>
+		<td class="ascii-type">!</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">65</td>
+		<td class="ascii-hex">41</td>
+		<td class="ascii-type">A</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">97</td>
+		<td class="ascii-hex">61</td>
+		<td class="ascii-type">a</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">2</td>
+		<td class="ascii-hex">02</td>
+		<td class="ascii-type">C+B</td>
+		<td class="ascii-def">STX</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">34</td>
+		<td class="ascii-hex">22</td>
+		<td class="ascii-type">"</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">66</td>
+		<td class="ascii-hex">42</td>
+		<td class="ascii-type">B</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">98</td>
+		<td class="ascii-hex">62</td>
+		<td class="ascii-type">b</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">3</td>
+		<td class="ascii-hex">03</td>
+		<td class="ascii-type">C+C</td>
+		<td class="ascii-def">ETX</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">35</td>
+		<td class="ascii-hex">23</td>
+		<td class="ascii-type">#</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">67</td>
+		<td class="ascii-hex">43</td>
+		<td class="ascii-type">C</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">99</td>
+		<td class="ascii-hex">63</td>
+		<td class="ascii-type">c</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">4</td>
+		<td class="ascii-hex">04</td>
+		<td class="ascii-type">C+D</td>
+		<td class="ascii-def">EOT</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">36</td>
+		<td class="ascii-hex">24</td>
+		<td class="ascii-type">$</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">68</td>
+		<td class="ascii-hex">44</td>
+		<td class="ascii-type">D</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">100</td>
+		<td class="ascii-hex">64</td>
+		<td class="ascii-type">d</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">5</td>
+		<td class="ascii-hex">05</td>
+		<td class="ascii-type">C+E</td>
+		<td class="ascii-def">ENQ</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">37</td>
+		<td class="ascii-hex">25</td>
+		<td class="ascii-type">%</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">69</td>
+		<td class="ascii-hex">45</td>
+		<td class="ascii-type">E</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">101</td>
+		<td class="ascii-hex">65</td>
+		<td class="ascii-type">e</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">6</td>
+		<td class="ascii-hex">06</td>
+		<td class="ascii-type">C+F</td>
+		<td class="ascii-def">ACK</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">38</td>
+		<td class="ascii-hex">26</td>
+		<td class="ascii-type">&amp;</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">70</td>
+		<td class="ascii-hex">46</td>
+		<td class="ascii-type">F</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">102</td>
+		<td class="ascii-hex">66</td>
+		<td class="ascii-type">f</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">7</td>
+		<td class="ascii-hex">07</td>
+		<td class="ascii-type">C+G</td>
+		<td class="ascii-def">BEL</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">39</td>
+		<td class="ascii-hex">27</td>
+		<td class="ascii-type">'</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">71</td>
+		<td class="ascii-hex">47</td>
+		<td class="ascii-type">G</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">103</td>
+		<td class="ascii-hex">67</td>
+		<td class="ascii-type">g</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">8</td>
+		<td class="ascii-hex">08</td>
+		<td class="ascii-type">C+H</td>
+		<td class="ascii-def">BS</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">40</td>
+		<td class="ascii-hex">28</td>
+		<td class="ascii-type">(</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">72</td>
+		<td class="ascii-hex">48</td>
+		<td class="ascii-type">H</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">104</td>
+		<td class="ascii-hex">68</td>
+		<td class="ascii-type">h</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">9</td>
+		<td class="ascii-hex">09</td>
+		<td class="ascii-type">C+I</td>
+		<td class="ascii-def">HT</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">41</td>
+		<td class="ascii-hex">29</td>
+		<td class="ascii-type">)</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">73</td>
+		<td class="ascii-hex">49</td>
+		<td class="ascii-type">I</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">105</td>
+		<td class="ascii-hex">69</td>
+		<td class="ascii-type">i</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">10</td>
+		<td class="ascii-hex">0A</td>
+		<td class="ascii-type">C+J</td>
+		<td class="ascii-def">LF</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">42</td>
+		<td class="ascii-hex">2A</td>
+		<td class="ascii-type">*</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">74</td>
+		<td class="ascii-hex">4A</td>
+		<td class="ascii-type">J</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">106</td>
+		<td class="ascii-hex">6A</td>
+		<td class="ascii-type">j</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">11</td>
+		<td class="ascii-hex">0B</td>
+		<td class="ascii-type">C+K</td>
+		<td class="ascii-def">VT</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">43</td>
+		<td class="ascii-hex">2B</td>
+		<td class="ascii-type">+</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">75</td>
+		<td class="ascii-hex">4B</td>
+		<td class="ascii-type">K</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">107</td>
+		<td class="ascii-hex">6B</td>
+		<td class="ascii-type">k</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">12</td>
+		<td class="ascii-hex">0C</td>
+		<td class="ascii-type">C+L</td>
+		<td class="ascii-def">FF</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">44</td>
+		<td class="ascii-hex">2C</td>
+		<td class="ascii-type">,</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">76</td>
+		<td class="ascii-hex">4C</td>
+		<td class="ascii-type">L</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">108</td>
+		<td class="ascii-hex">6C</td>
+		<td class="ascii-type">l</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">13</td>
+		<td class="ascii-hex">0D</td>
+		<td class="ascii-type">C+M</td>
+		<td class="ascii-def">CR</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">45</td>
+		<td class="ascii-hex">2D</td>
+		<td class="ascii-type">-</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">77</td>
+		<td class="ascii-hex">4D</td>
+		<td class="ascii-type">M</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">109</td>
+		<td class="ascii-hex">6D</td>
+		<td class="ascii-type">m</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">14</td>
+		<td class="ascii-hex">0E</td>
+		<td class="ascii-type">C+N</td>
+		<td class="ascii-def">SO</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">46</td>
+		<td class="ascii-hex">2E</td>
+		<td class="ascii-type">.</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">78</td>
+		<td class="ascii-hex">4E</td>
+		<td class="ascii-type">N</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">110</td>
+		<td class="ascii-hex">6E</td>
+		<td class="ascii-type">n</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">15</td>
+		<td class="ascii-hex">0F</td>
+		<td class="ascii-type">C+O</td>
+		<td class="ascii-def">SI</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">47</td>
+		<td class="ascii-hex">2F</td>
+		<td class="ascii-type">/</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">79</td>
+		<td class="ascii-hex">4F</td>
+		<td class="ascii-type">O</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">111</td>
+		<td class="ascii-hex">6F</td>
+		<td class="ascii-type">o</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">16</td>
+		<td class="ascii-hex">10</td>
+		<td class="ascii-type">C+P</td>
+		<td class="ascii-def">DLE</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">48</td>
+		<td class="ascii-hex">30</td>
+		<td class="ascii-type">0</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">80</td>
+		<td class="ascii-hex">50</td>
+		<td class="ascii-type">P</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">112</td>
+		<td class="ascii-hex">70</td>
+		<td class="ascii-type">p</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">17</td>
+		<td class="ascii-hex">11</td>
+		<td class="ascii-type">C+Q</td>
+		<td class="ascii-def">DC1</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">49</td>
+		<td class="ascii-hex">31</td>
+		<td class="ascii-type">1</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">81</td>
+		<td class="ascii-hex">51</td>
+		<td class="ascii-type">Q</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">113</td>
+		<td class="ascii-hex">71</td>
+		<td class="ascii-type">q</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">18</td>
+		<td class="ascii-hex">12</td>
+		<td class="ascii-type">C+R</td>
+		<td class="ascii-def">DC2</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">50</td>
+		<td class="ascii-hex">32</td>
+		<td class="ascii-type">2</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">82</td>
+		<td class="ascii-hex">52</td>
+		<td class="ascii-type">R</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">114</td>
+		<td class="ascii-hex">72</td>
+		<td class="ascii-type">r</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">19</td>
+		<td class="ascii-hex">13</td>
+		<td class="ascii-type">C+S</td>
+		<td class="ascii-def">DC3</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">51</td>
+		<td class="ascii-hex">33</td>
+		<td class="ascii-type">3</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">83</td>
+		<td class="ascii-hex">53</td>
+		<td class="ascii-type">S</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">115</td>
+		<td class="ascii-hex">73</td>
+		<td class="ascii-type">s</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">20</td>
+		<td class="ascii-hex">14</td>
+		<td class="ascii-type">C+T</td>
+		<td class="ascii-def">DC4</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">52</td>
+		<td class="ascii-hex">34</td>
+		<td class="ascii-type">4</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">84</td>
+		<td class="ascii-hex">54</td>
+		<td class="ascii-type">T</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">116</td>
+		<td class="ascii-hex">74</td>
+		<td class="ascii-type">t</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">21</td>
+		<td class="ascii-hex">15</td>
+		<td class="ascii-type">C+U</td>
+		<td class="ascii-def">NAK</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">53</td>
+		<td class="ascii-hex">35</td>
+		<td class="ascii-type">5</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">85</td>
+		<td class="ascii-hex">55</td>
+		<td class="ascii-type">U</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">117</td>
+		<td class="ascii-hex">75</td>
+		<td class="ascii-type">u</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">22</td>
+		<td class="ascii-hex">16</td>
+		<td class="ascii-type">C+V</td>
+		<td class="ascii-def">SYN</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">54</td>
+		<td class="ascii-hex">36</td>
+		<td class="ascii-type">6</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">86</td>
+		<td class="ascii-hex">56</td>
+		<td class="ascii-type">V</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">118</td>
+		<td class="ascii-hex">76</td>
+		<td class="ascii-type">v</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">23</td>
+		<td class="ascii-hex">17</td>
+		<td class="ascii-type">C+W</td>
+		<td class="ascii-def">ETB</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">55</td>
+		<td class="ascii-hex">37</td>
+		<td class="ascii-type">7</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">87</td>
+		<td class="ascii-hex">57</td>
+		<td class="ascii-type">W</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">119</td>
+		<td class="ascii-hex">77</td>
+		<td class="ascii-type">w</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">24</td>
+		<td class="ascii-hex">18</td>
+		<td class="ascii-type">C+X</td>
+		<td class="ascii-def">CAN</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">56</td>
+		<td class="ascii-hex">38</td>
+		<td class="ascii-type">8</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">88</td>
+		<td class="ascii-hex">58</td>
+		<td class="ascii-type">X</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">120</td>
+		<td class="ascii-hex">78</td>
+		<td class="ascii-type">x</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">25</td>
+		<td class="ascii-hex">19</td>
+		<td class="ascii-type">C+Y</td>
+		<td class="ascii-def">EM</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">57</td>
+		<td class="ascii-hex">39</td>
+		<td class="ascii-type">9</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">89</td>
+		<td class="ascii-hex">59</td>
+		<td class="ascii-type">Y</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">121</td>
+		<td class="ascii-hex">79</td>
+		<td class="ascii-type">y</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">26</td>
+		<td class="ascii-hex">1A</td>
+		<td class="ascii-type">C+Z</td>
+		<td class="ascii-def">SUB</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">58</td>
+		<td class="ascii-hex">3A</td>
+		<td class="ascii-type">:</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">90</td>
+		<td class="ascii-hex">5A</td>
+		<td class="ascii-type">Z</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">122</td>
+		<td class="ascii-hex">7A</td>
+		<td class="ascii-type">z</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">27</td>
+		<td class="ascii-hex">1B</td>
+		<td class="ascii-type">C+[</td>
+		<td class="ascii-def">ESC</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">59</td>
+		<td class="ascii-hex">3B</td>
+		<td class="ascii-type">;</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">91</td>
+		<td class="ascii-hex">5B</td>
+		<td class="ascii-type">[</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">123</td>
+		<td class="ascii-hex">7B</td>
+		<td class="ascii-type">{</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">28</td>
+		<td class="ascii-hex">1C</td>
+		<td class="ascii-type">C+\</td>
+		<td class="ascii-def">FS</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">60</td>
+		<td class="ascii-hex">3C</td>
+		<td class="ascii-type">&lt;</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">92</td>
+		<td class="ascii-hex">5C</td>
+		<td class="ascii-type">\</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">124</td>
+		<td class="ascii-hex">7C</td>
+		<td class="ascii-type">|</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">29</td>
+		<td class="ascii-hex">1D</td>
+		<td class="ascii-type">C+]</td>
+		<td class="ascii-def">GS</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">61</td>
+		<td class="ascii-hex">3D</td>
+		<td class="ascii-type">=</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">93</td>
+		<td class="ascii-hex">5D</td>
+		<td class="ascii-type">]</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">125</td>
+		<td class="ascii-hex">7D</td>
+		<td class="ascii-type">}</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">30</td>
+		<td class="ascii-hex">1E</td>
+		<td class="ascii-type">C+^</td>
+		<td class="ascii-def">RS</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">62</td>
+		<td class="ascii-hex">3E</td>
+		<td class="ascii-type">&gt;</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">94</td>
+		<td class="ascii-hex">5E</td>
+		<td class="ascii-type">^</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">126</td>
+		<td class="ascii-hex">7E</td>
+		<td class="ascii-type">~</td>
+		</tr>
+		<tr>
+		<td class="ascii-dec">31</td>
+		<td class="ascii-hex">1F</td>
+		<td class="ascii-type">C+_</td>
+		<td class="ascii-def">US</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">63</td>
+		<td class="ascii-hex">3F</td>
+		<td class="ascii-type">?</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">95</td>
+		<td class="ascii-hex">5F</td>
+		<td class="ascii-type">_</td>
+		<td class="ascii-place">&nbsp;</td>
+		<td class="ascii-dec">127</td>
+		<td class="ascii-hex">7F</td>
+		<td class="ascii-type">DEL</td>
+		</tr>
+		</tbody>
+		</table>
