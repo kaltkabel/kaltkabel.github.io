@@ -20,18 +20,18 @@
 			width:55mm;
 			float:left;
 			text-align:right;
-			padding-right:10px;
-			margin-top:10px;
-			margin-bottom:6px;
+			padding-right:3mm;
+			margin-top:3mm;
+			margin-bottom:1mm;
 		}
 		.two{
 			float:right;
-			margin-top:10px;
-			margin-bottom:6px;
+			margin-top:3mm;
+			margin-bottom:1mm;
 		}
 		.input{
 			box-sizing: border-box;
-			width:115mm;
+			width:105mm;
 			font-size:40px;
 			border:1px solid grey;
 			padding-left: 5px;
@@ -39,8 +39,8 @@
 		}
 		.top{
 			font-size:40px;
-			margin-top:250px;
-			margin-bottom:5px;
+			margin-top:60mm;
+			margin-bottom:1mm;
 		}
 		.top2{
 			font-size:25px;
@@ -55,6 +55,12 @@
 			border:1px solid grey;
 			border-radius:5px;
 			resize: none;
+		}
+		textarea[rows="1"]{
+			height:16mm;
+		}
+		textarea[rows="2"]{
+			height:28mm;
 		}
 		.select{ 
 			width:650px;
