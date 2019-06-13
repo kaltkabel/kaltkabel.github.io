@@ -1,0 +1,35 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Accessing the Recovery Menu:
+ 1  Restart the device
+ 2  Press and hold Power button and the Vol+ Button
+ 
+Accessing the Factory Mode:
+ 1  Restart the device
+ 2  Press and hold Power button and the Vol- Button
+ 3  Select Recovery Menu
+
+Recovery Menu (Oreo)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from SD card
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Power off
+ > Enterprise reset
+ > Factory reset
+
+Factory Mode (Oreo)
+ > Auto Test
+ > Manual Test
+ > Item Test
+ > Test Report
+ > Debug Test
+ > Clear eMMC
+ > Version
+ > Reboot</p>
+</div>
+
+<div id="LastEdit"></div>
