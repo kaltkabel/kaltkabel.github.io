@@ -1,9 +1,9 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto weh factory">
-<p>1  Power Off the device by pressing the Power button for 10 seconds
-2  Press and Hold the SEND (Windows) and END (OK) button, then press the Power button briefly
-3  Whe "Clean Boot" is displayed, press the 1 button</p>
+<p>1  Coldboot the device by pressing the RESET button on the back side of the device.
+2  Press and Hold the (SEND+END) or (WIN+OK) or (GREEN+RED) buttons.
+3  When "Clean Boot" is displayed, press the 1 button</p>
 </div>
 
 <div id="LastEdit"></div>

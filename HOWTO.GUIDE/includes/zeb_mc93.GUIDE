@@ -1,8 +1,9 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android">&nbspInformation
-<p>PN MC330x-xxxxGxxx = WITH GMS
-PN MC330x-xxxxAxxx = NO GMS</p>
+<p>This device comes with only GMS
+GMS can be disabled with StageNow only:
+GMS Manager -> Restricted (MX 8.3+)</p>
 </div>
 
 <div class="howto android coldboot">
@@ -10,28 +11,26 @@ PN MC330x-xxxxAxxx = NO GMS</p>
 2  When the screen turns off, release the buttons.
 3  The devuice reboots.
 
-CAUTION Performing a hard reset with a SD card installed in the MC33XX may cause damage or 
+CAUTION Performing a hard reset with a SD card installed in the MC93XX may cause damage or 
 data corruption to the SD card.</p>
 </div>
 
 <div class="howto android menu">
 <p>1  Reboot the device
-2  Press and hold down GUN trigger or both SIDE SCAN buttons
+2  Press and hold down GUN trigger
 3  When Zebra Technologies logo appears on the screen release the trigger
-	
-Recovery Menu (Android 7.1.2):
- > Reboot system now
- > Apply update from ADB
- > Apply update from SD card
- > Power off
- 
+
 Recovery Menu (Android 8.1.0):
  > Reboot system now
  > Apply upgrade from ADB
  > Apply upgrade from SD card
+ > Apply upgrade from USB drive
  > Apply downgrade from ADB
  > Apply downgrade from SD card
- > Power off</p>
+ > Apply downgrade from USB drive
+ > View recovery logs
+ > Power off
+ > Ship mode</p>
 </div>
 
 <div class="howto android factory">
