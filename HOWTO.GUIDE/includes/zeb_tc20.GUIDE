@@ -30,16 +30,16 @@ Recovery Menu (Android 8.1.0)
  > Power off</p>
 </div>
 
-
 <div class="howto android factory">
-<p>T200JNXXXREXXxyz -> Enterprise Reset   (Erases /Data)
-T200JNXXXRFXXxyz -> Factory Reset      (Erases /Data, /Enterprise)
-T200JNXXXRWXXxyz -> Full Factory Reset (Erases /Data, /Enterprise, External SD Card)
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</p>
+</div>
 
-(SD Card method)
-1  Copy Cleaner file xyz.zip -> SD:\xyz.zip
+<div class="howto android os">
+<p>(SD Card method)
+1  Copy OS file xyz.zip -> SD:\xyz.zip
 2  Reboot into RECOVERY
-3  Start the FACTORY RESET
+3  Start the Upgrade
     Use the ARROWS to navigate to "apply update from sdcard"
     Select the xyz.zip to start the RESET
 4  Wait until the process is finished and restart the device
