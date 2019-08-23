@@ -19,7 +19,7 @@ Recovery Menu (Android 7.1.1)
 
 <div class="howto android">&nbspInformation
 <p>To enable the developer mode:
- 1. SM10, SM10LTE, SM15X/N : Run dial app – type *#991*
+ 1. SM10, SM10LTE, SM15X/N : Run dial app – type *#991#
  2. SM15W : Run Calculator app – type .+991+
 
 - For APK installation enable Dev Mode!
