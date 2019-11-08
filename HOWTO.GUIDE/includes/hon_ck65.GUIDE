@@ -1,40 +1,21 @@
 <script src="javascript/LastEdit.js"></script>
 
 <div class="howto android menu">
-<p>Accessing the Recovery Menu:
- 1  Connect the device to a PC with ADB enabled
- 2  Perform the command: abd reboot recovery
- 3  The device will reboot
- 4  When "no command" is displayed, tap shortly Power button and the Vol+ button
- 5  Navigate with Vol+ and Vol-
-
-Accessing the Bootloader Menu:
+<p>Accessing the Bootloader Menu:
  1  Restart the device
- 2  Press and hold Power button and the Vol- Button
- 3  Release when "START" is shown on the display
- 4  Navigate with Vol+ and Vol-
+ 2  Press power button + shift button (green) to boot device into bootloader menu
+ 3  Use green or orange shift to browser through available options.
+ 4  Press power button to confirm on selections made.
 
-Recovery Menu (OS 7.1.1)
- > Reboot system now
- > Reboot to Bootloader
- > Apply update from ADB
- > Apply update from SD card
- > Wipe date/factory reset
- > Wipe IPSM partition
- > Mount /system
- > View recovery logs
- > Run graphics test
- > Power off
-
-Bootloader Menu (OS 7.1.1)
+Bootloader Menu
+ > Power off            (turns the device off)
  > START                (starts the device)
  > Restart bootloader   (restarts this menu)
  > Full Factory Reset   (erase internal storage, settings and the IPSM partition)
  > Enterprise Reset     (erase internal storage and settings)
  > Enable Field Debug
  > Enable Download Mode
- > Boot to FFBM         (enter the test mode)
- > Power off            (turns the device off)</p>
+ > Boot to QMMI         (enter the test mode)</p>
 </div>
 
 <div class="howto android factory">
@@ -47,7 +28,7 @@ Using the Settings Menu:
  3  Perform a Full Factory Reset
 
 Using the Bootloader Menu:
-This might activate the Factory Reset Protection, when a Google Account is logged to the device
+This might activate the Factory Reset Protection, when a Google Account is logged to the device!
  1  Enter the Bootloader Menu (Reboot -> Power + Vol-)
  2  Tap the Vol- 2 times
  3  Hit the Power button, when Full Factory Reset is selected
@@ -55,9 +36,7 @@ This might activate the Factory Reset Protection, when a Google Account is logge
 </div>
 
 <div class="howto android os">
-<p>Only if the 2nd Last Digit of the PN is 0 (Zero) -> it can be downgraded from Oreo to Nougat
-
-Using the HUpgrader:
+<p>Using the HUpgrader:
  1  Copy the Firmware zipfile to InternalStorage/Download/ or microSD/Download/
     or to the root of the microSD card
  2  On the device, tap on HUpgrader

@@ -6,12 +6,14 @@ GMS can be disabled with StageNow only:
 GMS Manager -> Restricted (MX 8.3+)</p>
 </div>
 
-<div class="howto android menu">
-<p>1  Reset the device
-2  Hold down PTT button
-3  Release when Zebra Logo appears
 
-Recovery Menu (FW 8.1.0 & FW 9.0.0)
+<div class="howto android menu">
+<p>1  Plug in the powersupply
+2  Press and hold down the 1 button on the back side of the device
+3  When Zebra Technologies logo appears on the screen release the button
+
+Recovery Menu (Android 8.1.0):
+Navigate with the 2 button and select with the 1 button.
  > Reboot system now
  > Apply upgrade from ADB
  > Apply upgrade from SD card
