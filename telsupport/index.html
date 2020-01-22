@@ -110,8 +110,13 @@
          		var an = "marc.roeder@jarltech.de"
          		var cc = "dominik.quillmann@jarltech.de"
          	}
+         	if ($("#FB option:selected").val() == "Andy TSE") {
+         		var an = "andreas.willeke@jarltech.de"
+			var anrede = "Hi Andy," + + "%0D%0A" + "folgender Kunde hat eine Anfrage bezüglich des Swissbit SDK gestellt:"
+         	}
          	$("#Send").val(an)
          	$("#CC").val(cc)
+		$("#Anrede").val(anrede)
          }
          function submit() {
 				var an = $("#Send").val()
@@ -122,29 +127,7 @@
                 var link = "mailto:" + an + cc
                          + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                          + "&body=" 
-						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
-						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
-						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
-						 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
-						 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
-						 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
-						 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
-						 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
-						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
-						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
-				window.location=link
-         }
-
-         function swiss() {
-				var an = $("#Send").val()
-				var cc = "&cc=" + $("#CC").val()
-				if (!$("#CC").val()) {
-					cc = ""
-				}
-                var link = "mailto:" + "andreas.willeke@jarltech.de"
-                         + "&subject=" + " - Neue Swissbit Anfrage"
-                         + "&body=" 
-						 + "Hi Andy, folgender Kunde hat eine Anfrage bezüglich des SDKs gestellt:" + "%0D%0A"
+						 + $("#Anrede").val(anrede) + "%0D%0A"
 						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
 						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
 						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
