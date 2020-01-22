@@ -90,6 +90,7 @@
          <!-- Send / Reset -->
          <input id="submit" type="submit" value="Send" />
          <input id="reset" type="reset" value="Reset" />
+	 <input id="swiss" type="swiss" value="Swissbit TSE" />
 	   </div> 
 	   </div>	 
       </form>
@@ -133,6 +134,29 @@
 						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
 				window.location=link
          }
+
+         function swiss() {
+				var an = $("#Send").val()
+				var cc = "&cc=" + $("#CC").val()
+				if (!$("#CC").val()) {
+					cc = ""
+				}
+                var link = "mailto:" + "andreas.willeke@jarltech.de"
+                         + "&subject=" + " - Neue Swissbit Anfrage"
+                         + "&body=" 
+						 + "Hi Andy, folgender Kunde hat eine Anfrage bezüglich des SDKs gestellt:" + "%0D%0A"
+						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
+						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
+						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
+						 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
+						 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
+						 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
+						 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
+						 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
+						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
+						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
+				window.location=link
+         }	     
       </script>
 	   
    </body>
