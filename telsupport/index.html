@@ -76,6 +76,7 @@
                   <option value="FB1">FB1 - Scanner & MDE</option>
                   <option value="FB2">FB2 - Drucker</option>
                   <option value="FB3">FB3 - Kassensysteme</option>
+		  <option value="Andy TSE">Andy - Swissbit TSE</option>
                </select>
             </div>
          </div>
@@ -127,16 +128,16 @@
                          + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                          + "&body=" 
 						 + $("#Anrede").val(anrede) + "%0D%0A"
-						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
-						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
-						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
-						 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
-						 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
-						 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
-						 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
-						 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
-						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
-						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
+						 + $("#KDN").attr('name').bold() + " " + $("#KDN").val() + "%0D%0A"
+						 + $("#KDN_Name").attr('name').bold() + " " + $("#KDN_Name").val() + "%0D%0A"
+						 + $("#KDN_Mail").attr('name').bold() + " " + $("#KDN_Mail").val() + "%0D%0A"
+						 + $("#KDN_Tel").attr('name').bold() + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
+						 + $("#PN").attr('name').bold() + " " + $("#PN").val() + "%0D%0A"
+						 + $("#SN").attr('name').bold() + " " + $("#SN").val() + "%0D%0A%0D%0A"
+						 + $("#ERR").attr('name').bold() + " " + $("#ERR").val() + "%0D%0A"
+						 + $("#ERR2").attr('name').bold() + " " + $("#ERR2").val() + "%0D%0A"
+						 + $("#IF").attr('name').bold() + " " + $("#IF").val() + "%0D%0A"
+						 + $("#OS").attr('name').bold() + " " + $("#OS").val() + "%0D%0A"
 				window.location=link
          }	     
       </script>
