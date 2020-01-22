@@ -121,13 +121,14 @@
          function submit() {
 				var an = $("#Send").val()
 				var cc = "&cc=" + $("#CC").val()
+				var anrede = $("#Anrede").val(anrede) + "%0D%0A"
 				if (!$("#CC").val()) {
 					cc = ""
 				}
                 var link = "mailto:" + an + cc
                          + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                          + "&body=" 
-						 + $("#Anrede").val(anrede) + "%0D%0A"
+						 + anrede
 						 + $("#KDN").attr('name').bold() + " " + $("#KDN").val() + "%0D%0A"
 						 + $("#KDN_Name").attr('name').bold() + " " + $("#KDN_Name").val() + "%0D%0A"
 						 + $("#KDN_Mail").attr('name').bold() + " " + $("#KDN_Mail").val() + "%0D%0A"
