@@ -6,4 +6,12 @@
 3  When "Clean Boot" is displayed, press the 1 button</p>
 </div>
 
+<div class="howto weh os">
+<p>1  Copy the .bin file to the root of a sd card (QVGA=320×240, VGA=640x480)
+2  Insert the sd card to the device
+3  Enter BOOT MENU (hold right arrow while powering on)
+4  Select SD Download and then BOOT + OS
+5  Press the Reset button when prompted</p>
+</div>
+
 <div id="LastEdit"></div>

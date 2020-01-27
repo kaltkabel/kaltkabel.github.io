@@ -18,16 +18,21 @@ Recovery Menu (Android 7.1.1)
 </div>
 
 <div class="howto android">&nbspInformation
-<p>To enable the developer mode:
- 1. SM10, SM10LTE, SM15X/N : Run dial app – type *#991#
- 2. SM15W : Run Calculator app – type .+991+
+<p>- To enable the developer mode:
+  1. SM10, SM10LTE, SM15X/N : Run dial app – type *#991#
+  2. SM15W : Run Calculator app – type .+991+
 
 - For APK installation enable Dev Mode!
 
 - Kiosk Mode Password: mobile
   Password can be changed in: 
   "internal storage/Android/data/com.m3.appcenter/appcenter_login.xml"
-  -> &lsaquo;password value="new password" ....</p>
+  -> &lsaquo;password value="new password" ....
+
+- Touch Sensitivity:
+  Setting -> Accessibility -> Touch sensitivity -> Select Glove or Normal
+  
+- EU OTA Server Address: http://dn.m3mobile.net/OS/OTA/SM15</p>
 </div>
 
 <div id="LastEdit"></div>

@@ -15,84 +15,83 @@
 			</div>
 		</nav>
    
-   <div id="content">
-	  <h1></h1>
+      <div id="content">
+      <h1></h1>
       <form action="javascript:submit()" method="post" enctype="text/plain">
-	  <div id="main">  
-	  <div id="left"> 
-         <div class="wrapper">
-            <div class="one">Kundenummer:</div>
-            <div class="two"><input id="KDN" type="text" name="Kundenummer:" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Ansprechpartner:</div>
-            <div class="two"><input id="KDN_Name" type="text" name="Ansprechpartner:" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">E-mail:</div>
-            <div class="two"><input id="KDN_Mail" type="text" name="Email:" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Telefon:</div>
-            <div class="two"><input id="KDN_Tel" type="text" name="Telefon:" /></div>
-         </div>
-         <br />
-	      
-         <div class="wrapper">
-            <div class="one">Produkt:</div>
-            <div class="two"><input id="PN" type="text" name="Produkt:" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Seriennummer:</div>
-            <div class="two"><input id="SN" type="text" name="SN:" /></div>
-         </div>
-	     <br />
-         <div class="wrapper">
-            <div class="one1">Problem:</div>
-            <div class="two"><textarea id="ERR" type="text" name="Problem:"></textarea></div>
-         </div>
-         <div class="wrapper">
-            <div class="one1">Was hat der Kunde schon probiert?</div>
-            <div class="two"><textarea id="ERR2" type="text" name="Probiert wurde:"></textarea></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Interface:</div>
-            <div class="two"><input id="IF" type="text" name="Interface:" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Betriebssystem:</div>
-            <div class="two"><input id="OS" type="text" name="Betriebssystem:" /></div>
-         </div>
-       </div>
-	   
-	   <div id="right">
-	     <div class="wrapper">
-            <div class="one">Fachbereich:</div>
-            <div class="two">
-               <select id="FB" onchange="insertmail()">
-                  <option selected disabled>Fachbereich</option>
-                  <option value="FB1">FB1 - Scanner & MDE</option>
-                  <option value="FB2">FB2 - Drucker</option>
-                  <option value="FB3">FB3 - Kassensysteme</option>
-		  <option value="Swissbit TSE">Andy - Swissbit TSE</option>
-               </select>
-            </div>
-         </div>
-         <div class="wrapper">
-            <div class="one">Senden an:</div>
-            <div class="two"><input id="Send" type="text" /></div>
-         </div>
-         <div class="wrapper">
-            <div class="one">CC an:</div>
-            <div class="two"><input id="CC" type="text" /></div>
-         </div>
-         <!-- Send / Reset -->
-         <input id="submit" type="submit" value="Send" />
-         <input id="reset" type="reset" value="Reset" />
-	   </div> 
-	   </div>	 
-      </form>
-	</div>
+            <div id="main">  
+               <div id="left"> 
+                  <div class="wrapper">
+                     <div class="one">Kundenummer:</div>
+                     <div class="two"><input id="KDN" type="text" name="Kundenummer:" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Ansprechpartner:</div>
+                     <div class="two"><input id="KDN_Name" type="text" name="Ansprechpartner:" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">E-mail:</div>
+                     <div class="two"><input id="KDN_Mail" type="text" name="Email:" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Telefon:</div>
+                     <div class="two"><input id="KDN_Tel" type="text" name="Telefon:" /></div>
+                  </div>
+                  <br />
+                  
+                  <div class="wrapper">
+                     <div class="one">Produkt:</div>
+                     <div class="two"><input id="PN" type="text" name="Produkt:" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Seriennummer:</div>
+                     <div class="two"><input id="SN" type="text" name="SN:" /></div>
+                  </div>
+                  <br />
+                  <div class="wrapper">
+                     <div class="one1">Problem:</div>
+                     <div class="two"><textarea id="ERR" type="text" name="Problem:"></textarea></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one1">Was hat der Kunde schon probiert?</div>
+                     <div class="two"><textarea id="ERR2" type="text" name="Probiert wurde:"></textarea></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Interface:</div>
+                     <div class="two"><input id="IF" type="text" name="Interface:" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Betriebssystem:</div>
+                     <div class="two"><input id="OS" type="text" name="Betriebssystem:" /></div>
+                  </div>
+               </div>
+               <div id="right">
+               <div class="wrapper">
+                     <div class="one">Fachbereich:</div>
+                     <div class="two">
+                        <select id="FB" onchange="insertmail()">
+                           <option selected disabled>Fachbereich</option>
+                           <option value="FB1">FB1 - Scanner & MDE</option>
+                           <option value="FB2">FB2 - Drucker</option>
+                           <option value="FB3">FB3 - Kassensysteme</option>
+                           <option value="Swissbit TSE">Andy - Swissbit TSE</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">Senden an:</div>
+                     <div class="two"><input id="Send" type="text" /></div>
+                  </div>
+                  <div class="wrapper">
+                     <div class="one">CC an:</div>
+                     <div class="two"><input id="CC" type="text" /></div>
+                  </div>
+                  <!-- Send / Reset -->
+                  <input id="submit" type="submit" value="Send" />
+                  <input id="reset" type="reset" value="Reset" />
+               </div> 
+            </div>	 
+         <form>
+      </div>
 	   
       <script type="text/javascript">
          function insertmail() {
@@ -122,22 +121,22 @@
 					cc = ""
 				}
 				if ($("#FB option:selected").val() == "Swissbit TSE") {
-         				var anrede = "Hi Andy," + "%0D%0A" + "%0D%0A" + "folgender Kunde hat eine Anfrage bezüglich des Swissbit SDK gestellt:" + "%0D%0A"
-         			}
-                var link = "mailto:" + an + cc
-                         + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
-                         + "&body=" 
-						 + anrede + "%0D%0A"
-						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
-						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
-						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
-						 + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
-						 + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
-						 + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
-						 + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
-						 + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
-						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
-						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
+         		var anrede = "Hi Andy," + "%0D%0A" + "%0D%0A" + "folgender Kunde hat eine Anfrage bezüglich des Swissbit SDK gestellt:" + "%0D%0A"
+         	}
+            var link = "mailto:" + an + cc
+                     + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
+                     + "&body=" 
+                     + anrede + "%0D%0A"
+                     + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
+                     + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
+                     + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
+                     + $("#KDN_Tel").attr('name') + " " + $("#KDN_Tel").val() + "%0D%0A%0D%0A"
+                     + $("#PN").attr('name') + " " + $("#PN").val() + "%0D%0A"
+                     + $("#SN").attr('name') + " " + $("#SN").val() + "%0D%0A%0D%0A"
+                     + $("#ERR").attr('name') + " " + $("#ERR").val() + "%0D%0A"
+                     + $("#ERR2").attr('name') + " " + $("#ERR2").val() + "%0D%0A"
+                     + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
+                     + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
 				window.location=link
          }	     
       </script>
