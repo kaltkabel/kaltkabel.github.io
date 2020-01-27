@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -76,6 +74,7 @@
                   <option value="FB1">FB1 - Scanner & MDE</option>
                   <option value="FB2">FB2 - Drucker</option>
                   <option value="FB3">FB3 - Kassensysteme</option>
+		  <option value="Swissbit TSE">Andy - Swissbit TSE</option>
                </select>
             </div>
          </div>
@@ -109,18 +108,26 @@
          		var an = "marc.roeder@jarltech.de"
          		var cc = "dominik.quillmann@jarltech.de"
          	}
+         	if ($("#FB option:selected").val() == "Swissbit TSE") {
+         		var an = "andreas.willeke@jarltech.de"
+         	}
          	$("#Send").val(an)
          	$("#CC").val(cc)
          }
          function submit() {
 				var an = $("#Send").val()
 				var cc = "&cc=" + $("#CC").val()
+				var anrede = ""
 				if (!$("#CC").val()) {
 					cc = ""
 				}
+				if ($("#FB option:selected").val() == "Swissbit TSE") {
+         				var anrede = "Hi Andy," + "%0D%0A" + "%0D%0A" + "folgender Kunde hat eine Anfrage bezüglich des Swissbit SDK gestellt:" + "%0D%0A"
+         			}
                 var link = "mailto:" + an + cc
                          + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                          + "&body=" 
+						 + anrede + "%0D%0A"
 						 + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"
 						 + $("#KDN_Name").attr('name') + " " + $("#KDN_Name").val() + "%0D%0A"
 						 + $("#KDN_Mail").attr('name') + " " + $("#KDN_Mail").val() + "%0D%0A"
@@ -132,7 +139,7 @@
 						 + $("#IF").attr('name') + " " + $("#IF").val() + "%0D%0A"
 						 + $("#OS").attr('name') + " " + $("#OS").val() + "%0D%0A"
 				window.location=link
-         }
+         }	     
       </script>
 	   
    </body>
