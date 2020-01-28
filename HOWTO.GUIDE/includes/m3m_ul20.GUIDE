@@ -2,7 +2,11 @@
 
 
 <div class="howto android">&nbspInformation
-<p>- To enable the developer mode:
+<p>- PROBLEM: Scanner Service does not run
+  This happens when updating from 2.1.1 to 2.2.7
+  SOLUTION: Uninstall App ScannerServiceZ2D
+
+- To enable the developer mode:
   1. UL20X : Run dial app – type *#991#
   2. UL20W : Run Calculator app – type .+991+
 
@@ -17,6 +21,11 @@
   Setting -> Accessibility -> Touch sensitivity -> Select Glove or Normal
   
 - EU OTA Server Address: http://dn.m3mobile.net/OS/OTA/UL20_P</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</p>
 </div>
 
 <div id="LastEdit"></div>

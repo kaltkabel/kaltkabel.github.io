@@ -35,4 +35,9 @@ Recovery Menu (Android 7.1.1)
 - EU OTA Server Address: http://dn.m3mobile.net/OS/OTA/SM15</p>
 </div>
 
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</p>
+</div>
+
 <div id="LastEdit"></div>

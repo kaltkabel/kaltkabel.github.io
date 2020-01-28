@@ -1,5 +1,20 @@
 <script src="javascript/LastEdit.js"></script>
 
+<div class="howto weh menu">
+<p>Access the Bootloader Menu:
+1 Press and hold the Right Arrow Button
+2 Power Up the device
+
+Bootloader Menu
+1) SD Download
+2) USB Download
+3) Clean Boot
+4) Factory Reset
+5) Device ID(UUID)
+6) D_Serial:Comport8
+7) ALL Format</p>
+</div>
+
 <div class="howto weh factory">
 <p>1  Coldboot the device by pressing the RESET button on the back side of the device.
 2  Press and Hold the (SEND+END) or (WIN+OK) or (GREEN+RED) buttons.

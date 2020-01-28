@@ -1,0 +1,30 @@
+<script src="javascript/LastEdit.js"></script>
+
+
+<div class="howto android">&nbspInformation
+<p>- To enable the developer mode:
+  Tap 5 times on the build number in About Phone
+
+- Kiosk Mode Password: mobile
+  Password can be changed in: 
+  "internal storage/Android/data/com.m3.appcenter/appcenter_login.xml"
+  -> &lsaquo;password value="new password" ....</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</p>
+</div>
+
+<div class="howto android os">
+<p>1  Copy the update file (.zip) to a MicroSD card
+2  Start the device and select the System Update App
+3  Select the upper right Settings Menu
+4  Tap System Local Upgrade
+5  Tap the Hamburger Menu on the upper left and select File Manager
+6  Navigate to MicroSD card and select the update file (.zip)
+7  Tap SURE button when prompted
+8  The device will reboot and the new OS will be installed</p>
+</div>
+
+<div id="LastEdit"></div>

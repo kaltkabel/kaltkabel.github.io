@@ -6,12 +6,7 @@ GMS can be disabled with StageNow only:
 GMS Manager -> Restricted (MX 8.3+)</p>
 </div>
 
-<div class="howto android coldboot">
-<p>1  Simultaneously press the Power button, 1 and 9 keys for five seconds.
-2  When the screen turns off, release the buttons.
-3  The devuice reboots.
-
-CAUTION Performing a hard reset with a SD card installed in the MC93XX may cause damage or 
+CAUTION Performing a hard reset with a SD card installed in the MC9300 may cause damage or 
 data corruption to the SD card.</p>
 </div>
 

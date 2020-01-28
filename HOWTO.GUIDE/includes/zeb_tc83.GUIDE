@@ -6,13 +6,16 @@ GMS can be disabled with StageNow only:
 GMS Manager -> Restricted (MX 8.3+)</p>
 </div>
 
+CAUTION Performing a hard reset with a SD card installed in the TC8300 may cause damage or 
+data corruption to the SD card.</p>
+</div>
+
 <div class="howto android menu">
-<p>1  Plug in the powersupply
-2  Press and hold down the 1 button on the back side of the device
-3  When Zebra Technologies logo appears on the screen release the button
+<p>1  Reboot the device
+2  Press and hold down GUN trigger
+3  When Zebra Technologies logo appears on the screen release the trigger
 
 Recovery Menu (Android 8.1.0):
-Navigate with the 2 button and select with the 1 button.
  > Reboot system now
  > Apply upgrade from ADB
  > Apply upgrade from SD card
