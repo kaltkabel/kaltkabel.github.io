@@ -124,7 +124,7 @@
          		var anrede = "Hi Andy," + "%0D%0A" + "%0D%0A" + "folgender Kunde hat eine Anfrage bezüglich des Swissbit SDK gestellt:" + "%0D%0A"
          	}
             var link = "mailto:" + an + cc
-                     + "&subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
+                     + "?subject=" + $("#FB option:selected").val() + " - Neue Supportanfrage"
                      + "&body=" 
                      + anrede + "%0D%0A"
                      + $("#KDN").attr('name') + " " + $("#KDN").val() + "%0D%0A"

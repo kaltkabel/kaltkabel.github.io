@@ -18,7 +18,9 @@ Recovery Menu (Android 7.1.1)
 </div>
 
 <div class="howto android">&nbspInformation
-<p>- To enable the developer mode:
+<p>- Android 5.1 and below can not be updated to Android 7.1 and above!
+
+- To enable the developer mode:
   1. SM10, SM10LTE, SM15X/N : Run dial app – type *#991#
   2. SM15W : Run Calculator app – type .+991+
 

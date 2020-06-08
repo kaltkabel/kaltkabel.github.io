@@ -2,7 +2,9 @@
 
 
 <div class="howto android">&nbspInformation
-<p>- PROBLEM: Scanner Service does not run
+<p>- UL20 with Android 8.1 can not be updated to Android 9.0
+
+- PROBLEM: Scanner Service does not run
   This happens when updating from 2.1.1 to 2.2.7
   SOLUTION: Uninstall App ScannerServiceZ2D
 
