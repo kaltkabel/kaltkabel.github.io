@@ -1,0 +1,21 @@
+<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>Access the Recovery Menu: 
+1 Reboot the device 
+2 Hold down Vol+ button
+
+Access the Bootloader Menu: 
+1 Reboot the device 
+2 Hold down Vol- button
+
+Recovery Menu (Android 9)
+ > Reboot system now
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Power off
+
+Bootloader Menu (Android 9)
+ > START
+ > Restart bootloader
+ > Recovery mode
+ > Power off
+ > Boot to FFBM > Switch system</p></div><div class="howto android factory"><p>1 GoTo Honeywell Developer options and erase Userdata, IPSM, Config2 GoTo All Apps -> Settings -> Backup & Restore 3 Select Erase Everything</p></div><div id="LastEdit"></div>

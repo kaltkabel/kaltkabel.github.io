@@ -41,7 +41,7 @@ Recovery Menu (Android 8.1.0)
 2  Reboot into RECOVERY
 3  Start the Upgrade
     Use the ARROWS to navigate to "apply update from sdcard"
-    Select the xyz.zip to start the RESET
+    Select the xyz.zip
 4  Wait until the process is finished and restart the device
 
 (ADB method)

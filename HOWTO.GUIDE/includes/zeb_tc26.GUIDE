@@ -1,31 +1,18 @@
 <script src="javascript/LastEdit.js"></script>
 
-<div class="howto android coldboot">
-<p>1  Simultaneously press the Power and Volume Up buttons for at least five seconds.
-2  When the screen turns off, release the buttons.
-3  The TC25 reboots.
- 
-CAUTION Performing a hard reset with a SD card installed in the TC25 may cause damage or 
-data corruption to the SD card.</p>
-</div>
-
 <div class="howto android menu">
 <p>1  Reboot the device
 2  Press and hold down PTT buttons
 3  Release when the device vibrates or when the zebra Logo appears
  
-Recovery Menu (Android 7.1.2)
- > Reboot system now
- > Apply update from ADB
- > Apply update from SD card
- > power off
- 
-Recovery Menu (Android 8.1.0)
+Recovery Menu (Android 10)
  > Reboot system now
  > Apply upgrade from ADB
  > Apply upgrade from SD card
+ > Apply upgrade from USB drive
  > Apply downgrade from ADB
  > Apply downgrade from SD card
+ > Apply downgrade from USB drive
  > View recovery logs
  > Power off</p>
 </div>
