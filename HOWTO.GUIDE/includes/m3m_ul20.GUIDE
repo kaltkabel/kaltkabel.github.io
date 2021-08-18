@@ -11,6 +11,10 @@
 - To enable the developer mode:
   1. UL20X : Run dial app – type *#991#
   2. UL20W : Run Calculator app – type .+991+
+  
+- To enter the CIT mode:
+  1. UL20X : Run dial app – type *#889#
+  2. UL20W : Run Calculator app – type .+889+
 
 - For APK installation enable Dev Mode!
 
@@ -27,7 +31,10 @@
 
 <div class="howto android factory">
 <p>Using the System Settings:
- -> Settings -> Backup & Reset -> Factory Reset</p>
+ -> Settings -> Backup & Reset -> Factory Reset
+ 
+ Using the CIT mode for Master Clear:
+ -> enter CIT mode -> select Master Clear</p>
 </div>
 
 <div id="LastEdit"></div>
