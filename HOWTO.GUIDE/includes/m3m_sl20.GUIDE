@@ -1,0 +1,16 @@
+<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>1  Hold the Volume+ and turn on the device
+2  Press Volume- on the recover mode option
+
+Recovery Menu (Android 11)
+ > Reboot system now
+ > Reboot to booloader
+ > Enter fastboot
+ > Apply update from ADB
+ > Apply update from SD card
+ > Wipe data/factory reset
+ > Wipe cache partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Run locale test
+ > Power off</p></div><div id="LastEdit"></div>
