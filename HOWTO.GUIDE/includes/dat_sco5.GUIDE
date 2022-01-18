@@ -1,0 +1,16 @@
+<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>1  Turn off the device
+2  Power on the device and hold down the right scan trigger
+
+Recovery Menu
+> Reboot system now
+> Reboot to bootloader
+> Enter fastboot
+> Apply update from ADB
+> Apply update from SD card
+> Factory Reset
+> Enterprise Reset
+> Mount /system
+> View recovery logs
+> Run graphics test
+> Run locale test
+> Power off</p></div><div id="LastEdit"></div>
