@@ -1,0 +1,46 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Accessing the Bootloader:
+ 1  Reboot the device
+ 2  Press and Hold Vol-
+ 3  Navigate with Volume and confirm with Power
+
+Accessing the Recovery Mode:
+ 1  Reboot to Bootloader
+ 2  Select Recovery Mode
+
+Bootloader Menu (Android 11):
+ > START
+ > Restart Bootloader
+ > Recovery Mode
+ > Power Off
+ > Boot to FFBM
+ > Boot to QMMI
+ > Full Factory Reset   (erase internal storage, settings and the IPSM partition)
+ > Enterprise Reset     (erase internal storage and settings)
+ > Enable Field Debug
+ > Enable Download Mode
+
+Recovery Mode (Android 10):
+ > Reboot system now
+ > Reboot to bootloader
+ > Enter fastboot
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe date/factory reset
+ > Wipe IPSM partition
+ > Wipe config partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Run locale test
+ > Power off</p>
+</div>
+
+<div class="howto android os">
+<p>If possible, please use the hupgrade app</p>
+</div>
+
+<div id="LastEdit"></div>
