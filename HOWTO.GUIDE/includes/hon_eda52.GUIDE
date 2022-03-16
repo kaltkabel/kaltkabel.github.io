@@ -1,4 +1,7 @@
-<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>Accessing the Bootloader:
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Accessing the Bootloader:
  1  Reboot the device
  2  Press and Hold Vol-
  3  Navigate with Volume and confirm with Power
@@ -7,7 +10,7 @@ Accessing the Recovery Mode:
  1  Reboot to Bootloader
  2  Select Recovery Mode
 
-Bootloader Menu (Android 10):
+Bootloader Menu (Android 11):
  > START
  > Restart Bootloader
  > Recovery Mode
@@ -33,4 +36,11 @@ Recovery Mode (Android 10):
  > View recovery logs
  > Run graphics test
  > Run locale test
- > Power off</p></div><div class="howto android os"><p>If possible, please use the hupgrade app</p></div><div id="LastEdit"></div>
+ > Power off</p>
+</div>
+
+<div class="howto android os">
+<p>If possible, please use the hupgrade app</p>
+</div>
+
+<div id="LastEdit"></div>
