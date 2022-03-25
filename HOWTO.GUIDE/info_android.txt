@@ -14,4 +14,5 @@ Marshmallow        6.0
 Nougat             7.0
 Oreo               8.0
 Pie                9.0
-Q                 10.0
+Android 10        10.0
+Android 11        11.0
