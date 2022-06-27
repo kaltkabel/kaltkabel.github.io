@@ -1,0 +1,20 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down PTT button
+3  Release when the device vibrates or when the zebra Logo appears
+ 
+Recovery Menu (Android 10)
+ > Reboot system now
+ > Apply upgrade from ADB
+ > Apply upgrade from SD card
+ > Apply upgrade from USB drive
+ > Apply downgrade from ADB
+ > Apply downgrade from SD card
+ > Apply downgrade from USB drive
+ > View recovery logs
+ > Power off</p>
+</div>
+
+<div id="LastEdit"></div>

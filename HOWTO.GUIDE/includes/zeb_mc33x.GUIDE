@@ -1,0 +1,42 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down GUN trigger or both SIDE SCAN buttons
+3  Release when the device vibrates or when the zebra Logo appears
+ 
+Recovery Menu (Android 10)
+ > Reboot system now
+ > Apply upgrade from ADB
+ > Apply upgrade from SD card
+ > Apply upgrade from USB drive
+ > Apply downgrade from ADB
+ > Apply downgrade from SD card
+ > Apply downgrade from USB drive
+ > View recovery logs
+ > Power off</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</p>
+</div>
+
+<div class="howto android os">
+<p>(SD Card method)
+1  Copy OS file xyz.zip -> SD:\xyz.zip
+2  Reboot into RECOVERY
+3  Start the Upgrade
+    Use the ARROWS to navigate to "apply update from sdcard"
+    Select the xyz.zip to start the update
+4  Wait until the process is finished and restart the device
+
+(ADB method)
+1  Connect the device to PC via USB Debugging
+2  Send command: adb reboot recovery
+3  In Recovery Mode, select "apply update from ADB"
+4  Send command: adb sideload xyz.zip
+5  When finished select "reboot system now"</p>
+</div>
+
+<div id="LastEdit"></div>
