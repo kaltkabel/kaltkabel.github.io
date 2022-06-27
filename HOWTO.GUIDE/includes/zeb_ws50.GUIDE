@@ -1,0 +1,9 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down Back button
+3  Release when the device vibrates or when the zebra Logo appears</p>
+</div>
+
+<div id="LastEdit"></div>
