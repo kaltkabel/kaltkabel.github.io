@@ -1,0 +1,27 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down the Rotate Screen button (Android 8) or the Volume Up button (Andrdoi 10)</p>
+</div>
+
+<div class="howto windows factory">
+<p>There are two ways to perform a factory reset on the Windows tablet:
+
+The first method is through Windows Settings.
+NOTE This is a long process and may take an hour or longer to complete.
+1  On the tablet, navigate to: Start > Settings > Update and Security > Recovery > Find Reset this PC. 
+2  Tap the Get Started button.
+3  In the resulting dialog box, you have the option to keep your files or remove everything.
+4  Select one of these options.
+5  Then press Next at the next prompts until the reset process starts.
+6  Once the reset is complete, you will be returned to the Windows OOBE setup process
+
+The second method is to perform a full re-flash of the tablet with the Zebra stock Win10 image.
+NOTE USB drive with at least 16 GB is recommended
+1  Download the Image from the Tablet Support Page
+2  Create a bootable USB drive with its Image
+3  Boot from USB drive and perform a full re-flash</p>
+</div>
+
+<div id="LastEdit"></div>
