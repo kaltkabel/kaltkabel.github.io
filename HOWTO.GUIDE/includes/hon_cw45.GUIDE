@@ -1,1 +1,50 @@
+<script src="javascript/LastEdit.js"></script>
 
+<div class="howto android menu">
+<p>Accessing the Recovery Menu:
+ 1  Restart the device and keep holding the P1 Button
+ 2  When "no command" is displayed, hold Power button and tap shortly P1 button
+ 3  Navigate with P1 & P2
+
+Accessing the Bootloader Menu:
+ 1  Enter Recovery Mode and select "Reboot to Bootloader"
+
+Recovery Menu
+ > Reboot system now
+ > Reboot to Bootloader
+ > Enter fastboot
+ > Apply update from ADB
+ > Apply update from SD card
+ > Wipe date/factory reset
+ > Wipe IPSM partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Run locale test
+ > Power off
+
+Bootloader Menu
+ > START                (starts the device)
+ > Restart bootloader   (restarts this menu)
+ > Full Factory Reset   (erase internal storage, settings and the IPSM partition)
+ > Enterprise Reset     (erase internal storage and settings)
+ > Enable Field Debug
+ > Enable Download Mode
+ > Power off            (turns the device off)
+ > Boot to FFBM         (enter test mode)
+ > Boot to QMMI         (enter a different test mode)</p>
+</div>
+
+<div class="howto android os">
+<p>Using the HUpgrader:
+ 1  Copy the Firmware zipfile to InternalStorage/Download/ or microSD/Download/
+    or to the root of the microSD card
+ 2  On the device, tap on HUpgrader
+ 3  Tap on the three dots on the upper right corner and tap on "Select OTA from Storage"
+    Note: Select the appropriate location, depending on whether the zipfile is in the '/sdcard/Download' 
+          directory on Internal Storage,or on a physical MicroSD Card from the tabs at the top.
+ 4  Tap on the Firmware zipfile
+ 5  The device will prompt you to reboot the device once the update is complete</p>
+</div>
+
+<div id="LastEdit"></div>
