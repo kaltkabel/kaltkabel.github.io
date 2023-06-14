@@ -1,4 +1,7 @@
-<script src="javascript/LastEdit.js"></script><div class="howto android menu"><p>Access the Recovery Menu: 
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>Access the Recovery Menu: 
 1 Reboot the device 
 2 Hold down Vol+ button
 
@@ -18,4 +21,39 @@ Bootloader Menu (Android 9)
  > Restart bootloader
  > Recovery mode
  > Power off
- > Boot to FFBM > Switch system</p></div><div class="howto android factory"><p>1 GoTo Honeywell Developer options and erase Userdata, IPSM, Config2 GoTo All Apps -> Settings -> Backup & Restore 3 Select Erase Everything</p></div><div id="LastEdit"></div>
+ > Boot to FFBM
+ > Switch system
+ 
+Recovery Menu (Android 11)
+ > Reboot system now
+ > Reboot to bootloader
+ > Apply update from ADB
+ > Apply update from SD card
+ > Apply update from IPSM
+ > Wipe data/factory reset
+ > Wipe IPSM partition
+ > Wipe config partition
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Run locale test
+ > Power off
+ 
+Bootloader Menu (Android 11)
+ > START
+ > Restart bootloader
+ > Recovery mode
+ > Power off
+ > Boot to FFBM
+ > Switch system</p>
+</div>
+
+<div class="howto android factory">
+<p>1 GoTo Honeywell Developer options and erase Userdata, IPSM, Config
+2 GoTo All Apps -> Settings -> Backup & Restore 
+3 Select Erase Everything
+
+If not possible, update to Android 11 and perform Wipe data/fatory reset</p>
+</div>
+
+<div id="LastEdit"></div>
