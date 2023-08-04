@@ -1,0 +1,84 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Tm-J Checkliste</title>
+		<link rel="stylesheet" type="text/css" href="../css/sheets-of-paper-a4.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body class="document">
+		<div class="fixbox">
+			<div class="print" onclick="window.print();">Drucken</div>
+			<div class="link" onclick="location.href='../index.html';">Home</div>
+			<div class="link" onclick="location.href='./extra_evolis.htm';">Evolis</div>
+			<div class="link" onclick="location.href='./extra_label.htm';">Label</div>
+			<div class="link" onclick="location.href='./extra_pos.htm';">Pos</div>
+			<div class="home" onclick="location.href='./extra_tm-j.htm';">TM-J</div>
+		</div>
+		<div class="page" contenteditable="false">
+			<input class="titleinput" autofocus="">
+			
+			<div class="one">Bearbeiter:</div>
+			<div class="two"><input class="input"></div>
+					
+			<div class="one">Produkt:</div>
+			<div class="two"><input class="input"></div>
+					
+			<div class="one">Datum:</div>
+			<div class="two"><input class="input" id="datum" value="06.07.2023"></div>
+					
+			<div class="top">Information:</div>
+			<div class="bot"><textarea rows="2"></textarea></div>
+			
+			<br>
+			
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Alle Schrauben befestigt ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Port ok ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Sensoren überprüft ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Platen ok ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Nozzle check ok ok ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Riemen ok ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Gefettet ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Receipt ok ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Slip ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				Prinquality ?
+			</label>
+			<label class="form-control"> <input type="checkbox" name="checkbox" />
+				A/C duration ?
+			</label>
+
+		</div>
+		<script>
+		function myFunction() {
+			window.print();
+		}
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+		if(dd<10) {dd = '0'+dd} 
+		if(mm<10) {mm = '0'+mm} 
+		today = dd + '.' + mm + '.' + yyyy;
+		document.getElementById("datum").value = today; ;
+		</script>
+	
+
+</body></html>
