@@ -103,13 +103,13 @@
 			background-color: #F3F3F3;
 		}
 		@media print{
-			.print {display:none;}
+			.fixbox {display:none;}
 		}
 		.form-control {
 			padding-left: 15px;
 			margin-top: 5px;
 			font-size: 25px;
-			line-height: 1.5;
+			line-height: 1.2;
 			display: grid;
 			grid-template-columns: 1em auto;
 			gap: 15px;
