@@ -1,0 +1,8 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1. Reboot the device
+2. Press and hold Blue + P7</p>
+</div>
+
+<div id="LastEdit"></div>
