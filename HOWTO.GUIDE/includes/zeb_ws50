@@ -1,0 +1,14 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Connect the device to the USB Snap-On Cable 
+2  On the Quick Access panel, press and hold the Power button until the menu appears.
+3  Press Restart
+4  Press and hold the Back button until the Zebra logo displays, and then release the button.</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</div>
+
+<div id="LastEdit"></div>
