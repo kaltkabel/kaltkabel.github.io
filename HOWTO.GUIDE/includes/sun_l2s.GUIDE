@@ -1,0 +1,25 @@
+<script src="javascript/LastEdit.js"></script>
+
+<div class="howto android menu">
+<p>1  Reboot the device
+2  Press and hold down Vol+
+
+Recovery Menu (Android 12):
+ > Reboot system now
+ > Reboot to bootloader
+ > Enter Fastboot
+ > Apply upgrade from ADB
+ > Apply upgrade from SD card
+ > Wipe data/factory reset
+ > Mount /system
+ > View recovery logs
+ > Run graphics test
+ > Run locale test
+ > Power off</p>
+</div>
+
+<div class="howto android factory">
+<p>Using the System Settings:
+ -> Settings -> Backup & Reset -> Factory Reset</div>
+
+<div id="LastEdit"></div>
