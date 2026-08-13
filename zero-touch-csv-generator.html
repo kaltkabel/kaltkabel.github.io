@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero-Touch CSV Generator</title>
+<style>
+  :root{
+    --bg: #101418;
+    --panel: #161b21;
+    --panel-border: #262e37;
+    --text: #e6ebf0;
+    --text-dim: #8b96a3;
+    --accent: #4fd1a5;
+    --accent-dim: #2c6b52;
+    --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  body[data-theme="light"]{
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --panel-border: #dde2e8;
+    --text: #1c2126;
+    --text-dim: #6b7480;
+    --accent: #1f9d76;
+    --accent-dim: #bfe9d9;
+  }
+  body[data-theme="light"] .eyebrow{ color:var(--accent); }
+  body[data-theme="light"] button{ color:#ffffff; }
+  body[data-theme="light"] input[type=text], body[data-theme="light"] textarea{ background:#fafbfc; }
+  body[data-theme="light"] pre, body[data-theme="light"] thead th{ background:#fafbfc; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 20% -10%, rgba(79,209,165,0.06), transparent 45%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    display:flex;
+    justify-content:center;
+    padding:48px 20px 80px;
+  }
+  .wrap{ width:100%; max-width:640px; }
+  header{ margin-bottom:32px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+  .header-text{ flex:1; }
+  .theme-toggle{
+    flex:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-dim);
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:20px;
+    padding:6px 6px;
+    cursor:pointer;
+    margin-top:2px;
+  }
+  .theme-toggle span{
+    padding:5px 10px;
+    border-radius:14px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .theme-toggle span.active{
+    background:var(--accent);
+    color:#0a1410;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 10px;
+  }
+  h1{
+    font-size:26px;
+    font-weight:650;
+    letter-spacing:-0.01em;
+    margin:0 0 8px;
+  }
+  .sub{
+    color:var(--text-dim);
+    font-size:14px;
+    line-height:1.5;
+    margin:0;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:14px;
+    padding:28px;
+    margin-top:28px;
+  }
+  .field{ margin-bottom:22px; }
+  .field:last-of-type{ margin-bottom:0; }
+  label{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  label .hint{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:400;
+    color:var(--text-dim);
+  }
+  input[type=text], textarea{
+    width:100%;
+    background:#0d1116;
+    border:1px solid var(--panel-border);
+    border-radius:8px;
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:14px;
+    padding:11px 13px;
+    resize:vertical;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  textarea{
+    font-family:var(--mono);
+    font-size:13px;
+    line-height:1.6;
+    min-height:96px;
+  }
+  input[type=text]:focus, textarea:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(79,209,165,0.15);
+  }
+  .row-count{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-dim);
+    margin-top:6px;
+    min-height:14px;
+  }
+  .divider{
+    height:1px;
+    background:var(--panel-border);
+    margin:24px 0;
+  }
+  .field-pair{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .field-pair .field{ margin-bottom:0; }
+  @media (max-width:520px){
+    .field-pair{ grid-template-columns:1fr; gap:22px; }
+  }
+  .actions{
+    margin-top:28px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  button{
+    font-family:var(--sans);
+    font-weight:650;
+    font-size:14px;
+    padding:12px 22px;
+    width:180px;
+    text-align:center;
+    border-radius:8px;
+    border:1px solid var(--accent);
+    background:var(--accent);
+    color:#0a1410;
+    cursor:pointer;
+    transition:transform .12s ease, background .15s ease;
+  }
+  button:hover{ background:#69dcb4; }
+  button:active{ transform:scale(0.98); }
+  #status{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-dim);
+  }
+  #status.error{ color:#f0876f; }
+  #status.ok{ color:var(--accent); }
+  .preview{
+    margin-top:28px;
+  }
+  .preview h2{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--text-dim);
+    margin:0 0 10px;
+  }
+  .warnings{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .warning-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-family:var(--mono);
+    font-size:12px;
+    padding:8px 12px;
+    border-radius:7px;
+    border:1px solid;
+  }
+  .warning-item.severity-error{
+    color:#ffb4a3;
+    border-color:#5c3128;
+    background:rgba(240,135,111,0.08);
+  }
+  .warning-item.severity-warn{
+    color:#f0cf7a;
+    border-color:#5c4f28;
+    background:rgba(240,207,122,0.08);
+  }
+  .warning-item .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:currentColor;
+    flex:none;
+  }
+  .all-clear{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--accent);
+    padding:8px 12px;
+    border-radius:7px;
+    border:1px solid var(--accent-dim);
+    background:rgba(79,209,165,0.08);
+    margin-bottom:16px;
+  }
+  .table-scroll{
+    border:1px solid var(--panel-border);
+    border-radius:8px;
+    overflow-x:auto;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:var(--mono);
+    font-size:12px;
+  }
+  thead th{
+    text-align:left;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--text-dim);
+    font-weight:600;
+    padding:9px 12px;
+    background:#0d1116;
+    border-bottom:1px solid var(--panel-border);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:8px 12px;
+    border-bottom:1px solid var(--panel-border);
+    white-space:nowrap;
+    color:var(--text);
+  }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr.row-incomplete{ background:rgba(240,207,122,0.06); }
+  tbody tr.row-invalid{ background:rgba(240,135,111,0.07); }
+  tbody tr.row-duplicate td.cell-flag{ color:#c98be0; }
+  td.cell-empty{ color:var(--text-dim); font-style:italic; }
+  td.cell-flag{ position:relative; }
+  .flag-badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    padding:1px 6px;
+    border-radius:4px;
+    margin-left:7px;
+    vertical-align:middle;
+  }
+  .flag-badge.warn{ background:rgba(240,207,122,0.15); color:#f0cf7a; }
+  .flag-badge.error{ background:rgba(240,135,111,0.15); color:#ffb4a3; }
+  .flag-badge.dup{ background:rgba(201,139,224,0.15); color:#c98be0; }
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:12px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-dim);
+  }
+  .legend span{ display:flex; align-items:center; gap:6px; }
+  .legend .swatch{ width:10px; height:10px; border-radius:3px; }
+  .legend .swatch.incomplete{ background:rgba(240,207,122,0.35); }
+  .legend .swatch.invalid{ background:rgba(240,135,111,0.35); }
+  .legend .swatch.duplicate{ background:rgba(201,139,224,0.35); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-text">
+      <p class="eyebrow">Android Zero-Touch Enrollment</p>
+      <h1>CSV Generator</h1>
+      <p class="sub">Gerätedaten eintragen und als Zero-Touch-CSV exportieren. Seriennummer und IMEI werden zeilenweise gepaart.</p>
+    </div>
+    <div class="theme-toggle" id="themeToggle">
+      <span id="themeDarkLabel">Dark</span><span id="themeLightLabel">Light</span>
+    </div>
+  </header>
+
+  <div class="card">
+    <div class="field">
+      <label>Hersteller</label>
+      <input type="text" id="manufacturer" placeholder="z. B. Samsung">
+    </div>
+
+    <div class="field">
+      <label>Modell</label>
+      <input type="text" id="model" placeholder="z. B. Galaxy Tab Active4 Pro">
+    </div>
+
+    <div class="field">
+      <label>Zero-Touch ID</label>
+      <input type="text" id="zerotouch" placeholder="z. B. 123456789012">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="field-pair">
+      <div class="field">
+        <label>Seriennummer <span class="hint">1 pro Zeile</span></label>
+        <textarea id="serials" placeholder="SN12345&#10;SN12346&#10;SN12347"></textarea>
+        <div class="row-count" id="serialCount"></div>
+      </div>
+
+      <div class="field">
+        <label>IMEI <span class="hint">1 pro Zeile</span></label>
+        <textarea id="imeis" placeholder="356938035643809&#10;356938035643810"></textarea>
+        <div class="row-count" id="imeiCount"></div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="generateBtn">CSV erstellen</button>
+      <span id="status"></span>
+    </div>
+
+    <div class="preview" id="previewWrap" style="display:none;">
+      <h2>Prüfung</h2>
+      <div id="warningsBox"></div>
+      <h2>Vorschau</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>modemtype</th>
+              <th>modemid (IMEI)</th>
+              <th>serial</th>
+              <th>model</th>
+              <th>manufacturer</th>
+              <th>profiletype</th>
+              <th>owner</th>
+            </tr>
+          </thead>
+          <tbody id="previewBody"></tbody>
+        </table>
+      </div>
+      <div class="legend">
+        <span><span class="swatch incomplete"></span>Unvollständige Zeile</span>
+        <span><span class="swatch invalid"></span>Ungültige IMEI</span>
+        <span><span class="swatch duplicate"></span>Duplikat</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function splitLines(value){
+  return value.split(/\r?\n/).map(v => v.trim()).filter(v => v.length > 0);
+}
+
+function csvEscape(value){
+  const v = String(value ?? "");
+  if (/[",\n]/.test(v)) {
+    return '"' + v.replace(/"/g, '""') + '"';
+  }
+  return v;
+}
+
+const serialsEl = document.getElementById('serials');
+const imeisEl = document.getElementById('imeis');
+const serialCountEl = document.getElementById('serialCount');
+const imeiCountEl = document.getElementById('imeiCount');
+
+function updateCounts(){
+  const sCount = splitLines(serialsEl.value).length;
+  const iCount = splitLines(imeisEl.value).length;
+  serialCountEl.textContent = sCount ? `${sCount} Seriennummer${sCount === 1 ? '' : 'n'}` : '';
+  imeiCountEl.textContent = iCount ? `${iCount} IMEI${iCount === 1 ? '' : 's'}` : '';
+}
+serialsEl.addEventListener('input', updateCounts);
+imeisEl.addEventListener('input', updateCounts);
+
+// --- Höhe von SN- und IMEI-Feld synchron halten, wenn eines per Maus vergrößert wird ---
+let heightSyncLock = false;
+let heightSyncPending = false;
+function syncHeight(source, target){
+  const h = source.offsetHeight;
+  if (Math.abs(target.offsetHeight - h) > 1) {
+    heightSyncLock = true;
+    target.style.height = h + 'px';
+    // Lock erst im nächsten Frame wieder freigeben, damit die dadurch
+    // ausgelöste Resize-Notification des Zielfelds ignoriert wird
+    requestAnimationFrame(() => { heightSyncLock = false; });
+  }
+}
+const heightObserver = new ResizeObserver(entries => {
+  if (heightSyncPending) return;
+  heightSyncPending = true;
+  requestAnimationFrame(() => {
+    heightSyncPending = false;
+    if (heightSyncLock) return;
+    entries.forEach(entry => {
+      if (entry.target === serialsEl) syncHeight(serialsEl, imeisEl);
+      else if (entry.target === imeisEl) syncHeight(imeisEl, serialsEl);
+    });
+  });
+});
+heightObserver.observe(serialsEl);
+heightObserver.observe(imeisEl);
+
+// --- Theme Toggle ---
+const themeToggle = document.getElementById('themeToggle');
+const themeDarkLabel = document.getElementById('themeDarkLabel');
+const themeLightLabel = document.getElementById('themeLightLabel');
+
+function setTheme(theme){
+  document.body.setAttribute('data-theme', theme);
+  themeDarkLabel.classList.toggle('active', theme === 'dark');
+  themeLightLabel.classList.toggle('active', theme === 'light');
+}
+setTheme('dark');
+themeDarkLabel.addEventListener('click', () => setTheme('dark'));
+themeLightLabel.addEventListener('click', () => setTheme('light'));
+
+function isImeiFormatValid(imei){
+  return /^\d{15}$/.test(imei);
+}
+
+// Luhn-Prüfsumme, wie sie für IMEIs verwendet wird
+function isImeiChecksumValid(imei){
+  if (!isImeiFormatValid(imei)) return false;
+  let sum = 0;
+  let doubleDigit = false;
+  for (let i = imei.length - 1; i >= 0; i--) {
+    let n = parseInt(imei[i], 10);
+    if (doubleDigit) {
+      n *= 2;
+      if (n > 9) n -= 9;
+    }
+    sum += n;
+    doubleDigit = !doubleDigit;
+  }
+  return sum % 10 === 0;
+}
+
+function countOccurrences(list){
+  const map = new Map();
+  list.forEach(v => {
+    if (!v) return;
+    map.set(v, (map.get(v) || 0) + 1);
+  });
+  return map;
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, ch => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[ch]));
+}
+
+document.getElementById('generateBtn').addEventListener('click', () => {
+  const statusEl = document.getElementById('status');
+  const manufacturer = document.getElementById('manufacturer').value.trim();
+  const model = document.getElementById('model').value.trim();
+  const zerotouch = document.getElementById('zerotouch').value.trim();
+  const serials = splitLines(serialsEl.value);
+  const imeis = splitLines(imeisEl.value);
+
+  statusEl.className = '';
+
+  if (!zerotouch) {
+    statusEl.textContent = 'Bitte Zero-Touch ID ausfüllen.';
+    statusEl.className = 'error';
+    return;
+  }
+
+  const pathImei = imeis.length > 0; // ZT-ID + IMEI reicht
+  const pathSerial = !!manufacturer && !!model && serials.length > 0; // ZT-ID + Hersteller + Modell + Seriennummer
+
+  if (!pathImei && !pathSerial) {
+    statusEl.textContent = 'Bitte entweder IMEI eintragen, oder Hersteller + Modell + Seriennummer ausfüllen.';
+    statusEl.className = 'error';
+    return;
+  }
+
+  // Sobald eine Seriennummer vorhanden ist, sind Hersteller und Modell zwingend erforderlich —
+  // unabhängig davon, ob zusätzlich IMEIs eingetragen wurden.
+  if (serials.length > 0 && (!manufacturer || !model)) {
+    statusEl.textContent = 'Sobald eine Seriennummer eingetragen ist, müssen Hersteller und Modell ausgefüllt sein.';
+    statusEl.className = 'error';
+    return;
+  }
+
+  const serialCounts = countOccurrences(serials);
+  const imeiCounts = countOccurrences(imeis);
+
+  const rowCount = Math.max(serials.length, imeis.length);
+  const header = ['modemtype','modemid','serial','model','manufacturer','profiletype','owner'];
+  const rows = [header];
+  const rowMeta = [];
+
+  let incompleteCount = 0;
+  let invalidFormatCount = 0;
+  let invalidChecksumCount = 0;
+  let dupSerialCount = 0;
+  let dupImeiCount = 0;
+
+  for (let i = 0; i < rowCount; i++) {
+    const serial = serials[i] || '';
+    const imei = imeis[i] || '';
+    const modemtype = imei ? 'IMEI' : '';
+    rows.push([modemtype, imei, serial, model, manufacturer, 'ZERO_TOUCH', zerotouch]);
+
+    const bothListsUsed = serials.length > 0 && imeis.length > 0;
+    const meta = {
+      incomplete: bothListsUsed && (!serial || !imei),
+      imeiInvalidFormat: imei && !isImeiFormatValid(imei),
+      imeiInvalidChecksum: imei && isImeiFormatValid(imei) && !isImeiChecksumValid(imei),
+      serialDuplicate: serial && serialCounts.get(serial) > 1,
+      imeiDuplicate: imei && imeiCounts.get(imei) > 1
+    };
+    if (meta.incomplete) incompleteCount++;
+    if (meta.imeiInvalidFormat) invalidFormatCount++;
+    if (meta.imeiInvalidChecksum) invalidChecksumCount++;
+    if (meta.serialDuplicate) dupSerialCount++;
+    if (meta.imeiDuplicate) dupImeiCount++;
+    rowMeta.push(meta);
+  }
+
+  const csvContent = rows.map(r => r.map(csvEscape).join(',')).join('\r\n');
+
+  // --- Warnungen zusammenstellen ---
+  const warnings = [];
+  if (serials.length > 0 && imeis.length > 0 && serials.length !== imeis.length) {
+    warnings.push({
+      severity: 'warn',
+      text: `Ungleiche Anzahl: ${serials.length} Seriennummer${serials.length === 1 ? '' : 'n'} vs. ${imeis.length} IMEI${imeis.length === 1 ? '' : 's'} — ${incompleteCount} Zeile${incompleteCount === 1 ? '' : 'n'} unvollständig.`
+    });
+  } else if (incompleteCount > 0) {
+    warnings.push({ severity: 'warn', text: `${incompleteCount} unvollständige Zeile${incompleteCount === 1 ? '' : 'n'} (leere Seriennummer oder IMEI).` });
+  }
+  if (invalidFormatCount > 0) {
+    warnings.push({ severity: 'error', text: `${invalidFormatCount} IMEI${invalidFormatCount === 1 ? '' : 's'} nicht 15-stellig / enthält Nicht-Ziffern.` });
+  }
+  if (invalidChecksumCount > 0) {
+    warnings.push({ severity: 'warn', text: `${invalidChecksumCount} IMEI${invalidChecksumCount === 1 ? '' : 's'} mit ungültiger Prüfsumme (Luhn) — Format ok, aber vermutlich ein Tippfehler.` });
+  }
+  if (dupSerialCount > 0) {
+    warnings.push({ severity: 'warn', text: `${dupSerialCount} doppelte Seriennummer${dupSerialCount === 1 ? '' : 'n'}.` });
+  }
+  if (dupImeiCount > 0) {
+    warnings.push({ severity: 'warn', text: `${dupImeiCount} doppelte IMEI${dupImeiCount === 1 ? '' : 's'}.` });
+  }
+
+  const warningsBox = document.getElementById('warningsBox');
+  if (warnings.length === 0) {
+    warningsBox.innerHTML = `<div class="all-clear">Keine Auffälligkeiten — ${rowCount} Zeile${rowCount === 1 ? '' : 'n'} bereit.</div>`;
+  } else {
+    warningsBox.innerHTML = `<div class="warnings">${warnings.map(w =>
+      `<div class="warning-item severity-${w.severity}"><span class="dot"></span>${escapeHtml(w.text)}</div>`
+    ).join('')}</div>`;
+  }
+
+  // --- Tabellen-Vorschau ---
+  const previewBody = document.getElementById('previewBody');
+  previewBody.innerHTML = rowMeta.map((meta, i) => {
+    const [modemtype, imei, serial, m, mf, pt, own] = rows[i + 1];
+    const rowClasses = [];
+    if (meta.incomplete) rowClasses.push('row-incomplete');
+    if (meta.imeiInvalidFormat || meta.imeiInvalidChecksum) rowClasses.push('row-invalid');
+    if (meta.serialDuplicate || meta.imeiDuplicate) rowClasses.push('row-duplicate');
+
+    const serialCell = serial
+      ? `${escapeHtml(serial)}${meta.serialDuplicate ? '<span class="flag-badge dup">Dup</span>' : ''}`
+      : `<span class="cell-empty">leer</span>`;
+
+    let imeiCell;
+    if (imei) {
+      imeiCell = escapeHtml(imei);
+      if (meta.imeiInvalidFormat) imeiCell += '<span class="flag-badge error">Format</span>';
+      else if (meta.imeiInvalidChecksum) imeiCell += '<span class="flag-badge warn">Prüfsumme</span>';
+      if (meta.imeiDuplicate) imeiCell += '<span class="flag-badge dup">Dup</span>';
+    } else {
+      imeiCell = `<span class="cell-empty">leer</span>`;
+    }
+
+    return `<tr class="${rowClasses.join(' ')}">
+      <td>${modemtype || '<span class="cell-empty">leer</span>'}</td>
+      <td class="cell-flag">${imeiCell}</td>
+      <td class="cell-flag">${serialCell}</td>
+      <td>${escapeHtml(m)}</td>
+      <td>${escapeHtml(mf)}</td>
+      <td>${escapeHtml(pt)}</td>
+      <td>${escapeHtml(own)}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('previewWrap').style.display = 'block';
+
+  // Download
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const safeName = (manufacturer + '_' + model).replace(/[^a-z0-9_-]+/gi, '_');
+  a.href = url;
+  a.download = `zerotouch_${safeName || 'export'}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  statusEl.textContent = `${rowCount} Zeile${rowCount === 1 ? '' : 'n'} exportiert${warnings.length ? ` — ${warnings.length} Hinweis${warnings.length === 1 ? '' : 'e'} beachten` : ''}.`;
+  statusEl.className = warnings.some(w => w.severity === 'error') ? 'error' : 'ok';
+});
+</script>
+</body>
+</html>
