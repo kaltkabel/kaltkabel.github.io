@@ -545,7 +545,9 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   document.getElementById('previewWrap').style.display = 'block';
 
   // --- Download ---
-  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  // UTF-8 BOM voranstellen, damit Excel die Datei zuverlässig als UTF-8
+  // erkennt und Zeichen wie å/ä/ö nicht als Ã¥/Ã¤/Ã¶ anzeigt
+  const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
