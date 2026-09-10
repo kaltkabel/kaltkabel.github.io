@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generatoren Übersicht</title>
+<style>
+  :root{
+    --bg: #101418;
+    --panel: #161b21;
+    --panel-border: #262e37;
+    --text: #e6ebf0;
+    --text-dim: #8b96a3;
+    --accent: #4fd1a5;
+    --accent-dim: #2c6b52;
+    --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  body[data-theme="light"]{
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --panel-border: #dde2e8;
+    --text: #1c2126;
+    --text-dim: #6b7480;
+    --accent: #1f9d76;
+    --accent-dim: #bfe9d9;
+  }
+  body[data-theme="light"] .eyebrow{ color:var(--accent); }
+  body[data-theme="light"] .open-btn{ color:#ffffff; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 20% -10%, rgba(79,209,165,0.06), transparent 45%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    display:flex;
+    justify-content:center;
+    padding:48px 20px 80px;
+  }
+  .wrap{ width:100%; max-width:900px; }
+  header{ margin-bottom:32px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+  .header-text{ flex:1; }
+  .theme-toggle{
+    flex:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-dim);
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:20px;
+    padding:6px 6px;
+    cursor:pointer;
+    margin-top:2px;
+  }
+  .theme-toggle span{
+    padding:5px 10px;
+    border-radius:14px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .theme-toggle span.active{
+    background:var(--accent);
+    color:#0a1410;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 10px;
+  }
+  h1{
+    font-size:26px;
+    font-weight:650;
+    letter-spacing:-0.01em;
+    margin:0 0 8px;
+  }
+  .sub{
+    color:var(--text-dim);
+    font-size:14px;
+    line-height:1.5;
+    margin:0;
+    max-width:520px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    margin-top:28px;
+  }
+  @media (max-width:760px){
+    .grid{ grid-template-columns:1fr; }
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:14px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    color:var(--text);
+    transition:border-color .15s ease, transform .12s ease;
+  }
+  .card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+  }
+  .card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:14px;
+    gap:10px;
+  }
+  .card-title{
+    font-size:17px;
+    font-weight:650;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .format-badge{
+    flex:none;
+    font-family:var(--mono);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    padding:3px 9px;
+    border-radius:20px;
+    border:1px solid var(--accent-dim);
+    color:var(--accent);
+    background:rgba(79,209,165,0.08);
+    white-space:nowrap;
+  }
+  .card-desc{
+    color:var(--text-dim);
+    font-size:13px;
+    line-height:1.55;
+    margin:0 0 16px;
+    flex:1;
+  }
+  .card-facts{
+    list-style:none;
+    margin:0 0 20px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .card-facts li{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--text-dim);
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .card-facts li::before{
+    content:'';
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--accent);
+    flex:none;
+    transform:translateY(-1px);
+  }
+  .open-btn{
+    font-family:var(--sans);
+    font-weight:650;
+    font-size:13px;
+    padding:10px 18px;
+    text-align:center;
+    border-radius:8px;
+    border:1px solid var(--accent);
+    background:var(--accent);
+    color:#0a1410;
+    transition:background .15s ease;
+  }
+  .card:hover .open-btn{ background:#69dcb4; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-text">
+      <p class="eyebrow">Geräteverwaltung</p>
+      <h1>Generatoren Übersicht</h1>
+      <p class="sub">Werkzeuge zum Erstellen von Import-Dateien für Geräte-Onboarding und -Verwaltung.</p>
+    </div>
+    <div class="theme-toggle" id="themeToggle">
+      <span id="themeDarkLabel">Dark</span><span id="themeLightLabel">Light</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="/generators/zerotouch/index.html">
+      <div class="card-top">
+        <h2 class="card-title">Zero-Touch CSV Generator</h2>
+        <span class="format-badge">CSV</span>
+      </div>
+      <p class="card-desc">Erfasst Geräte-Metadaten (Hersteller, Modell, Zero-Touch ID, Seriennummern, IMEIs) und exportiert sie im Android-Zero-Touch-Enrollment-Format.</p>
+      <ul class="card-facts">
+        <li>IMEI-Format &amp; Luhn-Prüfsumme werden geprüft</li>
+        <li>Zero-Touch ID immer Pflicht</li>
+        <li>SN und IMEI zeilenweise gepaart</li>
+      </ul>
+      <span class="open-btn">Generator öffnen</span>
+    </a>
+
+    <a class="card" href="/generators/eloview/index.html">
+      <div class="card-top">
+        <h2 class="card-title">Eloview CSV Generator</h2>
+        <span class="format-badge">CSV</span>
+      </div>
+      <p class="card-desc">Wandelt Tab-getrennte Rohdaten (Franchise, Land, Referenz, Ort, Gerätetyp, Index, Seriennummer) in eine Eloview „Add Device"-CSV um.</p>
+      <ul class="card-facts">
+        <li>Device Name wird automatisch generiert</li>
+        <li>Franchise wird auf Tag gemappt (z. B. Subway)</li>
+        <li>Fehlerhafte Zeilen werden übersprungen &amp; markiert</li>
+      </ul>
+      <span class="open-btn">Generator öffnen</span>
+    </a>
+
+    <a class="card" href="/generators/sunmi/index.html">
+      <div class="card-top">
+        <h2 class="card-title">Sunmi MSN Generator</h2>
+        <span class="format-badge">XLSX</span>
+      </div>
+      <p class="card-desc">Erfasst eine Sunmi ID und zugehörige Seriennummern (MSN) und exportiert sie als XLSX-Datei, eine Zeile pro Seriennummer.</p>
+      <ul class="card-facts">
+        <li>Seriennummern per Leerzeichen oder Zeilenumbruch</li>
+        <li>Sunmi ID + mind. 1 Seriennummer Pflicht</li>
+        <li>Duplikate werden markiert</li>
+      </ul>
+      <span class="open-btn">Generator öffnen</span>
+    </a>
+  </div>
+</div>
+
+<script>
+  const themeDarkLabel = document.getElementById('themeDarkLabel');
+  const themeLightLabel = document.getElementById('themeLightLabel');
+  function setTheme(theme){
+    document.body.setAttribute('data-theme', theme);
+    themeDarkLabel.classList.toggle('active', theme === 'dark');
+    themeLightLabel.classList.toggle('active', theme === 'light');
+  }
+  setTheme('dark');
+  themeDarkLabel.addEventListener('click', () => setTheme('dark'));
+  themeLightLabel.addEventListener('click', () => setTheme('light'));
+</script>
+</body>
+</html>
