@@ -9,6 +9,8 @@ Android-Zero-Touch-Enrollment-Format.
 2. Auf **„CSV erstellen"** klicken.
 3. Bei bestandener Prüfung wird die CSV automatisch heruntergeladen,
    zusätzlich erscheinen eine Warnungs-Box und eine farbige Vorschau-Tabelle.
+4. Über **„← Zurück zum Hauptmenü"** oben links gelangt man zurück zur
+   Generatoren-Übersicht (`/generators/index.html`).
 
 ## Formularfelder
 
@@ -56,6 +58,10 @@ zusätzlich werden folgende Hinweise angezeigt:
 Die „Ungleiche Anzahl"-Warnung erscheint **nur**, wenn sowohl bei
 Seriennummer als auch bei IMEI mindestens ein Eintrag vorhanden ist.
 
+Anders als im Sunmi-Generator werden doppelte Seriennummern/IMEIs hier
+**nicht** entfernt – sie werden nur markiert und als Warnung angezeigt, alle
+Zeilen bleiben im Export enthalten.
+
 ### IMEI-Validierung im Detail
 - **Format:** genau 15 Ziffern, keine Buchstaben/Sonderzeichen.
 - **Prüfsumme (Luhn-Algorithmus):** von rechts nach links, jede zweite Ziffer
@@ -94,8 +100,13 @@ IMEI,356938035643810,SN12346,Galaxy Tab Active4 Pro,Samsung,ZERO_TOUCH,123456789
 ```
 
 ### Dateiname
-`zerotouch_<Hersteller>_<Modell>.csv` (Sonderzeichen werden durch `_` ersetzt).
-Ohne Hersteller/Modell (reiner IMEI-Weg): `zerotouch_export.csv`.
+`zerotouch_<Hersteller>_<Modell>_<Zeitstempel>.csv`, Sonderzeichen im
+Hersteller-/Modell-Teil werden durch `_` ersetzt. Ohne Hersteller/Modell
+(reiner IMEI-Weg): `zerotouch_export_<Zeitstempel>.csv`.
+
+Der Zeitstempel hat das Format `JJJJMMTT_HHMMSS` (lokale Zeit des Browsers),
+z. B. `20260917_143022` für den 17.09.2026, 14:30:22 Uhr. Dadurch überschreibt
+ein erneuter Export dieselbe Datei nicht.
 
 ## Technische Details
 
@@ -110,3 +121,5 @@ Ohne Hersteller/Modell (reiner IMEI-Weg): `zerotouch_export.csv`.
   Maus automatisch aneinander an.
 - Dark/Light-Umschalter oben rechts, Standard ist Dark Mode (nicht dauerhaft
   gespeichert).
+- Oben links führt ein „← Zurück zum Hauptmenü"-Link zurück zur
+  Generatoren-Übersicht.
