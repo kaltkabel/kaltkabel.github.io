@@ -7,8 +7,11 @@ Diese Webapp wandelt Tab-getrennte Rohdaten in eine CSV im Eloview
 
 1. Rohdaten in das Textfeld einfügen (z. B. per Copy-Paste aus Excel).
 2. Auf **„CSV erstellen"** klicken.
-3. Die Datei `AddDeviceTemplate.csv` wird automatisch heruntergeladen,
-   zusätzlich erscheint eine Vorschau mit Warnungen im Browser.
+3. Die Datei `AddDeviceTemplate_<Zeitstempel>.csv` wird automatisch
+   heruntergeladen, zusätzlich erscheint eine Vorschau mit Warnungen im
+   Browser.
+4. Über **„← Zurück zum Hauptmenü"** oben links gelangt man zurück zur
+   Generatoren-Übersicht (`/generators/index.html`).
 
 ## Erwartetes Eingabeformat
 
@@ -73,6 +76,15 @@ Warnungs-Box angezeigt:
 - **Doppelter Device Name** – derselbe berechnete Name kommt mehrfach vor.
 - **Doppelte Seriennummer** – dieselbe Seriennummer kommt mehrfach vor.
 
+Anders als im Sunmi-Generator werden doppelte Zeilen hier **nicht** entfernt
+– sie werden nur markiert und bleiben im Export enthalten.
+
+### Dateiname
+`AddDeviceTemplate_<Zeitstempel>.csv`. Der Zeitstempel hat das Format
+`JJJJMMTT_HHMMSS` (lokale Zeit des Browsers), z. B. `20260917_143022` für den
+17.09.2026, 14:30:22 Uhr. Dadurch überschreibt ein erneuter Export dieselbe
+Datei nicht.
+
 ## Technische Details
 
 - Encoding: UTF-8 mit BOM (Byte Order Mark), damit Excel Sonderzeichen wie
@@ -82,3 +94,5 @@ Warnungs-Box angezeigt:
   werden in `"..."` gesetzt)
 - Reines Frontend, kein Server nötig – Verarbeitung und Download laufen
   vollständig im Browser.
+- Oben links führt ein „← Zurück zum Hauptmenü"-Link zurück zur
+  Generatoren-Übersicht.
