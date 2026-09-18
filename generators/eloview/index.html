@@ -43,6 +43,18 @@
     padding:48px 20px 80px;
   }
   .wrap{ width:100%; max-width:720px; }
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-bottom:18px;
+    transition:color .15s ease;
+  }
+  .back-link:hover{ color:var(--accent); }
   header{ margin-bottom:32px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
   .header-text{ flex:1; }
   .theme-toggle{
@@ -281,6 +293,7 @@
 </head>
 <body>
 <div class="wrap">
+  <a class="back-link" href="/generators/index.html">&larr; Zurück zum Hauptmenü</a>
   <header>
     <div class="header-text">
       <p class="eyebrow">Eloview Portal</p>
@@ -349,6 +362,13 @@ function escapeHtml(str){
   return String(str).replace(/[&<>"']/g, ch => ({
     '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
   }[ch]));
+}
+
+// Aktuellen Zeitstempel im Format YYYYMMDD_HHMMSS liefern, für eindeutige Download-Dateinamen.
+function getTimestamp(){
+  const d = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
 }
 
 function countOccurrences(list){
@@ -550,7 +570,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'AddDeviceTemplate.csv';
+  a.download = `AddDeviceTemplate_${getTimestamp()}.csv`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
