@@ -43,6 +43,18 @@
     padding:48px 20px 80px;
   }
   .wrap{ width:100%; max-width:640px; }
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-bottom:18px;
+    transition:color .15s ease;
+  }
+  .back-link:hover{ color:var(--accent); }
   header{ margin-bottom:32px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
   .header-text{ flex:1; }
   .theme-toggle{
@@ -258,6 +270,8 @@
   }
   tbody tr:last-child td{ border-bottom:none; }
   tbody tr.row-duplicate td.cell-flag{ color:#c98be0; }
+  tbody tr.row-removed{ opacity:0.55; }
+  tbody tr.row-removed td{ text-decoration:line-through; }
   td.cell-empty{ color:var(--text-dim); font-style:italic; }
   td.cell-flag{ position:relative; }
   .flag-badge{
@@ -272,6 +286,7 @@
     vertical-align:middle;
   }
   .flag-badge.dup{ background:rgba(201,139,224,0.15); color:#c98be0; }
+  .flag-badge.removed{ background:rgba(240,135,111,0.15); color:#ffb4a3; }
   .legend{
     display:flex;
     flex-wrap:wrap;
@@ -284,10 +299,12 @@
   .legend span{ display:flex; align-items:center; gap:6px; }
   .legend .swatch{ width:10px; height:10px; border-radius:3px; }
   .legend .swatch.duplicate{ background:rgba(201,139,224,0.35); }
+  .legend .swatch.removed{ background:rgba(240,135,111,0.35); }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <a class="back-link" href="/generators/index.html">&larr; Zurück zum Hauptmenü</a>
   <header>
     <div class="header-text">
       <p class="eyebrow">Sunmi Geräteverwaltung</p>
@@ -334,7 +351,8 @@
         </table>
       </div>
       <div class="legend">
-        <span><span class="swatch duplicate"></span>Doppelte Seriennummer</span>
+        <span><span class="swatch duplicate"></span>Doppelte Seriennummer (erstes Vorkommen behalten)</span>
+        <span><span class="swatch removed"></span>Entfernt (Duplikat, nicht exportiert)</span>
       </div>
     </div>
   </div>
@@ -361,6 +379,13 @@ function escapeHtml(str){
   return String(str).replace(/[&<>"']/g, ch => ({
     '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
   }[ch]));
+}
+
+// Aktuellen Zeitstempel im Format YYYYMMDD_HHMMSS liefern, für eindeutige Download-Dateinamen.
+function getTimestamp(){
+  const d = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
 }
 
 const serialsEl = document.getElementById('serials');
@@ -403,52 +428,71 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     return;
   }
 
+  // Duplikate erkennen und entfernen: erstes Vorkommen einer Seriennummer
+  // wird behalten, alle weiteren Vorkommen werden aus dem Export entfernt.
   const serialCounts = countOccurrences(serials);
-  let dupCount = 0;
+  const seen = new Set();
+  let removedCount = 0;
   const rowsMeta = serials.map(s => {
-    const isDup = serialCounts.get(s) > 1;
-    if (isDup) dupCount++;
-    return { serial: s, duplicate: isDup };
+    const isDupGroup = serialCounts.get(s) > 1;
+    let removed = false;
+    if (isDupGroup) {
+      if (seen.has(s)) {
+        removed = true;
+        removedCount++;
+      } else {
+        seen.add(s);
+      }
+    }
+    return { serial: s, duplicate: isDupGroup, removed };
   });
+  const exportRows = rowsMeta.filter(r => !r.removed);
 
   // --- Warnungen ---
   const warnings = [];
-  if (dupCount > 0) {
-    warnings.push({ severity: 'warn', text: `${dupCount} doppelte Seriennummer${dupCount === 1 ? '' : 'n'}.` });
+  if (removedCount > 0) {
+    warnings.push({
+      severity: 'warn',
+      text: `${removedCount} doppelte Seriennummer${removedCount === 1 ? '' : 'n'} wurde${removedCount === 1 ? '' : 'n'} entfernt — ${exportRows.length} Gerät${exportRows.length === 1 ? '' : 'e'} exportiert.`
+    });
   }
 
   const warningsBox = document.getElementById('warningsBox');
   if (warnings.length === 0) {
-    warningsBox.innerHTML = `<div class="all-clear">Keine Auffälligkeiten — ${serials.length} Zeile${serials.length === 1 ? '' : 'n'} bereit.</div>`;
+    warningsBox.innerHTML = `<div class="all-clear">Keine Auffälligkeiten — ${exportRows.length} Zeile${exportRows.length === 1 ? '' : 'n'} bereit.</div>`;
   } else {
     warningsBox.innerHTML = `<div class="warnings">${warnings.map(w =>
       `<div class="warning-item severity-${w.severity}"><span class="dot"></span>${escapeHtml(w.text)}</div>`
     ).join('')}</div>`;
   }
 
-  // --- Vorschau-Tabelle ---
+  // --- Vorschau-Tabelle (zeigt alle eingegebenen Zeilen, auch entfernte) ---
   const previewBody = document.getElementById('previewBody');
   previewBody.innerHTML = rowsMeta.map(r => {
-    const rowClass = r.duplicate ? 'row-duplicate' : '';
-    const serialCell = `${escapeHtml(r.serial)}${r.duplicate ? '<span class="flag-badge dup">Dup</span>' : ''}`;
-    return `<tr class="${rowClass}">
+    const rowClasses = [];
+    if (r.removed) rowClasses.push('row-removed');
+    else if (r.duplicate) rowClasses.push('row-duplicate');
+    let serialCell = escapeHtml(r.serial);
+    if (r.removed) serialCell += '<span class="flag-badge removed">Entfernt</span>';
+    else if (r.duplicate) serialCell += '<span class="flag-badge dup">Dup</span>';
+    return `<tr class="${rowClasses.join(' ')}">
       <td class="cell-flag">${serialCell}</td>
       <td>${escapeHtml(sunmiId)}</td>
     </tr>`;
   }).join('');
   document.getElementById('previewWrap').style.display = 'block';
 
-  // --- XLSX bauen (MSN zuerst, dann ID) ---
-  const wsData = [['MSN', 'ID'], ...rowsMeta.map(r => [r.serial, sunmiId])];
+  // --- XLSX bauen (MSN zuerst, dann ID) — nur nicht-entfernte Zeilen ---
+  const wsData = [['MSN', 'ID'], ...exportRows.map(r => [r.serial, sunmiId])];
   const ws = XLSX.utils.aoa_to_sheet(wsData);
   ws['!cols'] = [{ wch: 22 }, { wch: 18 }];
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'MSN');
 
   const safeName = sunmiId.replace(/[^a-z0-9_-]+/gi, '_');
-  XLSX.writeFile(wb, `sunmi_${safeName || 'export'}.xlsx`);
+  XLSX.writeFile(wb, `sunmi_${safeName || 'export'}_${getTimestamp()}.xlsx`);
 
-  statusEl.textContent = `${serials.length} Zeile${serials.length === 1 ? '' : 'n'} exportiert${warnings.length ? ` — ${warnings.length} Hinweis${warnings.length === 1 ? '' : 'e'} beachten` : ''}.`;
+  statusEl.textContent = `${exportRows.length} Zeile${exportRows.length === 1 ? '' : 'n'} exportiert${warnings.length ? ` — ${warnings.length} Hinweis${warnings.length === 1 ? '' : 'e'} beachten` : ''}.`;
   statusEl.className = 'ok';
 });
 </script>
