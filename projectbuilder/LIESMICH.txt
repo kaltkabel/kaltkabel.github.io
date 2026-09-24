@@ -1,0 +1,27 @@
+Anleitungs-Editor – Offline-Version (Fileserver / Festplatte)
+=============================================================
+
+1) index.html in den gewuenschten Ordner auf dem Fileserver legen
+   (z. B. \\fileserver\Anleitungen\index.html).
+2) Doppelklick auf index.html – die App laeuft direkt im Browser.
+   Kein Webserver, kein Node, keine Datenbank, kein Internet notwendig.
+
+Sichern und Laden
+-----------------
+* Es gibt nur zwei Knoepfe: "Sichern" und "Laden". Beides betrifft immer
+  die KOMPLETTE Dokumentation (mit allen Anleitungen und Bildern).
+* "Sichern" legt eine JSON-Datei im Download-Ordner ab – von dort in den
+  Fileserver-Ordner verschieben (oder im Browser den Download-Ordner
+  direkt auf den Fileserver zeigen lassen: Einstellungen > Downloads).
+* "Laden" oeffnet eine gesicherte JSON-Datei wieder. Eine bereits
+  vorhandene Dokumentation wird dabei aktualisiert.
+* Zusaetzlich haelt der Browser den aktuellen Stand vor (localStorage +
+  IndexedDB fuer Bilder). Browserdaten loeschen = Stand weg, deshalb nach
+  dem Bearbeiten immer "Sichern" und die Datei ablegen.
+* Bilder sind in der JSON-Datei enthalten – eine Datei pro Dokumentation
+  genuegt fuer Backup und Umzug auf einen anderen Rechner.
+
+Drucken
+-------
+* "Drucken (A4)" verwenden, im Druckdialog A4, Skalierung 100 %,
+  Raender "keine" – die Seitenraender sind im Blatt schon enthalten.
