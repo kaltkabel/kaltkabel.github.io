@@ -1,0 +1,675 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velocity Lizenz-Barcodes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+/* Layout: Ivanti-Seitenrahmen (dunkle Navy-Kopfzeile, Rot als Markenfarbe, ruhige weiße Karten)
+   + Velocity-Details (dunkles Android-Gerät, Teal-Unterstreichungen als Zustandsfarbe). */
+:root {
+  --bg: #f2f4f7;
+  --surface: #ffffff;
+  --surface-2: #f7f8fa;
+  --ink: #0f1b2d;
+  --muted: #5a6678;
+  --line: #dde2e9;
+  --brand: #d42b20;
+  --brand-hover: #b8231a;
+  --brand-ink: #ffffff;
+  --navy: #0b1628;
+  --navy-2: #15243d;
+  --navy-text: #e9eef6;
+  --navy-muted: #9aa9c0;
+  --teal: #13918d;
+  --teal-soft: #e0f3f2;
+  --laser: #e5302a;
+  --warn: #b54708;
+  --ok: #1f7a4a;
+  --paper: #ffffff;
+  --paper-ink: #0b0f12;
+  --paper-muted: #5f6870;
+  --paper-line: #e3e7ec;
+  --dev-body: #1a1d20;
+  --dev-screen: #262a2e;
+  --dev-bar: #15181a;
+  --dev-text: #c9cfd4;
+  --dev-dim: #7d868d;
+  --dev-line: #3fb3ae;
+  --dev-btn: #33383d;
+  --shadow: 0 1px 2px rgba(15,27,45,.06), 0 8px 24px -12px rgba(15,27,45,.18);
+  --font-display: "Figtree", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Figtree", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a111d; --surface: #111b2b; --surface-2: #0d1624; --ink: #e8edf4; --muted: #94a1b4; --line: #22324a;
+    --brand: #ef4a3e; --brand-hover: #ff6155; --brand-ink: #ffffff;
+    --navy: #070d18; --navy-2: #101c30;
+    --teal: #4cc9c3; --teal-soft: #11312f; --laser: #ff4a3d; --warn: #f2a46b; --ok: #6fd18a;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.7);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a111d; --surface: #111b2b; --surface-2: #0d1624; --ink: #e8edf4; --muted: #94a1b4; --line: #22324a;
+  --brand: #ef4a3e; --brand-hover: #ff6155; --brand-ink: #ffffff;
+  --navy: #070d18; --navy-2: #101c30;
+  --teal: #4cc9c3; --teal-soft: #11312f; --laser: #ff4a3d; --warn: #f2a46b; --ok: #6fd18a;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.7);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+
+/* ---------- Kopfzeile ---------- */
+.topbar { background: var(--navy); color: var(--navy-text); border-bottom: 1px solid rgba(255,255,255,.06); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .01em; }
+.brand-mark { width: 26px; height: 26px; border-radius: 6px; background: var(--brand); display: grid; place-items: center; }
+.brand-mark svg { width: 16px; height: 16px; }
+.brand small { font-weight: 500; color: var(--navy-muted); margin-left: 4px; }
+.topbar-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--navy-muted); display: flex; align-items: center; gap: 8px; }
+.topbar-meta .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dev-line); box-shadow: 0 0 0 3px rgba(63,179,174,.2); }
+
+.hero { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--navy-text); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -80px; top: -60px; width: 380px; height: 380px; border-radius: 50%; border: 56px solid var(--brand); opacity: .14; pointer-events: none; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: end; padding-block: 40px 44px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+.eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy-muted); display: flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 3px; border-radius: 2px; background: var(--brand); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4.6vw, 3.25rem); line-height: 1.05; letter-spacing: -.02em; margin: 12px 0 12px; text-wrap: balance; color: #ffffff; }
+h1 span { color: var(--brand); }
+.lede { color: var(--navy-muted); max-width: 56ch; margin: 0; font-size: 1rem; }
+.steps { display: flex; flex-direction: column; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.steps li { font-size: .85rem; display: flex; align-items: center; gap: 10px; color: var(--navy-text); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 8px; padding: 7px 14px 7px 8px; }
+.steps b { font-family: var(--font-mono); font-size: .72rem; width: 22px; height: 22px; border-radius: 5px; display: grid; place-items: center; background: var(--brand); color: #fff; }
+@media (max-width: 760px) { .steps { flex-direction: row; flex-wrap: wrap; } }
+
+/* ---------- Arbeitsbereich ---------- */
+main.wrap { padding-block: 32px 64px; }
+.bench { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 32px; align-items: start; }
+@media (max-width: 900px) { .bench { grid-template-columns: minmax(0, 1fr); } }
+.left { display: flex; flex-direction: column; gap: 20px; }
+@media (max-width: 900px) { .left { max-width: 380px; width: 100%; margin: 0 auto; } }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow); }
+.panel h2 { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0; display: flex; justify-content: space-between; gap: 8px; }
+
+.paste textarea {
+  width: 100%; min-height: 136px; resize: vertical;
+  font-family: var(--font-mono); font-size: .76rem; line-height: 1.6; color: var(--ink);
+  background: var(--surface-2); border: 1px solid var(--line); border-bottom: 2px solid var(--teal); border-radius: 6px 6px 0 0; padding: 10px 12px;
+}
+.paste textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+.paste-status { font-size: .8rem; color: var(--muted); min-height: 1.2em; display: flex; gap: 6px; align-items: baseline; }
+.paste-status.ok { color: var(--ok); }
+.paste-status.err { color: var(--warn); }
+
+/* Velocity-Gerät */
+.device {
+  background: var(--dev-body); border-radius: 28px; padding: 12px 10px 14px;
+  box-shadow: 0 0 0 1px #000, 0 0 0 5px #2c3136, 0 26px 50px -25px rgba(0,0,0,.55);
+}
+.screen { background: var(--dev-screen); border-radius: 18px; overflow: hidden; color: var(--dev-text); }
+.statusbar { background: var(--dev-bar); display: flex; justify-content: space-between; gap: 8px; padding: 6px 14px; font-family: var(--font-mono); font-size: .7rem; color: var(--dev-dim); }
+.statusbar span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.appbar { padding: 12px 16px 4px; display: flex; justify-content: space-between; align-items: baseline; }
+.appbar strong { font-weight: 600; font-size: .95rem; color: #eef2f4; }
+.appbar span { font-family: var(--font-mono); font-size: .66rem; color: var(--dev-dim); }
+.dform { padding: 6px 16px 14px; display: flex; flex-direction: column; gap: 12px; }
+.dfield { display: flex; flex-direction: column; gap: 2px; }
+.dfield label { font-size: .78rem; color: var(--dev-text); display: flex; justify-content: space-between; }
+.dfield label i { font-style: normal; font-family: var(--font-mono); font-size: .65rem; color: var(--dev-dim); }
+.dfield input {
+  font-family: var(--font-mono); font-size: .95rem; color: #ffffff; background: transparent;
+  border: 0; border-bottom: 1.5px solid #59616a; padding: 5px 2px 6px; width: 100%; border-radius: 0;
+}
+.dfield input::placeholder { color: #6b747b; }
+.dfield input:focus { outline: none; border-bottom: 2px solid var(--dev-line); }
+.dfield.linked input { border-bottom-color: var(--dev-line); }
+.dfield .err { font-size: .7rem; color: #ffb27d; }
+.dfield .err:empty { display: none; }
+.dfield.ghost { opacity: .4; }
+.dbtns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 12px 14px; }
+.dbtns button { background: var(--dev-btn); color: #e8ecef; border: 0; border-radius: 2px; padding: 10px; font: 500 .85rem var(--font-body); cursor: pointer; }
+.dbtns button:hover { background: #3d4349; }
+.navbar { background: #000; display: flex; justify-content: space-around; padding: 9px 0 10px; color: #9aa2a8; }
+.navbar svg { width: 15px; height: 15px; }
+
+/* Einstellungen */
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 3px; gap: 3px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { text-align: center; font-size: .82rem; font-weight: 600; padding: 7px 4px; border-radius: 6px; cursor: pointer; color: var(--muted); }
+.seg input:checked + label { background: var(--navy-2); color: #ffffff; }
+.seg input:focus-visible + label { outline: 2px solid var(--teal); outline-offset: 1px; }
+.threshold { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--muted); }
+.threshold input[type="range"] { flex: 1; accent-color: var(--teal); min-width: 0; }
+.threshold output { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink); min-width: 5.5ch; text-align: right; }
+.threshold.off { opacity: .4; }
+.btn { font: 700 .88rem var(--font-body); border-radius: 6px; padding: 10px 16px; cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn.primary { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.btn.primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); }
+.btn svg { width: 16px; height: 16px; }
+button:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+
+/* ---------- Etiketten ---------- */
+.sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.sheet-head h2 { font-weight: 800; font-size: 1.4rem; letter-spacing: -.01em; margin: 0; flex: 1; }
+.sheet-head .count { font-family: var(--font-mono); font-size: .74rem; color: var(--teal); background: var(--teal-soft); border-radius: 99px; padding: 3px 10px; font-variant-numeric: tabular-nums; }
+.print-note { font-size: .78rem; color: var(--muted); max-width: 34ch; text-align: right; }
+
+.labels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 640px) { .labels { grid-template-columns: minmax(0, 1fr); } }
+
+.tag {
+  position: relative; background: var(--paper); color: var(--paper-ink);
+  border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px 14px; min-width: 0;
+  display: grid; grid-template-rows: auto 1fr auto; gap: 12px;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.tag.active { transform: translateY(-2px); border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft), var(--shadow); }
+.tag-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--paper-line); }
+.tag-no { font-family: var(--font-mono); font-weight: 700; font-size: .8rem; width: 30px; height: 30px; border-radius: 6px; display: grid; place-items: center; background: var(--brand); color: #fff; flex: none; }
+.tag-title { flex: 1; min-width: 0; }
+.tag-title strong { display: block; font-weight: 700; font-size: 1rem; line-height: 1.2; }
+.tag-title small { font-size: .74rem; color: var(--paper-muted); }
+.sym { font-family: var(--font-mono); font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: #15243d; color: #ffffff; white-space: nowrap; }
+.sym.qr { background: #13918d; }
+.sym.none { background: transparent; color: var(--paper-muted); border: 1px solid var(--paper-line); }
+
+.code { position: relative; display: grid; place-items: center; min-height: 150px; overflow: hidden; }
+.code svg { max-width: 100%; height: auto; display: block; }
+.code.qr svg { width: 150px; height: 150px; }
+.code.short svg { max-width: 60%; }
+.code .laser {
+  position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--laser);
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--laser) 60%, transparent);
+  opacity: 0; pointer-events: none;
+}
+.tag.active .laser { opacity: .9; animation: sweep 1.6s ease-in-out infinite alternate; }
+@keyframes sweep { from { top: 12%; } to { top: 88%; } }
+.placeholder { display: grid; justify-items: center; gap: 8px; color: var(--paper-muted); font-size: .82rem; text-align: center; }
+.placeholder svg { width: 120px; height: 44px; opacity: .25; }
+
+.tag-foot { display: flex; align-items: end; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 1px dashed var(--paper-line); }
+.val { font-family: var(--font-mono); font-size: .82rem; word-break: break-all; line-height: 1.35; min-width: 0; }
+.len { display: block; font-size: .66rem; color: var(--paper-muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.copy { flex: none; font: 600 .76rem var(--font-body); border: 1px solid var(--paper-line); background: #ffffff; color: #13918d; border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+.copy:hover { background: #e0f3f2; }
+.copy:focus-visible { outline: 2px solid #13918d; outline-offset: 2px; }
+
+/* Info-Karte */
+.info { background: var(--navy-2); color: var(--navy-text); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.info::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--brand); }
+.info h3 { font-weight: 700; font-size: 1rem; margin: 0; }
+.info dl { margin: 0; display: grid; gap: 12px; }
+.info dt { font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--navy-muted); }
+.info dd { margin: 2px 0 0; font-family: var(--font-mono); font-size: .86rem; word-break: break-word; color: #ffffff; }
+.info dd.empty { color: var(--navy-muted); }
+.info p { margin: auto 0 0; font-size: .78rem; color: var(--navy-muted); }
+
+.footnote { margin-top: 22px; font-size: .82rem; color: var(--muted); max-width: 70ch; }
+.print-head { display: none; }
+
+/* ---------- Vergrößerte Ansicht ---------- */
+.code.filled { cursor: zoom-in; border-radius: 6px; }
+.code.filled:hover { background: #f4f7f9; }
+.code.filled:focus-visible { outline: 2px solid #13918d; outline-offset: 2px; }
+.zoom { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; background: rgba(7, 13, 24, .78); backdrop-filter: blur(3px); }
+.zoom-card {
+  width: 60vw; height: 60vh; max-width: 100%;
+  background: #ffffff; color: #0b0f12; border-radius: 12px; overflow: hidden;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.6);
+  animation: zoomIn .18s ease-out;
+}
+@media (max-width: 700px) { .zoom-card { width: 100%; } }
+@keyframes zoomIn { from { transform: scale(.94); opacity: 0; } to { transform: none; opacity: 1; } }
+.zoom-head { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #e3e7ec; }
+.zoom-head .tag-no { width: 30px; height: 30px; }
+.zoom-head strong { flex: 1; font-size: 1.05rem; font-weight: 700; min-width: 0; }
+.zoom-head button, .zoom-foot button { font: 600 .82rem var(--font-body); border: 1px solid #dde2e9; background: #ffffff; color: #0f1b2d; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.zoom-head button:hover, .zoom-foot button:hover { background: #f2f4f7; }
+.zoom-head .close { font-size: 1.1rem; line-height: 1; padding: 6px 10px; }
+.zoom-body { min-height: 0; padding: 4% 6%; display: grid; place-items: center; }
+.zoom-body svg { width: 100%; height: 100%; display: block; }
+.zoom-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; border-top: 1px dashed #e3e7ec; }
+.zoom-foot .zval { font-family: var(--font-mono); font-size: .95rem; word-break: break-all; text-align: center; flex: 1; min-width: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .zoom-card { animation: none; }
+  .tag { transition: none; }
+  .tag.active .laser { animation: none; top: 50%; }
+}
+
+/* ---------- Druck ---------- */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  :root { color-scheme: light; }
+  body { background: #fff !important; color: #000; }
+  .topbar, .hero, .left, .sheet-head, .footnote, .copy, .laser, .info p, .zoom { display: none !important; }
+  main.wrap { padding: 0; max-width: none; }
+  .bench { display: block; }
+  .print-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 3px solid #d42b20; padding-bottom: 6px; margin-bottom: 10mm; }
+  .print-head strong { font-size: 18pt; font-weight: 800; line-height: 1.1; }
+  .print-head span { font-family: var(--font-mono); font-size: 9pt; }
+  .labels { grid-template-columns: repeat(2, 1fr); gap: 8mm; }
+  .tag { box-shadow: none !important; transform: none !important; border: 1px solid #000; break-inside: avoid; page-break-inside: avoid; }
+  .info { background: #fff; color: #000; border: 1px dashed #000; box-shadow: none; break-inside: avoid; }
+  .info::before { display: none; }
+  .info dt, .info dd.empty { color: #444; }
+  .info dd { color: #000; }
+  .tag-no { background: #fff; color: #000; border: 1px solid #000; }
+  .sym { border: 1px solid #000; background: #fff !important; color: #000 !important; }
+}
+</style>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 16 16" fill="#fff"><rect x="2" y="3" width="1.5" height="10"/><rect x="5" y="3" width="1" height="10"/><rect x="7.5" y="3" width="2" height="10"/><rect x="11" y="3" width="1" height="10"/><rect x="13" y="3" width="1.5" height="10"/></svg></span>
+      License Barcodes <small>für Velocity</small>
+    </div>
+    <div class="topbar-meta"><span class="dot"></span><span>Add License · Android</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Ivanti Velocity · Lizenzierung</div>
+      <h1>Lizenz <span>scannen</span> statt tippen</h1>
+      <p class="lede">Füge den Lizenzblock ein oder trag die Werte einzeln ein. Für jedes Feld entsteht ein eigener Barcode, den du am Gerät direkt ins passende Feld scannst.</p>
+    </div>
+    <ol class="steps">
+      <li><b>1</b>Lizenzdaten einfügen</li>
+      <li><b>2</b>Feld am Gerät antippen</li>
+      <li><b>3</b>Etikett scannen</li>
+    </ol>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="print-head">
+    <div><strong id="ph-name">Velocity Lizenz</strong></div>
+    <span id="ph-meta"></span>
+  </div>
+
+  <div class="bench">
+    <div class="left">
+      <section class="panel paste" aria-label="Lizenzdaten einfügen">
+        <h2><span>Lizenzdaten einfügen</span></h2>
+        <textarea id="paste" spellcheck="false" placeholder="Licensee Name: …&#10;Registered User: …&#10;Platform Version: …&#10;Serial Number: …&#10;User Limit: …&#10;Expiration Date: MMDDYYYY&#10;Authorization Code: …"></textarea>
+        <div class="paste-status" id="paste-status">Den kompletten Block aus der Lizenz-Mail einfügen. Die Felder füllen sich automatisch.</div>
+      </section>
+
+      <div class="device" aria-label="Eingabe im Stil des Velocity-Dialogs">
+        <div class="screen">
+          <div class="statusbar"><span id="platform">Velocity</span><span id="clock">12:00</span></div>
+          <div class="appbar"><strong>Add License</strong><span>Eingabe</span></div>
+          <form class="dform" id="form" autocomplete="off">
+            <div class="dfield" data-key="licensee">
+              <label for="licensee">Licensee Name <i>01</i></label>
+              <input type="text" id="licensee" spellcheck="false">
+            </div>
+            <div class="dfield" data-key="serial">
+              <label for="serial">Serial Number <i>02</i></label>
+              <input type="text" id="serial" spellcheck="false">
+            </div>
+            <div class="dfield" data-key="expiry">
+              <label for="expiry">Expiration Date <i>03</i></label>
+              <input type="text" id="expiry" placeholder="MMDDYYYY" inputmode="numeric" maxlength="8">
+              <span class="err" id="expiry-err"></span>
+            </div>
+            <div class="dfield" data-key="auth">
+              <label for="auth">Authorization Code <i>04</i></label>
+              <input type="text" id="auth" spellcheck="false">
+            </div>
+            <div class="dfield" data-key="users">
+              <label for="users">User Limit <i>05</i></label>
+              <input type="text" id="users" inputmode="numeric" spellcheck="false">
+            </div>
+            <div class="dfield ghost" aria-hidden="true">
+              <label>User Number</label><input type="text" tabindex="-1" disabled>
+            </div>
+          </form>
+          <div class="dbtns">
+            <button type="button" id="to-paste">Einfügen</button>
+            <button type="button" id="clear">Leeren</button>
+          </div>
+          <div class="navbar" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2 4 8l7 6z"/></svg>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="5.5"/></svg>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="10" height="10"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <section class="panel" aria-label="Barcode-Einstellungen">
+        <h2><span>Symbologie</span></h2>
+        <div class="seg" role="radiogroup" aria-label="Barcode-Typ">
+          <input type="radio" name="mode" id="m-auto" value="auto" checked><label for="m-auto">Auto</label>
+          <input type="radio" name="mode" id="m-1d" value="1d"><label for="m-1d">1D</label>
+          <input type="radio" name="mode" id="m-2d" value="2d"><label for="m-2d">2D</label>
+        </div>
+        <div class="threshold" id="threshold">
+          <label for="qrlimit">QR ab</label>
+          <input type="range" id="qrlimit" min="8" max="48" value="20">
+          <output id="qrlimit-out" for="qrlimit">20 Zch.</output>
+        </div>
+      </section>
+    </div>
+
+    <section aria-label="Etikettenbogen">
+      <div class="sheet-head">
+        <h2>Etikettenbogen</h2>
+        <span class="count" id="count">0 / 5 bereit</span>
+        <button type="button" class="btn primary" id="print" hidden>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6V2h8v4M4 12H2.5V6h11v6H12"/><rect x="4" y="9.5" width="8" height="4.5"/></svg>
+          Etiketten drucken
+        </button>
+        <span class="print-note" id="print-note" hidden>Drucken geht hier im Chat nicht. Öffne die HTML-Datei aus dem Chat in deinem Browser, dort gibt es den Druck-Button.</span>
+      </div>
+      <div class="labels" id="labels"></div>
+      <p class="footnote">Auto erzeugt Code 128 für kurze Werte und wechselt zu QR, sobald ein Wert die eingestellte Länge erreicht oder Umlaute enthält. Liest dein Scanner kein QR, sag Bescheid, dann stelle ich auf DataMatrix oder PDF417 um.</p>
+    </section>
+  </div>
+</main>
+
+<div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-labelledby="zoom-title">
+  <div class="zoom-card">
+    <div class="zoom-head">
+      <span class="tag-no" id="zoom-no">01</span>
+      <strong id="zoom-title">Licensee Name</strong>
+      <span class="sym" id="zoom-sym">Code 128</span>
+      <button type="button" class="close" id="zoom-close" aria-label="Schließen">✕</button>
+    </div>
+    <div class="zoom-body" id="zoom-body"></div>
+    <div class="zoom-foot">
+      <button type="button" id="zoom-prev">← Vorheriges</button>
+      <span class="zval" id="zoom-val"></span>
+      <button type="button" id="zoom-next">Nächstes →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const FIELDS = [
+  { key: "licensee", title: "Licensee Name",      hint: "Name des Lizenznehmers" },
+  { key: "serial",   title: "Serial Number",      hint: "Seriennummer" },
+  { key: "expiry",   title: "Expiration Date",    hint: "Ablaufdatum · MMDDYYYY" },
+  { key: "auth",     title: "Authorization Code", hint: "Freischaltcode" },
+  { key: "users",    title: "User Limit",         hint: "Anzahl Benutzer" }
+];
+// Schlüssel im eingefügten Lizenzblock → Feld
+const PASTE_KEYS = {
+  "licensee name": "licensee",
+  "registered user": "regUser",
+  "platform version": "platform",
+  "serial number": "serial",
+  "user limit": "users",
+  "expiration date": "expiry",
+  "authorization code": "auth"
+};
+const START = `Licensee Name: OSI International Holding GmbH
+Registered User:
+Platform Version: Velocity Android 2.0 WEB
+Serial Number: 1093940
+User Limit: 2
+Expiration Date: 09302029
+Authorization Code: qKhrYfDN`;
+
+const $ = id => document.getElementById(id);
+const labelsEl = $("labels");
+const extra = { regUser: "", platform: "" };
+const PLACEHOLDER_BARS = '<svg viewBox="0 0 120 44" fill="currentColor"><rect x="0" width="3" height="44"/><rect x="6" width="1" height="44"/><rect x="10" width="4" height="44"/><rect x="17" width="2" height="44"/><rect x="22" width="1" height="44"/><rect x="26" width="5" height="44"/><rect x="34" width="2" height="44"/><rect x="39" width="1" height="44"/><rect x="43" width="3" height="44"/><rect x="50" width="1" height="44"/><rect x="54" width="4" height="44"/><rect x="61" width="2" height="44"/><rect x="66" width="1" height="44"/><rect x="70" width="3" height="44"/><rect x="77" width="5" height="44"/><rect x="85" width="1" height="44"/><rect x="89" width="2" height="44"/><rect x="94" width="4" height="44"/><rect x="101" width="1" height="44"/><rect x="105" width="3" height="44"/><rect x="111" width="2" height="44"/><rect x="117" width="3" height="44"/></svg>';
+
+FIELDS.forEach((f, i) => {
+  const el = document.createElement("article");
+  el.className = "tag";
+  el.dataset.key = f.key;
+  el.innerHTML = `
+    <div class="tag-head">
+      <span class="tag-no">${String(i + 1).padStart(2, "0")}</span>
+      <div class="tag-title"><strong>${f.title}</strong><small>${f.hint}</small></div>
+      <span class="sym none" id="sym-${f.key}">leer</span>
+    </div>
+    <div class="code" id="code-${f.key}"></div>
+    <div class="tag-foot">
+      <div class="val"><span id="val-${f.key}"></span><span class="len" id="len-${f.key}"></span></div>
+      <button type="button" class="copy" data-copy="${f.key}">Kopieren</button>
+    </div>`;
+  labelsEl.appendChild(el);
+});
+const info = document.createElement("aside");
+info.className = "info";
+info.innerHTML = `
+  <h3>Lizenz-Info</h3>
+  <dl>
+    <div><dt>Platform Version</dt><dd id="i-platform"></dd></div>
+    <div><dt>Registered User</dt><dd id="i-reg"></dd></div>
+    <div><dt>Gültig bis</dt><dd id="i-date"></dd></div>
+  </dl>
+  <p>Diese Angaben stehen im Lizenzblock, werden in Velocity aber nicht gescannt.</p>`;
+labelsEl.appendChild(info);
+
+const isAscii = s => /^[\x20-\x7E]*$/.test(s);
+const mode = () => document.querySelector('input[name="mode"]:checked').value;
+const validDate = s => /^(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{4}$/.test(s);
+const readableDate = s => validDate(s) ? `${s.slice(2,4)}.${s.slice(0,2)}.${s.slice(4)}` : "";
+
+function render() {
+  const m = mode();
+  const limit = parseInt($("qrlimit").value, 10);
+  $("qrlimit-out").textContent = limit + " Zch.";
+  $("threshold").classList.toggle("off", m !== "auto");
+  let ready = 0;
+
+  FIELDS.forEach(f => {
+    const v = $(f.key).value.trim();
+    const box = $("code-" + f.key), sym = $("sym-" + f.key);
+    $("val-" + f.key).textContent = v || "—";
+    $("len-" + f.key).textContent = v ? v.length + " Zeichen" : "";
+    document.querySelector(`.dfield[data-key="${f.key}"]`).classList.toggle("linked", !!v);
+    box.className = "code";
+
+    if (!v) {
+      box.removeAttribute("tabindex"); box.removeAttribute("role"); box.removeAttribute("aria-label");
+      box.innerHTML = `<div class="placeholder">${PLACEHOLDER_BARS}<span>Feld ${f.title} ausfüllen</span></div>`;
+      sym.className = "sym none"; sym.textContent = "leer";
+      return;
+    }
+    const use2D = m === "2d" || !isAscii(v) || (m === "auto" && v.length >= limit);
+    if (use2D) {
+      if (qrcode.stringToBytesFuncs) qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];
+      const qr = qrcode(0, "M"); qr.addData(v, "Byte"); qr.make();
+      box.classList.add("qr");
+      box.innerHTML = qr.createSvgTag(6, 0);
+      const svg = box.querySelector("svg");
+      svg.setAttribute("viewBox", `0 0 ${parseFloat(svg.getAttribute("width"))} ${parseFloat(svg.getAttribute("height"))}`);
+      sym.className = "sym qr"; sym.textContent = "QR";
+    } else {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      box.innerHTML = ""; box.appendChild(svg);
+      JsBarcode(svg, v, { format: "CODE128", width: 2, height: 96, displayValue: false, margin: 10, background: "#ffffff", lineColor: "#000000" });
+      const w = parseFloat(svg.getAttribute("width")), h = parseFloat(svg.getAttribute("height"));
+      svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      if (v.length <= 4) box.classList.add("short");
+      sym.className = "sym"; sym.textContent = "Code 128";
+    }
+    box.insertAdjacentHTML("beforeend", '<span class="laser"></span>');
+    box.classList.add("filled");
+    box.tabIndex = 0;
+    box.setAttribute("role", "button");
+    box.setAttribute("aria-label", f.title + " vergrößern");
+    ready++;
+  });
+
+  $("count").textContent = `${ready} / 5 bereit`;
+  const exp = $("expiry").value.trim();
+  $("expiry-err").textContent = exp && !validDate(exp) ? "8 Ziffern: Monat, Tag, Jahr (z. B. 09302029)" : "";
+
+  setInfo("i-platform", extra.platform);
+  setInfo("i-reg", extra.regUser);
+  setInfo("i-date", readableDate(exp));
+  $("platform").textContent = extra.platform || "Velocity";
+  $("ph-name").textContent = $("licensee").value.trim() || "Velocity Lizenz";
+  $("ph-meta").textContent = [extra.platform, $("serial").value.trim() && "S/N " + $("serial").value.trim(), "gedruckt " + new Date().toLocaleDateString("de-DE")].filter(Boolean).join(" · ");
+}
+function setInfo(id, v) { const el = $(id); el.textContent = v || "nicht angegeben"; el.classList.toggle("empty", !v); }
+
+// Lizenzblock zerlegen: funktioniert mit Zeilenumbrüchen und als eine lange Zeile
+function parseBlock(text) {
+  const names = Object.keys(PASTE_KEYS).map(k => k.replace(/ /g, "\\s+")).join("|");
+  const re = new RegExp(`(${names})\\s*[:=]`, "gi");
+  const hits = [...text.matchAll(re)];
+  const out = {};
+  hits.forEach((h, i) => {
+    const key = PASTE_KEYS[h[1].toLowerCase().replace(/\s+/g, " ")];
+    const end = i + 1 < hits.length ? hits[i + 1].index : text.length;
+    out[key] = text.slice(h.index + h[0].length, end).replace(/\s+/g, " ").trim();
+  });
+  return out;
+}
+
+function applyBlock(text, fromUser) {
+  const data = parseBlock(text);
+  const found = Object.keys(data);
+  const st = $("paste-status");
+  if (!found.length) {
+    if (fromUser) { st.textContent = "Keine Lizenzfelder erkannt. Erwartet wird z. B. „Serial Number: 1093940“."; st.className = "paste-status err"; }
+    return false;
+  }
+  FIELDS.forEach(f => { $(f.key).value = data[f.key] || ""; });
+  if (data.expiry) $("expiry").value = data.expiry.replace(/\D/g, "").slice(0, 8);
+  extra.regUser = data.regUser || "";
+  extra.platform = data.platform || "";
+  const n = FIELDS.filter(f => data[f.key]).length;
+  st.textContent = `${n} von 5 Barcode-Feldern übernommen.`;
+  st.className = "paste-status ok";
+  render();
+  return true;
+}
+
+function setActive(key) {
+  document.querySelectorAll(".tag").forEach(t => t.classList.toggle("active", t.dataset.key === key));
+}
+
+// Einfügefeld: bei jeder Änderung neu auslesen
+$("paste").addEventListener("input", e => applyBlock(e.target.value, true));
+// Block in ein Gerätefeld oder irgendwo auf die Seite eingefügt → ebenfalls verteilen
+document.addEventListener("paste", e => {
+  if (e.target.id === "paste") return;
+  const text = (e.clipboardData || window.clipboardData).getData("text");
+  if (Object.keys(parseBlock(text)).length >= 2) {
+    e.preventDefault();
+    $("paste").value = text;
+    applyBlock(text, true);
+  }
+});
+
+FIELDS.forEach(f => {
+  const inp = $(f.key);
+  inp.addEventListener("input", () => {
+    if (f.key === "expiry") inp.value = inp.value.replace(/\D/g, "");
+    render();
+  });
+  inp.addEventListener("focus", () => setActive(f.key));
+  inp.addEventListener("blur", () => setActive(null));
+});
+labelsEl.addEventListener("mouseover", e => { const t = e.target.closest(".tag"); setActive(t ? t.dataset.key : null); });
+labelsEl.addEventListener("mouseleave", () => setActive(document.activeElement && document.activeElement.id));
+document.querySelectorAll('input[name="mode"], #qrlimit').forEach(el => el.addEventListener("input", render));
+$("form").addEventListener("submit", e => e.preventDefault());
+$("clear").addEventListener("click", () => {
+  FIELDS.forEach(f => $(f.key).value = "");
+  extra.regUser = ""; extra.platform = "";
+  $("paste").value = "";
+  $("paste-status").textContent = "Den kompletten Block aus der Lizenz-Mail einfügen. Die Felder füllen sich automatisch.";
+  $("paste-status").className = "paste-status";
+  render();
+  $("paste").focus();
+});
+$("to-paste").addEventListener("click", () => { $("paste").focus(); $("paste").select(); });
+
+labelsEl.addEventListener("click", async e => {
+  const btn = e.target.closest("[data-copy]"); if (!btn) return;
+  const key = btn.dataset.copy, text = $(key).value.trim(); if (!text) return;
+  try { await navigator.clipboard.writeText(text); btn.textContent = "Kopiert ✓"; }
+  catch { const r = document.createRange(); r.selectNodeContents($("val-" + key)); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Markiert"; }
+  setTimeout(() => btn.textContent = "Kopieren", 1500);
+});
+
+// Drucken: nur möglich, wenn die Datei direkt im Browser geöffnet ist (nicht eingebettet im Chat)
+let embedded = true;
+try { embedded = window.self !== window.top; } catch { embedded = true; }
+$("print").hidden = embedded;
+$("print-note").hidden = !embedded;
+$("print").addEventListener("click", () => { render(); window.print(); });
+
+const tick = () => { $("clock").textContent = new Date().toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" }); };
+tick(); setInterval(tick, 30000);
+
+// Vergrößerte Ansicht: Barcode antippen → 3/5 des Bildschirms
+let zoomKey = null, zoomReturn = null;
+const filledKeys = () => FIELDS.filter(f => $(f.key).value.trim()).map(f => f.key);
+function openZoom(key) {
+  const box = $("code-" + key), src = box && box.querySelector("svg");
+  if (!src) return;
+  const i = FIELDS.findIndex(f => f.key === key);
+  zoomKey = key;
+  const svg = src.cloneNode(true);
+  svg.setAttribute("width", "100%"); svg.setAttribute("height", "100%");
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  if (!svg.getAttribute("shape-rendering")) svg.setAttribute("shape-rendering", "crispEdges");
+  $("zoom-body").replaceChildren(svg);
+  $("zoom-no").textContent = String(i + 1).padStart(2, "0");
+  $("zoom-title").textContent = FIELDS[i].title;
+  const s = $("sym-" + key);
+  $("zoom-sym").className = s.className; $("zoom-sym").textContent = s.textContent;
+  $("zoom-val").textContent = $(key).value.trim();
+  const keys = filledKeys();
+  $("zoom-prev").disabled = keys.length < 2; $("zoom-next").disabled = keys.length < 2;
+  if ($("zoom").hidden) zoomReturn = document.activeElement;
+  $("zoom").hidden = false;
+  $("zoom-close").focus();
+}
+function closeZoom() {
+  $("zoom").hidden = true; zoomKey = null;
+  if (zoomReturn && zoomReturn.focus) zoomReturn.focus();
+}
+function stepZoom(dir) {
+  const keys = filledKeys(); if (!keys.length) return;
+  const i = keys.indexOf(zoomKey);
+  openZoom(keys[(i + dir + keys.length) % keys.length]);
+}
+labelsEl.addEventListener("click", e => {
+  const box = e.target.closest(".code.filled");
+  if (box) openZoom(box.closest(".tag").dataset.key);
+});
+labelsEl.addEventListener("keydown", e => {
+  const box = e.target.closest && e.target.closest(".code.filled");
+  if (box && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openZoom(box.closest(".tag").dataset.key); }
+});
+$("zoom-close").addEventListener("click", closeZoom);
+$("zoom-prev").addEventListener("click", () => stepZoom(-1));
+$("zoom-next").addEventListener("click", () => stepZoom(1));
+$("zoom").addEventListener("click", e => { if (e.target.id === "zoom") closeZoom(); });
+document.addEventListener("keydown", e => {
+  if ($("zoom").hidden) return;
+  if (e.key === "Escape") closeZoom();
+  else if (e.key === "ArrowRight") stepZoom(1);
+  else if (e.key === "ArrowLeft") stepZoom(-1);
+});
+
+$("paste").value = START;
+applyBlock(START, false);
+</script>
