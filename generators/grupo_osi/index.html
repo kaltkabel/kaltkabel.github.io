@@ -379,7 +379,7 @@ button:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
         <span class="print-note" id="print-note" hidden>Drucken geht hier im Chat nicht. Öffne die HTML-Datei aus dem Chat in deinem Browser, dort gibt es den Druck-Button.</span>
       </div>
       <div class="labels" id="labels"></div>
-      <p class="footnote">Auto erzeugt Code 128 für kurze Werte und wechselt zu QR, sobald ein Wert die eingestellte Länge erreicht oder Umlaute enthält. Liest dein Scanner kein QR, sag Bescheid, dann stelle ich auf DataMatrix oder PDF417 um.</p>
+      <p class="footnote"></p>
     </section>
   </div>
 </main>
@@ -419,13 +419,13 @@ const PASTE_KEYS = {
   "expiration date": "expiry",
   "authorization code": "auth"
 };
-const START = `Licensee Name: OSI International Holding GmbH
+const START = `Licensee Name: XYZ International Holding GmbH
 Registered User:
 Platform Version: Velocity Android 2.0 WEB
-Serial Number: 1093940
+Serial Number: 10xxx40
 User Limit: 2
 Expiration Date: 09302029
-Authorization Code: qKhrYfDN`;
+Authorization Code: qKxxxxDN`;
 
 const $ = id => document.getElementById(id);
 const labelsEl = $("labels");
